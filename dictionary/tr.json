@@ -1,0 +1,43 @@
+{
+  "Index": {
+    "boilerplateName": "Next.js için i18n Şablonu",
+    "title": "i18n ve Shadcn UI ile Next 15 Şablonu",
+    "description": "Çok dilli ve erişilebilir web uygulamaları için güçlü bir başlangıç noktası.",
+    "cloneRepository": "Depoyu klonla",
+    "leaveStar": "Yıldız bırak",
+    "howToUse": "Nasıl kullanılır",
+    "gettingStarted": "Başlarken",
+    "installation": "Kurulum",
+    "howToContribute": "Katkıda bulunma",
+    "omitrtlUsage": "OmitRTL Kullanımı",
+    "OmitRTLInstruction": "OmitRTL kullanmak için, RTL desteğini hariç tutmak istediğiniz öğeyi OmitRTL bileşeniyle sarmanız yeterlidir.",
+    "contribute": "Katkı sağla",
+    "installationSteps": {
+      "cloneRepository": "Depoyu klonla:",
+      "installDependencies": "Bağımlılıkları yükle:",
+      "startDevServer": "Geliştirme sunucusunu başlat:"
+    },
+    "contributeSteps": {
+      "fork": "Depoyu çatalla:",
+      "createBranch": "Yeni bir dal oluştur:",
+      "commit": "Değişiklikleri kaydet:",
+      "push": "Dalı gönder:",
+      "pullRequest": "Yeni bir çekme isteği oluştur"
+    },
+    "error": {
+      "server": "Sunucu iç hatası",
+      "sorry": "Üzgünüz, sunucumuzda beklenmeyen bir sorunla karşılaştık.",
+      "tryAgain": "Lütfen daha sonra tekrar deneyin.",
+      "returnHome": "Ana sayfaya dön"
+    }
+  },
+  "Footer": {
+    "copyright": "© 2025 Next.js için i18n Şablonu. MIT lisansı ile açık kaynak.",
+    "githubLink": "GitHub"
+  },
+  "Metadata": {
+    "title": "Next.js Uluslararasılaştırma Şablonu - Çok Dilli Başlangıç Noktası",
+    "description": "Next.js için Arapça, Çince, İngilizce, İspanyolca ve Japonca destekli i18n (uluslararasılaştırma) şablonu. Shadcn arayüzü, tema değiştirici ve RTL desteği içerir.",
+    "keywords": "Next.js, i18n, uluslararasılaştırma, Arapça, Çince, İngilizce, İspanyolca, Japonca, çok dilli, şablon, shadcn arayüzü, RTL desteği"
+  }
+}

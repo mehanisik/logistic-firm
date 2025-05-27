@@ -1,3 +1,4 @@
+import { ATIK_TEAM_MEMBERS } from "@/constants/team.constant"
 import type { TeamMember } from "@/types/team.types"
 import { IconUsersGroup } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
@@ -6,7 +7,6 @@ import { SectionLayout } from "../ui/section-layout"
 
 export default function TeamMembers() {
 	const t = useTranslations("Team")
-	const atikTeamMembers = t.raw("members") as TeamMember[]
 	return (
 		<SectionLayout>
 			<div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10 md:mb-16 gap-6 md:gap-8">
@@ -24,7 +24,7 @@ export default function TeamMembers() {
 			</div>
 			<div className="mt-12 md:mt-24">
 				<div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-					{atikTeamMembers.map((member, index) => (
+					{ATIK_TEAM_MEMBERS.map((member, index) => (
 						<div key={index} className="group overflow-hidden">
 							<img
 								className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
@@ -42,7 +42,7 @@ export default function TeamMembers() {
 								</div>
 								<div className="mt-1 flex items-center justify-between">
 									<span className="text-muted-foreground inline-block translate-y-6 text-sm opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-										{member.role}
+										{t(`team.${member.id}.role`)}
 									</span>
 									<Link
 										href={member.linkedinUrl ?? "#"}

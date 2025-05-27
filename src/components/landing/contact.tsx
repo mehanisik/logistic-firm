@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import type { OfficeLocation } from "@/types/contact.types"
+import { ATIK_OFFICE_LOCATIONS } from "@/constants/contact.constant"
 import { IconBuildingSkyscraper, IconHeadset, IconMail, IconMapPin, IconMessageCircle, IconSend, IconUser } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
@@ -15,7 +15,6 @@ import { SectionLayout } from "../ui/section-layout"
 
 export default function ContactUs() {
 	const t = useTranslations("Contact")
-	const officeLocations = t.raw("officeLocations") as OfficeLocation[]
 
 	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
@@ -132,20 +131,19 @@ export default function ContactUs() {
 						<IconBuildingSkyscraper className="w-7 h-7 text-primary" /> {t("ourGlobalPresence")}
 					</h2>
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-						{officeLocations.map((office) => (
+						{ATIK_OFFICE_LOCATIONS.map((office) => (
 							<Card
-								key={office.name}
+								key={office.id}
 								className={`p-6 rounded-xl shadow-md ${office.isHub ? "border-2 border-primary/50 bg-primary/5" : "border border-border"}`}
 							>
 								<CardHeader className="p-0 mb-2">
 									<CardTitle className="text-lg font-semibold flex items-center gap-2 text-foreground">
-										<IconMapPin className={`w-5 h-5 ${office.isHub ? "text-primary" : "text-muted-foreground"}`} /> {office.name}
+										<IconMapPin className={`w-5 h-5 ${office.isHub ? "text-primary" : "text-muted-foreground"}`} />
+										{t(`officeLocations.${office.id}.name`)}
 									</CardTitle>
 								</CardHeader>
 								<CardContent className="p-0 text-sm text-muted-foreground space-y-0.5">
-									{office.addressLines.map((line) => (
-										<p key={line}>{line}</p>
-									))}
+									<p>{t(`officeLocations.${office.id}.addressLines`)}</p>
 								</CardContent>
 							</Card>
 						))}

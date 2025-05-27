@@ -1,17 +1,15 @@
 "use client"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { BorderBeam } from "@/components/ui/border-beam"
-import type { FeatureAccordionItem } from "@/types/feature-accordion.types"
+import { FEATURE_ACCORDION_ITEMS } from "@/constants/feature-accordion.constant"
 import { AnimatePresence, motion } from "motion/react"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
 import { useState } from "react"
-import { ICONS, IMAGES } from "../../constants/feature-accordion.constants"
 
 export default function FeatureAccordion() {
 	const t = useTranslations("FeatureAccordion")
-	const items = t.raw("items") as FeatureAccordionItem[]
-	const [activeItem, setActiveItem] = useState<keyof typeof ICONS>(items[0].icon as keyof typeof ICONS)
+	const [activeItem, setActiveItem] = useState<string>(FEATURE_ACCORDION_ITEMS[0].id)
 
 	return (
 		<section className="py-12 md:py-20 lg:py-32">
@@ -22,23 +20,17 @@ export default function FeatureAccordion() {
 					<p>{t("description")}</p>
 				</div>
 				<div className="grid gap-12 sm:px-12 md:grid-cols-2 lg:gap-20 lg:px-0">
-					<Accordion
-						type="single"
-						value={activeItem}
-						onValueChange={(value) => setActiveItem(value as keyof typeof ICONS)}
-						className="w-full"
-					>
-						{items.map((item) => {
-							const Icon = ICONS[item.icon as keyof typeof ICONS]
+					<Accordion type="single" value={FEATURE_ACCORDION_ITEMS[0].id} onValueChange={(value) => setActiveItem(value)} className="w-full">
+						{FEATURE_ACCORDION_ITEMS.map((item) => {
 							return (
-								<AccordionItem value={item.icon} key={item.icon}>
+								<AccordionItem value={item.id} key={item.id}>
 									<AccordionTrigger>
 										<div className="flex items-center gap-2 text-base">
-											<Icon className="size-4" />
-											{item.title}
+											{item.icon}
+											{t(`items.${item.id}.title`)}
 										</div>
 									</AccordionTrigger>
-									<AccordionContent>{item.content}</AccordionContent>
+									<AccordionContent>{t(`items.${item.id}.content`)}</AccordionContent>
 								</AccordionItem>
 							)
 						})}
@@ -56,9 +48,9 @@ export default function FeatureAccordion() {
 									className="size-full overflow-hidden rounded-2xl border bg-background shadow-md"
 								>
 									<Image
-										src={IMAGES[activeItem].image}
+										src={FEATURE_ACCORDION_ITEMS.filter((item) => item.id === activeItem)[0].imageUrl}
 										className="size-full object-cover object-left-top dark:mix-blend-lighten"
-										alt={IMAGES[activeItem].alt}
+										alt={t(`items.${activeItem}.title`)}
 										width={1207}
 										height={929}
 									/>

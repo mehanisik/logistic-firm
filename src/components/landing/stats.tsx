@@ -1,8 +1,8 @@
+import { STATS } from "@/constants/stats.constant"
 import { useTranslations } from "next-intl"
 
 export default function Stats() {
 	const t = useTranslations("Stats")
-	const stats = t.raw("stats") as { label: string; value: string }[]
 	return (
 		<section className="py-12 md:py-20">
 			<div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
@@ -11,10 +11,10 @@ export default function Stats() {
 					<p className="text-muted-foreground">{t("description")}</p>
 				</div>
 				<div className="grid gap-12 divide-y *:text-center md:grid-cols-3 md:gap-2 md:divide-x md:divide-y-0">
-					{stats.map((stat) => (
-						<div className="space-y-4" key={stat.label}>
+					{STATS.map((stat) => (
+						<div className="space-y-4" key={stat.id}>
 							<div className="text-5xl font-bold text-foreground">{stat.value}</div>
-							<p className="text-muted-foreground">{stat.label}</p>
+							<p className="text-muted-foreground">{t(`stats.${stat.id}.name`)}</p>
 						</div>
 					))}
 				</div>

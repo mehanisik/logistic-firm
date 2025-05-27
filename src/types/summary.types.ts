@@ -1,5 +1,5 @@
 export interface SummaryFeature {
-	icon: string
+	icon: React.ReactNode
 	title: string
 	description: string
 }

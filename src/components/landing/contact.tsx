@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import type { OfficeLocation } from "@/types/contact.types"
 import { IconBuildingSkyscraper, IconHeadset, IconMail, IconMapPin, IconMessageCircle, IconSend, IconUser } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
@@ -12,13 +13,7 @@ import type { FormEvent } from "react"
 import { Cobe } from "../ui/cobe"
 import { SectionLayout } from "../ui/section-layout"
 
-interface OfficeLocation {
-	name: string
-	addressLines: string[]
-	isHub?: boolean
-}
-
-export default function Contact() {
+export default function ContactUs() {
 	const t = useTranslations("Contact")
 	const officeLocations = t.raw("officeLocations") as OfficeLocation[]
 

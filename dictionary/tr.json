@@ -332,5 +332,43 @@
 		"contact": "İletişim",
 		"openMenuAria": "Menüyü aç",
 		"closeMenuAria": "Menüyü kapat"
+	},
+	"Summary": {
+		"title": "Küresel Bağlantılar Kuruyor, Değer Sunuyoruz",
+		"description": "Atik Import Export, yüksek kaliteli temizlik ve bakım ürünlerinin uluslararası lojistiği ve dağıtımında uzmanlaşmıştır. İşletmeleri dünya çapında güvenilir, emniyetli ve zamanında çözümlerle buluşturuyoruz.",
+		"features": [
+			{ "icon": "Zap", "title": "Hızlı & Güvenilir", "description": "Dünya çapında zamanında, güvenli ve verimli teslimat." },
+			{ "icon": "Cpu", "title": "Uzmanlık", "description": "Temizlik ve bakım ürünleri lojistiğinde derin bilgi birikimi." },
+			{ "icon": "Lock", "title": "Güven & Emniyet", "description": "Şeffaf, güvenilir ve emniyetli ürün yönetimi." },
+			{ "icon": "Sparkles", "title": "Müşteri Odaklı", "description": "Her müşteri için özel çözümler ve adanmış destek." }
+		]
+	},
+	"FeatureAccordion": {
+		"title": "Neden Atik Import Export?",
+		"description": "Uçtan uca lojistik, kamyon taşımacılığı ve yakında doğrudan ürün tedariki—hepsi güven, dürüstlük ve müşteri memnuniyeti odaklı.",
+		"items": [
+			{ "icon": "Database", "title": "Uluslararası Lojistik", "content": "Temizlik ve bakım ürünlerinde güvenli ve zamanında küresel taşımacılık." },
+			{ "icon": "Fingerprint", "title": "Kamyon Taşımacılığı", "content": "Modern filo ve uzman ekip ile ekonomik ve güvenli bölgesel taşıma." },
+			{ "icon": "IdCard", "title": "Dağıtım (Çok Yakında)", "content": "Genişleyen ithalat-ihracat kanallarımızla doğrudan premium ürün erişimi." },
+			{ "icon": "ChartBarIncreasingIcon", "title": "Ortaklık & Büyüme", "content": "Karşılıklı başarı ve uluslararası büyüme için uzun vadeli iş birlikleri." }
+		]
+	},
+	"Stats": {
+		"title": "Atik Import Export Rakamlarla",
+		"description": "Küresel temizlik ve bakım ürünleri sektöründeki etki ve erişimimiz.",
+		"stats": [
+			{ "label": "Hizmet Verilen Ülke", "value": "50+" },
+			{ "label": "Yıllık Sevkiyat", "value": "10.000+" },
+			{ "label": "Zamanında Teslimat Oranı", "value": "%98" }
+		]
+	},
+	"LogoCloud": {
+		"title": "Lider Markaların Güvendiği",
+		"description": "Ortaklarımız ve müşterilerimiz, kalite ve güvenilirliğe olan bağlılığımızı yansıtarak dünyanın dört bir yanına yayılmıştır."
+	},
+	"Story": {
+		"title": "Hikayemiz: Pazarları Birleştiriyor, Fırsatlar Yaratıyoruz",
+		"description": "Güven, emek ve dürüstlük temelleriyle kurulan Atik Import Export, uluslararası pazarlar arasında hayati bir köprüye dönüştü. Müşterilerimiz için fırsatları başarıya dönüştürüyoruz.",
+		"cta": "Daha Fazla Bilgi"
 	}
 }

@@ -7,6 +7,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { IconBrandFacebook, IconBrandLinkedin, IconBrandTwitter, IconMoon, IconPlant2, IconSend, IconSun } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
+import Image from "next/image"
 import Link from "next/link"
 import * as React from "react"
 
@@ -94,7 +95,7 @@ export default function Footer() {
 			onMouseLeave={handleMouseLeave}
 		>
 			{cursor && (
-				<div aria-hidden="true" className="pointer-events-none absolute left-0 top-0 w-full h-full z-0" style={{}}>
+				<div aria-hidden="true" className="pointer-events-none absolute left-0 top-0 w-full h-full z-0">
 					<div
 						style={{
 							position: "absolute",

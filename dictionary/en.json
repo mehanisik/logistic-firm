@@ -256,21 +256,21 @@
 				"name": "Alexandre Moreau",
 				"role": "Founder & CEO",
 				"description": "With over 20 years in global trade and supply chain innovation, Alexandre leads Atik Logistics with a vision for seamless, technology-driven logistics ecosystems that empower international businesses.",
-				"avatarUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80",
+				"avatarUrl": "https://alt.tailus.io/images/team/member-one.webp",
 				"linkedinUrl": "https://linkedin.com/in/alexandremoreau-example"
 			},
 			{
 				"name": "Priya Sharma",
 				"role": "Head of Global Operations",
 				"description": "Priya is an expert in optimizing international freight operations and ensuring strict customs compliance. Her strategic oversight guarantees efficiency and reliability across our vast global network.",
-				"avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80",
+				"avatarUrl": "https://alt.tailus.io/images/team/member-two.webp",
 				"linkedinUrl": "https://linkedin.com/in/priyasharma-example"
 			},
 			{
 				"name": "Kenji Tanaka",
 				"role": "Director of Technology & Innovation",
 				"description": "Kenji spearheads the development of Atik Logistics' proprietary digital platform, integrating AI and IoT to provide clients with unparalleled shipment visibility and predictive analytics.",
-				"avatarUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80",
+				"avatarUrl": "https://alt.tailus.io/images/team/member-three.webp",
 				"linkedinUrl": "https://linkedin.com/in/kenjitanaka-example"
 			}
 		]
@@ -329,5 +329,43 @@
 		"contact": "Contact Us",
 		"openMenuAria": "Open menu",
 		"closeMenuAria": "Close menu"
+	},
+	"Summary": {
+		"title": "Building Global Connections, Delivering Value",
+		"description": "Atik Import Export specializes in seamless international logistics and distribution of high-quality cleaning and care products. We connect businesses worldwide with reliable, secure, and timely solutions.",
+		"features": [
+			{ "icon": "Zap", "title": "Fast & Reliable", "description": "Timely, secure, and efficient delivery across the globe." },
+			{ "icon": "Cpu", "title": "Specialized Expertise", "description": "Deep knowledge in handling cleaning and care products logistics." },
+			{ "icon": "Lock", "title": "Trust & Security", "description": "Transparent, dependable, and secure handling of your goods." },
+			{ "icon": "Sparkles", "title": "Customer-Centric", "description": "Tailored solutions and dedicated support for every client." }
+		]
+	},
+	"FeatureAccordion": {
+		"title": "Why Choose Atik Import Export?",
+		"description": "We offer end-to-end logistics, truck transportation, and soon, direct product sourcing—all with a focus on trust, integrity, and customer satisfaction.",
+		"items": [
+			{ "icon": "Database", "title": "International Logistics", "content": "Comprehensive global shipping for cleaning and care products, ensuring safe and timely delivery." },
+			{ "icon": "Fingerprint", "title": "Truck Transportation", "content": "Modern fleet and expert team for cost-effective, secure regional transport." },
+			{ "icon": "IdCard", "title": "Distribution (Coming Soon)", "content": "Direct access to premium cleaning and care products through our expanding import-export channels." },
+			{ "icon": "ChartBarIncreasingIcon", "title": "Partnership & Growth", "content": "Long-term, collaborative relationships for mutual success and international expansion." }
+		]
+	},
+	"Stats": {
+		"title": "Atik Import Export in Numbers",
+		"description": "Our impact and reach in the global cleaning and care products sector.",
+		"stats": [
+			{ "label": "Countries Served", "value": "50+" },
+			{ "label": "Annual Shipments", "value": "10,000+" },
+			{ "label": "On-Time Delivery Rate", "value": "98%" }
+		]
+	},
+	"LogoCloud": {
+		"title": "Trusted by Leading Brands",
+		"description": "Our partners and clients span the globe, reflecting our commitment to quality and reliability."
+	},
+	"Story": {
+		"title": "Our Story: Bridging Markets, Creating Opportunities",
+		"description": "Founded on trust, hard work, and integrity, Atik Import Export has grown into a vital link between international markets. We turn opportunities into achievements for our clients.",
+		"cta": "Learn More"
 	}
 }

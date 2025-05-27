@@ -1,23 +1,11 @@
 import { BentoCard } from "@/components/ui/bento-card"
 import { SectionLayout } from "@/components/ui/section-layout"
+import type { AtikFeature } from "@/types/services.types"
 import { IconTruck } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
-import type { ReactNode } from "react"
 
-interface AtikFeature {
-	Icon: ReactNode
-	name: string
-	description: string
-	href: string
-	cta: string
-	badge?: string
-	background: string
-	className: string
-	altText: string
-}
-
-export default function ServicesSection() {
+export default function Services() {
 	const t = useTranslations("Services")
 	const atikStats = t.raw("stats") as { label: string; value: string }[]
 	const atikFeatures = t.raw("features") as AtikFeature[]
@@ -34,7 +22,7 @@ export default function ServicesSection() {
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
 						{atikStats.map((stat) => (
 							<div key={stat.label} className="text-center p-4 rounded-lg bg-background shadow-sm">
-								<div className="text-3xl md:text-4xl font-bold text-primary mb-1">{stat.value}</div>
+								<div className="text-3xl md:text-4xl font-bold text-primary mb-1 text-foreground">{stat.value}</div>
 								<div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
 							</div>
 						))}

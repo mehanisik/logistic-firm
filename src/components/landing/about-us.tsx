@@ -85,15 +85,21 @@ export default function AboutUs() {
 					<AnimatedScrollWords text={aboutUsText} />
 					<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 md:gap-8 mt-4 sm:mt-8">
 						<div className="text-center p-4 bg-muted/50 rounded-lg">
-							<div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-1 sm:mb-2">{t("yearsOfExpertiseValue")}</div>
+							<div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-1 sm:mb-2 text-foreground">
+								{t("yearsOfExpertiseValue")}
+							</div>
 							<div className="text-sm sm:text-base text-foreground font-medium">{t("yearsOfExpertiseLabel")}</div>
 						</div>
 						<div className="text-center p-4 bg-muted/50 rounded-lg">
-							<div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-1 sm:mb-2">{t("customerRetentionValue")}</div>
+							<div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-1 sm:mb-2 text-foreground">
+								{t("customerRetentionValue")}
+							</div>
 							<div className="text-sm sm:text-base text-foreground font-medium">{t("customerRetentionLabel")}</div>
 						</div>
 						<div className="text-center p-4 bg-muted/50 rounded-lg">
-							<div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-1 sm:mb-2">{t("globalClientsValue")}</div>
+							<div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-1 sm:mb-2 text-foreground">
+								{t("globalClientsValue")}
+							</div>
 							<div className="text-sm sm:text-base text-foreground font-medium">{t("globalClientsLabel")}</div>
 						</div>
 					</div>

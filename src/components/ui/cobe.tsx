@@ -101,7 +101,7 @@ export function Cobe({
       window.removeEventListener("resize", onResize); 
     };
 
-  }, [markers, baseColor, markerColor, glowColor ,theme]);
+  }, [markers, baseColor, markerColor, glowColor ,theme,rSpring]);
 
   return (
     <div

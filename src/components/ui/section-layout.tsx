@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils';
 import { ReactNode } from 'react';
 
 interface SectionLayoutProps {
+  id?: string;  
   children: ReactNode;
   className?: string;
   containerClassName?: string;
@@ -10,6 +11,7 @@ interface SectionLayoutProps {
 }
 
 export function SectionLayout({
+  id,
   children,
   className,
   containerClassName,
@@ -18,6 +20,7 @@ export function SectionLayout({
 }: SectionLayoutProps) {
   return (
     <section
+      id={id}
       className={cn(
         'w-full flex justify-center bg-background relative',
         !noPadding && 'py-24',

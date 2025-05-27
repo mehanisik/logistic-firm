@@ -1,43 +1,336 @@
 {
-  "Index": {
-    "boilerplateName": "Next.js için i18n Şablonu",
-    "title": "i18n ve Shadcn UI ile Next 15 Şablonu",
-    "description": "Çok dilli ve erişilebilir web uygulamaları için güçlü bir başlangıç noktası.",
-    "cloneRepository": "Depoyu klonla",
-    "leaveStar": "Yıldız bırak",
-    "howToUse": "Nasıl kullanılır",
-    "gettingStarted": "Başlarken",
-    "installation": "Kurulum",
-    "howToContribute": "Katkıda bulunma",
-    "omitrtlUsage": "OmitRTL Kullanımı",
-    "OmitRTLInstruction": "OmitRTL kullanmak için, RTL desteğini hariç tutmak istediğiniz öğeyi OmitRTL bileşeniyle sarmanız yeterlidir.",
-    "contribute": "Katkı sağla",
-    "installationSteps": {
-      "cloneRepository": "Depoyu klonla:",
-      "installDependencies": "Bağımlılıkları yükle:",
-      "startDevServer": "Geliştirme sunucusunu başlat:"
-    },
-    "contributeSteps": {
-      "fork": "Depoyu çatalla:",
-      "createBranch": "Yeni bir dal oluştur:",
-      "commit": "Değişiklikleri kaydet:",
-      "push": "Dalı gönder:",
-      "pullRequest": "Yeni bir çekme isteği oluştur"
-    },
-    "error": {
-      "server": "Sunucu iç hatası",
-      "sorry": "Üzgünüz, sunucumuzda beklenmeyen bir sorunla karşılaştık.",
-      "tryAgain": "Lütfen daha sonra tekrar deneyin.",
-      "returnHome": "Ana sayfaya dön"
-    }
-  },
-  "Footer": {
-    "copyright": "© 2025 Next.js için i18n Şablonu. MIT lisansı ile açık kaynak.",
-    "githubLink": "GitHub"
-  },
-  "Metadata": {
-    "title": "Next.js Uluslararasılaştırma Şablonu - Çok Dilli Başlangıç Noktası",
-    "description": "Next.js için Arapça, Çince, İngilizce, İspanyolca ve Japonca destekli i18n (uluslararasılaştırma) şablonu. Shadcn arayüzü, tema değiştirici ve RTL desteği içerir.",
-    "keywords": "Next.js, i18n, uluslararasılaştırma, Arapça, Çince, İngilizce, İspanyolca, Japonca, çok dilli, şablon, shadcn arayüzü, RTL desteği"
-  }
+	"Index": {
+		"boilerplateName": "Next.js i18n Şablonu",
+		"title": "i18n ve Shadcn UI ile Next 15 Şablonu",
+		"description": "Bir sonraki çok dilli, erişilebilir web uygulamanız için güçlü bir başlangıç noktası.",
+		"cloneRepository": "Depoyu Klonla",
+		"leaveStar": "Yıldız Bırak",
+		"howToUse": "Nasıl Kullanılır",
+		"gettingStarted": "Başlarken",
+		"installation": "Kurulum",
+		"howToContribute": "Nasıl Katkıda Bulunulur",
+		"omitrtlUsage": "OmitRTL Kullanımı",
+		"OmitRTLInstruction": "OmitRTL kullanmak için, RTL desteğini hariç tutmak istediğiniz bileşeni OmitRTL bileşeniyle sarmanız yeterlidir.",
+		"contribute": "Katkıda Bulun",
+		"installationSteps": {
+			"cloneRepository": "Depoyu klonla:",
+			"installDependencies": "Bağımlılıkları yükle:",
+			"startDevServer": "Geliştirme sunucusunu başlat:"
+		},
+		"contributeSteps": {
+			"fork": "Depoyu çatalla",
+			"createBranch": "Yeni bir dal oluştur:",
+			"commit": "Değişikliklerini kaydet:",
+			"push": "Dalı gönder:",
+			"pullRequest": "Yeni bir Çekme İsteği Oluştur"
+		},
+		"error": {
+			"server": "Dahili Sunucu Hatası",
+			"sorry": "Üzgünüz, sunucumuzda beklenmedik bir sorunla karşılaştık.",
+			"tryAgain": " Lütfen daha sonra tekrar deneyin.",
+			"returnHome": "Ana Sayfaya Dön"
+		}
+	},
+	"Footer": {
+		"copyright": "© {year} Atik Lojistik. Tüm Hakları Saklıdır. Global Ticaretteki Ortağınız.",
+		"githubLink": "GitHub",
+		"quickLinks": "Hızlı Bağlantılar",
+		"contactTitle": "Atik Lojistik ile İletişime Geçin",
+		"followUs": "Bizi Takip Edin",
+		"nav": {
+			"home": "Ana Sayfa",
+			"about": "Atik Lojistik Hakkında",
+			"services": "Hizmetlerimiz",
+			"blog": "Lojistik Analizleri",
+			"contact": "İletişim",
+			"track": "Gönderi Takibi"
+		},
+		"legal": {
+			"privacy": "Gizlilik Politikası",
+			"terms": "Hizmet Şartları",
+			"sitemap": "Site Haritası"
+		},
+		"social": {
+			"linkedin": "Atik Lojistik ile LinkedIn'de Bağlantı Kurun",
+			"twitter": "Atik Lojistik'i Twitter'da Takip Edin",
+			"facebook": "Atik Lojistik'i Facebook'ta Beğenin"
+		},
+		"newsletterPlaceholder": "e-posta.adresiniz@ornek.com",
+		"newsletterAriaLabel": "Bültene abone ol",
+		"companyName": "Atik Lojistik",
+		"address": "Global Merkez:\n123 Global Ticaret Kulesi, New York, NY 10001, ABD",
+		"phoneLabel": "Telefon: +1-555-LOGISTICS (564-4784)",
+		"emailLabel": "E-posta: inquiries@atiklogistics.com",
+		"newsletterDescription": "Atik Lojistik Insights ile global ticarette önde olun. En son sektör haberleri, mevzuat güncellemeleri ve tedarik zincirinizi optimize etmeye yönelik uzman ipuçları için abone olun."
+	},
+	"Metadata": {
+		"title": "Atik Lojistik | Global İthalat/İhracat ve Navlun Çözümleri",
+		"description": "Atik Lojistik, uzman uluslararası ithalat/ihracat, navlun yönlendirme, gümrük müşavirliği ve depolama hizmetleri sunar. Sorunsuz global ticaret için güvenilir ortağınız.",
+		"keywords": "lojistik, ithalat, ihracat, navlun, gümrükleme, uluslararası nakliye, tedarik zinciri, depolama, Atik Lojistik, global ticaret, kargo hizmetleri"
+	},
+	"Contact": {
+		"letsConnect": "Bağlantı Kuralım",
+		"title": "İletişime Geçin:",
+		"description": "Belirli bir gönderi sorgunuz olsun, kapsamlı bir lojistik danışmanlığına ihtiyacınız olsun ya da ortaklık fırsatlarını keşfetmek isteyin, global ekibimiz size yardımcı olmaya hazırdır.",
+		"quickContact": "Hızlı İletişim",
+		"generalInquiries": "Genel Sorularınız İçin:",
+		"salesAndQuotes": "Satış ve Teklifler İçin:",
+		"globalSupportHotline": "Global Destek Hattı:",
+		"sendUsAMessage": "Bize Mesaj Gönderin",
+		"fullName": "Tam Adınız",
+		"emailAddress": "E-posta Adresiniz",
+		"companyNameOptional": "Şirket Adı (İsteğe Bağlı)",
+		"yourMessage": "Mesajınız",
+		"submitYourInquiry": "Talebinizi Gönderin",
+		"ourGlobalPresence": "Global Varlığımız",
+		"namePlaceholder": "örn. Ayşe Yılmaz",
+		"emailPlaceholder": "siz@sirket.com",
+		"companyPlaceholder": "örn. Örnek A.Ş.",
+		"messagePlaceholder": "Lütfen lojistik ihtiyaçlarınızı veya sorunuzu ayrıntılı olarak açıklayın. Mal türü, menşe/varış yeri, tahmini hacim/sıklık vb. bilgileri ekleyin.",
+		"officeLocations": [
+			{
+				"name": "Global Merkez (New York, ABD)",
+				"addressLines": [
+					"123 Global Ticaret Kulesi",
+					"New York, NY 10001, ABD"
+				],
+				"isHub": true
+			},
+			{
+				"name": "Avrupa Merkezi (Rotterdam, Hollanda)",
+				"addressLines": [
+					"Liman Lojistik Merkezi, Maasvlakte",
+					"3199 XX Rotterdam, Hollanda"
+				],
+				"isHub": true
+			},
+			{
+				"name": "Asya-Pasifik Merkezi (Şanghay, Çin)",
+				"addressLines": [
+					"Okyanus Terminal Bir, Lujiazui",
+					"Şanghay 200120, Çin"
+				],
+				"isHub": true
+			}
+		]
+	},
+	"Testimonial": {
+		"title": "Dünya Çapında İşletmelerin Güvendiği",
+		"description": "Kritik ithalat/ihracat operasyonları ve global tedarik zinciri yönetimi için Atik Lojistik'e güvenen değerli müşterilerimizden doğrudan dinleyin.",
+		"testimonials": [
+			{
+				"author": {
+					"name": "Sarah Chen",
+					"handle": "Tedarik Zinciri Yöneticisi, TechStyle Inc.",
+					"avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80"
+				},
+				"text": "Atik Lojistik, uluslararası tedarik zincirimizi kökten değiştirdi. Proaktif iletişimleri ve verimli gümrükleme işlemleri sayesinde önemli ölçüde zaman ve maliyet tasarrufu sağladık. Global genişleme için gerçekten güvenilir bir ortak.",
+				"project": "Global Giyim Dağıtımı",
+				"companyLogoUrl": "/path/to/techstyle-logo.svg"
+			},
+			{
+				"author": {
+					"name": "David Miller",
+					"handle": "Operasyon Direktörü, Global Foods Ltd.",
+					"avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80"
+				},
+				"text": "Atik Lojistik ekibi sürekli olarak beklenenin ötesine geçiyor. Soğuk zincir çözümleriyle bozulabilir ürünlerin taşınmasındaki uzmanlıkları eşsiz. Teslimat sürelerinde ve ürün bütünlüğünde gözle görülür bir iyileşme kaydettik.",
+				"project": "Bozulabilir Ürün İhracatı",
+				"companyLogoUrl": "/path/to/globalfoods-logo.svg"
+			},
+			{
+				"author": {
+					"name": "Maria Rodriguez",
+					"handle": "CEO, Artisan Crafts Co.",
+					"avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80"
+				},
+				"text": "Yeni uluslararası pazarlara açılan büyüyen bir işletme olarak, Atik Lojistik'in sağladığı kritik rehberlik ve özel destek bizim için çok değerliydi. Kişiselleştirilmiş hizmetleri, karmaşık bir ithalat/ihracat sürecini basit ve yönetilebilir hale getirdi.",
+				"project": "Uluslararası Pazara Giriş"
+			},
+			{
+				"author": {
+					"name": "James Lee",
+					"handle": "Satın Alma Lideri, Advanced Machinery Corp.",
+					"avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80"
+				},
+				"text": "Büyük boyutlu makinelerin karmaşık bir proje kargo sevkiyatını Atik Lojistik'e emanet ettik. Titiz planlamaları, uygulamaları ve yerinde koordinasyonları kusursuzdu. Her türlü zorlu lojistik ihtiyacı için şiddetle tavsiye edilir.",
+				"project": "Büyük Boyutlu Makine Taşımacılığı",
+				"companyLogoUrl": "/path/to/amc-logo.svg"
+			}
+		]
+	},
+	"AboutUs": {
+		"aboutUsText": "Atik Lojistik'te bir hizmet sağlayıcıdan daha fazlasıyız; global pazarda yolunuzu bulmanızda stratejik ortağınızız. Yolculuğumuz on beş yıl önce yenilikçilik, müşteri odaklılık ve sürdürülebilir uygulamalara olan bağlılığımızla başladı. Olağanüstü ithalat ve ihracat çözümleri sunarak, işletmeleri verimlilik ve sarsılmaz güvenilirlikle yeni fırsatlara bağlıyoruz. Global başarınız için yolları inşa etmemize güvenin.",
+		"ourStory": "Hikayemiz",
+		"headline1": "Global Lojistikte Öncü,",
+		"headline2": "Temeli",
+		"headlineAccent": "Güven ve Yenilikçilik",
+		"subDescription": "Atik Lojistik, uluslararası ticareti basitleştirmeye adanmıştır. Kargonuzun sınırlar arasında sorunsuz ve verimli bir şekilde hareket etmesini sağlamak için en son teknolojiyi ve global bir ağı kullanarak kapsamlı ithalat/ihracat hizmetleri sunuyoruz.",
+		"partnerWithUs": "Bizimle Ortak Olun",
+		"yearsOfExpertiseValue": "15+",
+		"yearsOfExpertiseLabel": "Yıllık Uzmanlık",
+		"customerRetentionValue": "%99.5",
+		"customerRetentionLabel": "Müşteri Bağlılığı",
+		"globalClientsValue": "5000+",
+		"globalClientsLabel": "Global Müşteri"
+	},
+	"Hero": {
+		"imageAlt": "Dünya haritası üzerinde birbirine bağlı çizgilerle global lojistik ağı konsepti",
+		"headline1": "Atik Lojistik:",
+		"headline2": "Global Ticareti Kolaylaştırıyor, Dünyanızı Taşıyoruz.",
+		"description": "Atik Lojistik ile uluslararası taşımacılığın karmaşıklıklarında yol alın. Kesintisiz ithalat, ihracat ve tedarik zinciri yönetimi için kapsamlı, teknoloji odaklı çözümler sunarak işinizi benzersiz verimlilik ve güvenilirlikle dünya pazarlarına bağlıyoruz.",
+		"getAQuote": "Teklif Alın",
+		"exploreOurServices": "Hizmetlerimizi Keşfedin"
+	},
+	"Services": {
+		"coreServices": "Temel Hizmetlerimiz",
+		"headline": "Bağlantılı Bir Dünya İçin Uçtan Uca Lojistik",
+		"description": "Atik Lojistik olarak, tedarik zincirinizi optimize etmek, karmaşıklıkları azaltmak ve işinizi global sahnede ileriye taşımak için tasarlanmış kapsamlı bir ithalat/ihracat hizmetleri paketi sunuyoruz.",
+		"stats": [
+			{ "label": "Hizmet Verilen Ülke", "value": "180+" },
+			{ "label": "Yıllık Gönderi", "value": "1.2M+" },
+			{ "label": "Uygunluk Oranı", "value": "%99.9" },
+			{ "label": "Müşteri Memnuniyeti", "value": "4.9/5" }
+		],
+		"features": [
+			{
+				"name": "Global Navlun Yönlendirme",
+				"description": "İşletmenizi 180'den fazla ülkeye bağlayan kesintisiz hava, deniz ve kara navlun çözümleri. Tüm kargo türleri için optimize edilmiş rotalar, rekabetçi fiyatlar ve zamanında teslimatlar sağlıyoruz.",
+				"href": "/service/freight-forwarding",
+				"cta": "Yönlendirmeyi Keşfet",
+				"badge": "Temel Hizmet",
+				"altText": "Atik Lojistik kamyon filosu otoyolda kargo taşıyor",
+				"background": "https://images.unsplash.com/photo-1593617761943-9099951a0769?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+				"className": "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3"
+			},
+			{
+				"name": "Akıllı Depolama ve Sipariş Karşılama",
+				"description": "Gelişmiş envanter yönetimi, sipariş karşılama ve kit oluşturma ve çapraz sevkiyat gibi katma değerli hizmetler sunan güvenli, stratejik konumlu depolama.",
+				"href": "/service/warehousing",
+				"cta": "Tesisleri Görüntüle",
+				"badge": "Teknoloji Destekli",
+				"altText": "Otomatik sistemlere sahip modern bir Atik Lojistik deposunun içi",
+				"background": "https://plus.unsplash.com/premium_photo-1733266897023-8ef16ad9350a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+				"className": "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3"
+			},
+			{
+				"name": "Global Ticaret Görünürlüğü",
+				"description": "Birleşik dijital platformumuz aracılığıyla uçtan uca gönderi takibi. Tam tedarik zinciri şeffaflığı için gerçek zamanlı bilgiler, tahmini ETA'lar ve özel raporlama elde edin.",
+				"href": "/track-shipment",
+				"cta": "Kargonuzu Takip Edin",
+				"badge": "Canlı Güncellemeler",
+				"altText": "Atik Lojistik için global gönderi takibini gösteren dijital arayüz",
+				"background": "https://images.unsplash.com/photo-1713859326033-f75e04439c3e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+				"className": "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4"
+			},
+			{
+				"name": "Gümrük Müşavirliği ve Uygunluk",
+				"description": "Karmaşık uluslararası ticaret düzenlemelerinde uzman navigasyon. Lisanslı müşavirlerimiz hızlı gümrükleme, gümrük vergisi optimizasyonu ve tam uygunluk sağlar.",
+				"href": "/service/customs-brokerage",
+				"cta": "Uygunluğu Sağla",
+				"badge": "Lisanslı Uzmanlar",
+				"altText": "Bir limanda yüklenen konteyner gemisi, Atik Lojistik gümrük operasyonlarını simgeliyor",
+				"background": "https://plus.unsplash.com/premium_photo-1682141618819-cc11059daf9a?q=80&w=2132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+				"className": "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2"
+			},
+			{
+				"name": "Özel ve Proje Kargo",
+				"description": "Büyük boyutlu, tehlikeli, bozulabilir veya yüksek değerli mallar için özel lojistik. Karmaşık proje kargolarını planlamadan teslimata kadar hassasiyetle yönetiyoruz.",
+				"href": "/service/project-cargo",
+				"cta": "Projenizi Görüşün",
+				"badge": "Özel Çözümler",
+				"altText": "Atik Lojistik proje kargo hizmetlerini temsil eden özel ağır makinelerin taşınması",
+				"background": "https://images.unsplash.com/photo-1601912552080-0fb89fd08042?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+				"className": "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4"
+			}
+		]
+	},
+	"Team": {
+		"leadership": "Liderliğimiz",
+		"headline1": "Uzmanlarla Tanışın",
+		"headline2": "Sizin",
+		"headlineAccent": "Lojistik Başarınızı Sağlayan",
+		"description": "Deneyimli lojistik profesyonellerinden oluşan özel ekibimiz, derin endüstri deneyimini yenilikçi çözümlere olan tutkuyla birleştirerek kargonuzun her zaman en yetenekli ellerde olmasını sağlar.",
+		"joinOurTeam": "Ekibimize Katılın",
+		"members": [
+			{
+				"name": "Alexandre Moreau",
+				"role": "Kurucu ve CEO",
+				"description": "Global ticaret ve tedarik zinciri yenilikçiliğinde 20 yılı aşkın deneyimiyle Alexandre, uluslararası işletmeleri güçlendiren sorunsuz, teknoloji odaklı lojistik ekosistemleri vizyonuyla Atik Lojistik'e liderlik ediyor.",
+				"avatarUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80",
+				"linkedinUrl": "https://linkedin.com/in/alexandremoreau-example"
+			},
+			{
+				"name": "Priya Sharma",
+				"role": "Global Operasyonlar Başkanı",
+				"description": "Priya, uluslararası navlun operasyonlarını optimize etme ve sıkı gümrük uyumunu sağlama konusunda uzmandır. Stratejik gözetimi, geniş global ağımız genelinde verimlilik ve güvenilirliği garanti eder.",
+				"avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80",
+				"linkedinUrl": "https://linkedin.com/in/priyasharma-example"
+			},
+			{
+				"name": "Kenji Tanaka",
+				"role": "Teknoloji ve Yenilikçilik Direktörü",
+				"description": "Kenji, müşterilere benzersiz gönderi görünürlüğü ve tahmini analitik sağlamak için yapay zeka ve IoT'yi entegre ederek Atik Lojistik'in tescilli dijital platformunun geliştirilmesine öncülük ediyor.",
+				"avatarUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80",
+				"linkedinUrl": "https://linkedin.com/in/kenjitanaka-example"
+			}
+		],
+		"connectOnLinkedIn": "LinkedIn'de Bağlan"
+	},
+	"ExtraServices": {
+		"headline": "Atik Lojistik: Özel Hizmetler",
+		"description": "Atik Lojistik, sektörlere özel çözümlerle işinizi ileriye taşır. İhtiyacınıza uygun uzman lojistik hizmetlerimizi keşfedin.",
+		"highlights": [
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1577563908411-579749246d82?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+				"altText": "Atik Lojistik ilaç sevkiyatları için sıcaklık kontrollü kargo konteynerleri",
+				"title": "İlaç ve Soğuk Zincir Lojistiği",
+				"category": "Özel Çözümler",
+				"description": "Atik Lojistik, ilaçlar ve sıcaklığa duyarlı mallar için doğrulanmış, GDP uyumlu soğuk zincir çözümleri sunarak, gerçek zamanlı izleme ile menşeden varış noktasına kadar ürün bütünlüğünü sağlar.",
+				"stat": "<2°C Dalgalanma Korundu",
+				"ctaLink": "/service/cold-chain-logistics",
+				"ctaText": "Soğuk Zinciri Keşfet"
+			},
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1605711217046-d3885ce4c651?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+				"altText": "Atik Lojistik endüstriyel bir proje için ağır makine taşımacılığını koordine ediyor",
+				"title": "Endüstriyel Proje Kargo Yönetimi",
+				"category": "Ağır ve Büyük Boyutlu",
+				"description": "Ağır yük, gabari dışı ve karmaşık proje kargolarının uzman elleçlenmesi. Atik Lojistik, endüstriyel projeler için rota etütleri, özel ekipman ve yerinde koordinasyon dahil anahtar teslim çözümler sunar.",
+				"stat": "500 Tona Kadar Kapasite",
+				"ctaLink": "/service/project-cargo",
+				"ctaText": "Projenizi Detaylandırın"
+			},
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1561069934-eee225952461?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+				"altText": "Atik Lojistik tarafından çevre dostu sevkiyat için kullanılan sürdürülebilir ambalaj malzemeleri",
+				"title": "Sürdürülebilir ve Yeşil Lojistik",
+				"category": "Çevre Bilinçli Sevkiyat",
+				"description": "Çevresel etkiyi azaltmaya kararlı olan Atik Lojistik, çevre bilinçli işletmeler için karbon-nötr sevkiyat seçenekleri, yakıt verimliliği için rota optimizasyonu ve sürdürülebilir ambalaj çözümleri sunar.",
+				"stat": "%20 CO₂ Azaltma Hedefi",
+				"ctaLink": "/sustainability",
+				"ctaText": "Yeşil Girişimlerimiz"
+			},
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+				"altText": "Bir Atik Lojistik sipariş karşılama merkezinde işlenen e-ticaret paketleri",
+				"title": "E-ticaret Sipariş Karşılama ve Son Mil Teslimatı",
+				"category": "Perakende ve E-ticaret",
+				"description": "Çevrimiçi perakendeciler için envanter yönetimi, toplama ve paketleme hizmetleri ve müşteri memnuniyetini artırmak ve büyümeyi hızlandırmak için verimli son mil teslimat ağları dahil entegre çözümler.",
+				"stat": "%99.8 Sipariş Doğruluğu",
+				"ctaLink": "/service/ecommerce-fulfillment",
+				"ctaText": "E-ticaretinizi Ölçeklendirin"
+			}
+		]
+	},
+	"Navbar": {
+		"brand": "Atik",
+		"home": "Ana Sayfa",
+		"about": "Hakkımızda",
+		"service": "Hizmetler",
+		"blog": "Blog",
+		"contact": "İletişim",
+		"openMenuAria": "Menüyü aç",
+		"closeMenuAria": "Menüyü kapat"
+	}
 }

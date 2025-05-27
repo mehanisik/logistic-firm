@@ -1,99 +1,121 @@
 "use client"
-import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { cn } from "@/lib/utils"
-import {
-	IconBook,
-	IconFlag,
-	IconHome,
-	IconInfoCircle,
-	IconMoon,
-	IconPhone,
-	IconSun,
-	IconTruckDelivery,
-} from "@tabler/icons-react"
-import { useTheme } from "next-themes"
+
+import { IconMenu2, IconPlant2, IconX } from "@tabler/icons-react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useState } from "react"
+import LanguageSwitcher from "../language-switcher"
+import { ThemeSwitcher } from "../theme-switcher"
+import { useState, useEffect, useRef } from "react"
+import { motion, useAnimation } from "framer-motion"
 
-const navLinks = [
-	{ href: "/", label: "Home", icon: IconHome },
-	{ href: "/about", label: "About Us", icon: IconInfoCircle },
-	{ href: "/service", label: "Service", icon: IconTruckDelivery },
-	{ href: "/blog", label: "Blog", icon: IconBook },
-	{ href: "/contact", label: "Contact Us", icon: IconPhone },
-]
+export default function Navbar() {
+	const [mobileOpen, setMobileOpen] = useState(false)
 
-const languages = [
-	{ code: "en", label: "English", icon: <IconFlag className="w-5 h-5 text-blue-600" /> },
-	{ code: "tr", label: "Türkçe", icon: <IconFlag className="w-5 h-5 text-red-600" /> },
-]
+	// Scroll direction logic
+	const lastScrollY = useRef(0)
+	const [show, setShow] = useState(true)
 
-export function Navbar({ className }: { className?: string }) {
-	const pathname = usePathname()
-	const { theme, setTheme } = useTheme()
-	const [currentLanguage, setCurrentLanguage] = useState("en")
-
-	// Language switcher logic (simplified, you may want to sync with cookies or context)
-	const handleLanguageChange = (lang: string) => {
-		setCurrentLanguage(lang)
-		// Add your routing logic here
-	}
+	useEffect(() => {
+		if (mobileOpen) return // Don't hide navbar when mobile menu is open
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY
+			if (currentScrollY < 10) {
+				setShow(true)
+			} else if (currentScrollY > lastScrollY.current) {
+				setShow(false)
+			} else {
+				setShow(true)
+			}
+			lastScrollY.current = currentScrollY
+		}
+		window.addEventListener("scroll", handleScroll)
+		return () => window.removeEventListener("scroll", handleScroll)
+	}, [mobileOpen])
 
 	return (
-		<header
-			className={cn(
-				"px-4 lg:px-6 h-16 flex items-center justify-between border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50 w-full",
-				className,
+		<>
+			<motion.header
+				initial={{ y: 0 }}
+				animate={{ y: show ? 0 : -80 }}
+				transition={{ type: "spring", stiffness: 300, damping: 30 }}
+				className="border-b border-white/10 bg-transparent shadow-lg sticky top-0 z-50 w-full transition-colors duration-300"
+			>
+				<div className="max-w-7xl mx-auto h-14 flex items-center px-2 sm:px-4">
+					<div className="flex justify-between items-center w-full h-full">
+						<div className="flex items-center">
+							<Link href="/" className="flex items-center space-x-2">
+								<IconPlant2 />
+								<span className="text-xl font-bold text-nexmove-primary">Atik</span>
+							</Link>
+						</div>
+						<nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+							<Link href="/" className="">
+								Home
+							</Link>
+							<Link href="/about-us" className="">
+								About us
+							</Link>
+							<Link href="/service" className="">
+								Service
+							</Link>
+							<Link href="/blog" className="">
+								Blog
+							</Link>
+							<Link href="/contact-us" className="">
+								Contact Us
+							</Link>
+							<LanguageSwitcher />
+							<ThemeSwitcher />
+						</nav>
+
+						<button
+							className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+							aria-label="Open menu"
+							onClick={() => setMobileOpen(true)}
+						>
+							<IconMenu2 size={28} />
+						</button>
+					</div>
+				</div>
+			</motion.header>
+
+			{mobileOpen && (
+				<div className="fixed inset-0 z-50 bg-background/95 flex flex-col">
+					<div className="flex items-center justify-between h-14 px-4 border-b">
+						<Link href="/" className="flex items-center space-x-2" onClick={() => setMobileOpen(false)}>
+							<IconPlant2 />
+							<span className="text-xl font-bold text-nexmove-primary">Atik</span>
+						</Link>
+						<button
+							className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+							aria-label="Close menu"
+							onClick={() => setMobileOpen(false)}
+						>
+							<IconX size={28} />
+						</button>
+					</div>
+					<nav className="flex flex-col gap-2 px-6 py-6 text-lg">
+						<Link href="/" onClick={() => setMobileOpen(false)} className="py-2">
+							Home
+						</Link>
+						<Link href="/about-us" onClick={() => setMobileOpen(false)} className="py-2">
+							About us
+						</Link>
+						<Link href="/service" onClick={() => setMobileOpen(false)} className="py-2">
+							Service
+						</Link>
+						<Link href="/blog" onClick={() => setMobileOpen(false)} className="py-2">
+							Blog
+						</Link>
+						<Link href="/contact-us" onClick={() => setMobileOpen(false)} className="py-2">
+							Contact Us
+						</Link>
+						<div className="flex gap-4 mt-4 items-center">
+							<LanguageSwitcher />
+							<ThemeSwitcher />
+						</div>
+					</nav>
+				</div>
 			)}
-		>
-			<Link className="flex items-center gap-2" href="/">
-				<IconTruckDelivery className="h-6 w-6 text-primary" />
-				<span className="font-bold text-xl">Logistic Firm</span>
-			</Link>
-			<nav className="flex items-center gap-2 sm:gap-4">
-				{navLinks.map(({ href, label, icon: Icon }) => (
-					<Link
-						key={href}
-						href={href}
-						className={cn(
-							"flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
-							pathname === href ? "bg-accent text-accent-foreground" : "text-muted-foreground",
-						)}
-					>
-						<Icon className="w-5 h-5" />
-						<span>{label}</span>
-					</Link>
-				))}
-				{/* Language Switcher */}
-				<DropdownMenu>
-					<DropdownMenuTrigger asChild>
-						<Button variant="ghost" size="icon" className="relative">
-							{languages.find(l => l.code === currentLanguage)?.icon || <IconFlag className="w-5 h-5" />}
-						</Button>
-					</DropdownMenuTrigger>
-					<DropdownMenuContent align="end">
-						{languages.map(lang => (
-							<DropdownMenuItem key={lang.code} onClick={() => handleLanguageChange(lang.code)}>
-								<span className="mr-2">{lang.icon}</span>
-								{lang.label}
-							</DropdownMenuItem>
-						))}
-					</DropdownMenuContent>
-				</DropdownMenu>
-				{/* Theme Switcher */}
-				<Button
-					variant="ghost"
-					size="icon"
-					onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-					aria-label="Toggle theme"
-				>
-					{theme === "dark" ? <IconMoon className="w-5 h-5" /> : <IconSun className="w-5 h-5" />}
-				</Button>
-			</nav>
-		</header>
+		</>
 	)
 }
-
-export default Navbar

@@ -1,14 +1,23 @@
-import HomeIndex from "@/components/pages/home-index"
-import { setRequestLocale } from "next-intl/server"
-import { use } from "react"
+import AboutUs from '@/components/pages/about-us';
+import Contact from '@/components/pages/contact';
+import ExtraServices from '@/components/pages/extra-services';
+import Hero from '@/components/pages/hero';
+import Services from '@/components/pages/services';
+import Team from '@/components/pages/team';
+import Testimonial from '@/components/pages/testimonial';
+import Footer from '@/components/ui/footer-section';
 
-export default function HomePage({
-	params,
-}: {
-	params: Promise<{ locale: string }>
-}) {
-	const { locale } = use(params)
-	setRequestLocale(locale)
-
-	return <HomeIndex />
+export default function HomePage() {
+  return (
+    <main>
+      <Hero />
+      <Services />
+      <ExtraServices />
+      <AboutUs />
+      <Testimonial />
+      <Team />
+      <Contact />
+      <Footer />
+    </main>
+  );
 }

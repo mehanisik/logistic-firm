@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Flower2Icon } from "lucide-react";
 
-export function Preloader() {
+export default function Preloader() {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export function Preloader() {
     <AnimatePresence>
       {show && (
        <motion.div
-       className="h-screen w-screen flex items-center justify-center bg-black text-white"
+       className="z-50 h-screen w-screen flex items-center justify-center bg-black text-white"
        initial={{ opacity: 1 }}
        animate={{ opacity: 0 }}
        transition={{ delay: 2.5, duration: 1 }}

@@ -1,75 +1,58 @@
 "use client"
 import { type MotionValue, motion, useScroll, useTransform } from "framer-motion"
+import { MessageCircleIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { type ReactNode, useRef } from "react"
 import { SectionLayout } from "../ui/section-layout"
 
-interface AnimatedWordProps {
+type WordProps = {
 	children: ReactNode
 	progress: MotionValue<number>
 	range: [number, number]
 }
+const Word = ({ children, progress, range }: WordProps) => {
+	const opacity = useTransform(progress, range, [0, 1])
 
-const AnimatedWord = ({ children, progress, range }: AnimatedWordProps) => {
-	const opacity = useTransform(progress, range, [0.1, 1])
-	const fontWeight = useTransform(progress, range, [400, 700])
 	return (
-		<span className="relative inline-block">
-			<span className="absolute inset-0 select-none text-foreground/10" aria-hidden="true">
-				{children}
-			</span>
-			<motion.span style={{ opacity, fontWeight }} className="text-foreground">
-				{children}
-			</motion.span>
+		<span className={"relative mr-4 mt-4"}>
+			<span className={"absolute opacity-20"}>{children}</span>
+
+			<motion.span style={{ opacity: opacity }}>{children}</motion.span>
 		</span>
-	)
-}
-
-interface AnimatedScrollWordsProps {
-	text: string
-	className?: string
-}
-
-function AnimatedScrollWords({ text, className }: AnimatedScrollWordsProps) {
-	const containerRef = useRef<HTMLParagraphElement>(null)
-	const { scrollYProgress } = useScroll({
-		target: containerRef,
-		offset: ["start 0.9", "start 0.25"],
-	})
-	const words = text.split(" ")
-	return (
-		<p
-			ref={containerRef}
-			className={`flex flex-wrap text-2xl sm:text-2xl md:text-3xl mb-8 sm:mb-12 leading-relaxed sm:leading-loose text-muted-foreground gap-x-[0.4em] gap-y-[0.1em] ${className || ""}`}
-			aria-label={text}
-		>
-			{words.map((word, i) => {
-				const start = i / words.length
-				const end = start + 1 / words.length
-				return (
-					<AnimatedWord key={`${word}-${i}-${crypto.randomUUID()}`} progress={scrollYProgress} range={[start, end]}>
-						{word}
-					</AnimatedWord>
-				)
-			})}
-		</p>
 	)
 }
 
 export default function AboutUs() {
 	const t = useTranslations("AboutUs")
 	const aboutUsText = t("aboutUsText")
+	const container = useRef(null)
+	const { scrollYProgress } = useScroll({
+		target: container,
+		offset: ["start end", "start start"],
+	})
+	const words = aboutUsText.split(" ")
+
 	return (
-		<SectionLayout id="about-us" className="relative px-0 py-0">
-			<div className="relative flex flex-col md:flex-row items-center md:items-stretch justify-center min-h-[60vh] py-16 md:py-28 px-4 md:px-12 gap-8 md:gap-0">
-				<div className="flex-1 flex items-center md:items-start justify-start md:justify-start">
-					<h2 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight mb-6 md:mb-0 drop-shadow-xl">
-						{t("headline1")} <span className="text-primary">{t("headlineAccent")}</span>
-					</h2>
+		<SectionLayout id="about-us">
+			<div className="relative flex flex-col items-center justify-center min-h-[60vh]">
+				<div className="text-center mb-8 md:mb-12 lg:mb-20">
+					<div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-semibold mb-4">
+						<MessageCircleIcon />
+						{t("ourStory")}
+					</div>
+					<h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-4 md:mb-6 px-4">{t("headline1")}</h2>
 				</div>
-				<div className="flex-1 flex flex-col items-start justify-center max-w-2xl">
-					<AnimatedScrollWords text={aboutUsText} className="text-white font-bold text-left md:text-2xl lg:text-3xl drop-shadow-xl" />
-				</div>
+				<p ref={container} className={"flex text-3xl md:text-6xl p-10 flex-wrap"}>
+					{words.map((word, i) => {
+						const start = i / words.length
+						const end = start + 1 / words.length
+						return (
+							<Word key={i} progress={scrollYProgress} range={[start, end]}>
+								{word}
+							</Word>
+						)
+					})}
+				</p>
 			</div>
 		</SectionLayout>
 	)

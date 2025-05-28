@@ -6,7 +6,7 @@ import Image from "next/image"
 export default function FeaturesSummary() {
 	const t = useTranslations("Summary")
 	return (
-		<SectionLayout noPadding containerClassName="max-w-7xl bg-primary/10 p-10">
+		<SectionLayout noPadding containerClassName="bg-primary/5 p-10">
 			<div className="mx-auto max-w-5xl space-y-12 px-6">
 				<div className="relative z-10 grid items-center gap-4 md:grid-cols-2 md:gap-12">
 					<h2 className="text-4xl font-semibold text-foreground">{t("title")}</h2>

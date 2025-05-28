@@ -10,7 +10,7 @@ export default function TeamMembers() {
 	return (
 		<SectionLayout>
 			<div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10 md:mb-16 gap-6 md:gap-8">
-				<div className="md:w-full">
+				<div className="md:w-full text-center">
 					<div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-semibold mb-3 uppercase tracking-wider">
 						<IconUsersGroup size={16} />
 						{t("leadership")}

@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import { forwardRef, HTMLAttributes, ReactNode } from 'react';
+import { Badge } from './badge';
 
 interface SectionLayoutProps extends Omit<HTMLAttributes<HTMLElement>, 'id'> {
   id?: string;
@@ -8,6 +9,7 @@ interface SectionLayoutProps extends Omit<HTMLAttributes<HTMLElement>, 'id'> {
   containerClassName?: string;
   fullWidth?: boolean;
   noPadding?: boolean;
+  sectionLabel?: ReactNode;
 }
 
 
@@ -19,6 +21,7 @@ export const SectionLayout = forwardRef<HTMLElement, SectionLayoutProps>(
     containerClassName,
     fullWidth = false,
     noPadding = false,
+    sectionLabel,
     ...props
   }, ref) => {
     return (

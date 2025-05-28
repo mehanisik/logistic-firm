@@ -6,11 +6,9 @@ import Hero from "@/components/landing/hero"
 import LogoCloud from "@/components/landing/logo-cloud"
 import Services from "@/components/landing/services"
 import Stats from "@/components/landing/stats"
-import Story from "@/components/landing/story"
 import Summary from "@/components/landing/summary"
 import TeamMembers from "@/components/landing/team"
 import Tesimonials from "@/components/landing/testimonial"
-import Navbar from "@/components/ui/navbar"
 
 export default function HomePage() {
 	return (

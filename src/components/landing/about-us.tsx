@@ -1,10 +1,7 @@
 "use client"
 import { type MotionValue, motion, useScroll, useTransform } from "framer-motion"
 import { useTranslations } from "next-intl"
-import Image from "next/image"
-import Link from "next/link"
 import { type ReactNode, useRef } from "react"
-import { Button } from "../ui/button"
 import { SectionLayout } from "../ui/section-layout"
 
 interface AnimatedWordProps {

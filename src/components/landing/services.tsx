@@ -22,7 +22,7 @@ export default function Services() {
 						{SERVICES_STATS.map((stat) => (
 							<div key={stat.id} className="text-center p-4 rounded-lg bg-background shadow-sm">
 								<div className="text-3xl md:text-4xl font-bold text-primary mb-1">{stat.value}</div>
-								<div className="text-sm text-muted-foreground font-medium">{t(`services.${stat.id}.name`)}</div>
+								<div className="text-sm text-muted-foreground font-medium">{t(`stats.${stat.id}.name`)}</div>
 							</div>
 						))}
 					</div>
@@ -32,12 +32,12 @@ export default function Services() {
 					{SERVICES.map((feature) => (
 						<BentoCard
 							key={feature.id}
-							name={t(`services.${feature.id}.name`)}
+							name={t(`features.${feature.id}.name`)}
 							className={feature.className}
 							Icon={feature.Icon}
-							description={t(`services.${feature.id}.description`)}
-							cta={t(`services.${feature.id}.cta`)}
-							badge={t(`services.${feature.id}.badge`)}
+							description={t(`features.${feature.id}.description`)}
+							cta={t(`features.${feature.id}.cta`)}
+							badge={t(`features.${feature.id}.badge`)}
 							href={feature.href}
 							background={
 								<Image

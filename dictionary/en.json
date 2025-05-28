@@ -31,7 +31,6 @@
 			"returnHome": "Return home"
 		}
 	},
-
 	"Footer": {
 		"copyright": "© {year} Atik Logistics. All Rights Reserved. Your Partner in Global Trade.",
 		"githubLink": "GitHub",
@@ -59,7 +58,7 @@
 		"newsletterPlaceholder": "your.email@example.com",
 		"newsletterAriaLabel": "Subscribe to newsletter",
 		"companyName": "Atik Logistics",
-		"address": "Global Headquarters:\n123 Global Trade Tower, New York, NY 10001, USA",
+		"address": "Global Headquarters:\n123 Global Trade Tower, New York, NY 10001, USA", 
 		"phoneLabel": "Phone: +1-555-LOGISTICS (564-4784)",
 		"emailLabel": "Email: inquiries@atiklogistics.com",
 		"newsletterDescription": "Stay ahead in global trade with Atik Logistics Insights. Subscribe for the latest industry news, regulatory updates, and expert tips on optimizing your supply chain."
@@ -91,15 +90,15 @@
 		"officeLocations": {
 			"global-headquarters": {
 				"name": "Global Headquarters",
-				"addressLines": ["ORTA MAH. DEMİRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA/ İSTANBUL"]
+				"addressLines": "ORTA MAH. DEMİRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA/ İSTANBUL"
 			},
 			"european-hub": {
 				"name": "European Hub",
-				"addressLines": ["ul.Marszałkowska 66, 00-401, Warszawa, Poland"]
+				"addressLines": "ul.Marszałkowska 66, 00-401, Warszawa, Poland"
 			},
 			"asia-pacific-hub": {
 				"name": "Asia-Pacific Hub",
-				"addressLines": ["Tehran, Iran"]
+				"addressLines": "Tehran, Iran"
 			}
 		}
 	},
@@ -156,7 +155,7 @@
 		"imageAlt": "Global logistics network concept with interconnected lines over a world map",
 		"headline1": "Atik Logistics:",
 		"headline2": "Streamlining Global Trade, Delivering Your World.",
-		"description": "Navigate the complexities of international shipping with Atik Logistics. We offer comprehensive, technology-driven solutions for seamless import, export, and supply chain management, connecting your business to markets worldwide with unparalleled efficiency and reliability.",
+		"description": "Navigate the complexities of international shipping with Atik Logistics. ",
 		"getAQuote": "Get a Quote",
 		"exploreOurServices": "Explore Our Services"
 	},
@@ -199,7 +198,7 @@
 			},
 			"customs-brokerage":{
 				"name": "Customs Brokerage",
-				"description": "Expert handling of customs clearance, documentation, and compliance for all import/export shipments, ensuring smooth通关流程.",
+				"description": "Expert handling of customs clearance, documentation, and compliance for all import/export shipments, ensuring smooth customs procedures.",
 				"cta": "Explore Customs",
 				"badge": "Core Service",
 				"altText": "Atik Logistics customs clearance process"
@@ -291,22 +290,48 @@
 	"Summary": {
 		"title": "Building Global Connections, Delivering Value",
 		"description": "Atik Import Export specializes in seamless international logistics and distribution of high-quality cleaning and care products. We connect businesses worldwide with reliable, secure, and timely solutions.",
-		"features": [
-			{ "id": "fast-and-reliable", "icon": "Zap", "title": "Fast & Reliable", "description": "Timely, secure, and efficient delivery across the globe." },
-			{ "id": "specialized-expertise", "icon": "Cpu", "title": "Specialized Expertise", "description": "Deep knowledge in handling cleaning and care products logistics." },
-			{ "id": "trust-and-security", "icon": "Lock", "title": "Trust & Security", "description": "Transparent, dependable, and secure handling of your goods." },
-			{ "id": "customer-centric", "icon": "Sparkles", "title": "Customer-Centric", "description": "Tailored solutions and dedicated support for every client." }
-		]
+		"features": {
+			"fast-and-reliable": {
+				"title": "Fast & Reliable",
+				"description": "Timely, secure, and efficient delivery across the globe."
+			},
+			"specialized-expertise": {
+				"title": "Specialized Expertise",
+				"description": "Deep knowledge in handling cleaning and care products logistics."
+			},
+			"trust-and-security": {
+				"title": "Trust & Security",
+				"description": "Transparent, dependable, and secure handling of your goods."
+			},
+			"customer-centric": {
+				"title": "Customer-Centric",
+				"description": "Tailored solutions and dedicated support for every client."
+			}
+		}
+
 	},
 	"FeatureAccordion": {
 		"title": "Why Choose Atik Import Export?",
 		"description": "We offer end-to-end logistics, truck transportation, and soon, direct product sourcing—all with a focus on trust, integrity, and customer satisfaction.",
-		"items": [
-			{ "id": "international-logistics", "title": "International Logistics", "content": "Comprehensive global shipping for cleaning and care products, ensuring safe and timely delivery." },
-			{ "id": "truck-transportation", "title": "Truck Transportation", "content": "Modern fleet and expert team for cost-effective, secure regional transport." },
-			{ "id": "distribution", "title": "Distribution (Coming Soon)", "content": "Direct access to premium cleaning and care products through our expanding import-export channels." },
-			{ "id": "partnership-and-growth", "title": "Partnership & Growth", "content": "Long-term, collaborative relationships for mutual success and international expansion." }
-		]
+		"items": {
+			"international-logistics": {
+				"title": "International Logistics",
+				"content": "Comprehensive global shipping for cleaning and care products, ensuring safe and timely delivery."
+			},
+			"truck-transportation": {
+				"title": "Truck Transportation",
+				"content": "Modern fleet and expert team for cost-effective, secure regional transport."
+			},
+			"distribution": {
+				"title": "Distribution",
+				"content": "Direct access to premium cleaning and care products through our expanding import-export channels."
+			},
+			"partnership-and-growth": {
+				"title": "Partnership & Growth",
+				"content": "Long-term, collaborative relationships for mutual success and international expansion."
+			}
+		}
+
 	},
 	"Stats": {
 		"title": "Tailark in numbers",

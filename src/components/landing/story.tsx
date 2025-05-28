@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { SectionLayout } from "@/components/ui/section-layout"
 import { ChevronRight } from "lucide-react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
@@ -6,7 +7,7 @@ import Link from "next/link"
 export default function Story() {
 	const t = useTranslations("Story")
 	return (
-		<section className="py-16 md:py-32">
+		<SectionLayout className="py-16 md:py-32">
 			<div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
 				<img
 					className="rounded-(--radius) grayscale"
@@ -31,6 +32,6 @@ export default function Story() {
 					</div>
 				</div>
 			</div>
-		</section>
+		</SectionLayout>
 	)
 }

@@ -1,11 +1,12 @@
 import { InfiniteSlider } from "@/components/ui/infinite-slider"
 import { ProgressiveBlur } from "@/components/ui/progressive-blur"
+import { SectionLayout } from "@/components/ui/section-layout"
 import { useTranslations } from "next-intl"
 
 export default function LogoCloud() {
 	const t = useTranslations("LogoCloud")
 	return (
-		<section className="bg-background overflow-hidden py-16">
+		<SectionLayout className="bg-background overflow-hidden py-16">
 			<div className="group relative m-auto max-w-7xl px-6">
 				<div className="flex flex-col items-center md:flex-row">
 					<div className="md:max-w-44 md:border-r md:pr-6">
@@ -97,6 +98,6 @@ export default function LogoCloud() {
 					</div>
 				</div>
 			</div>
-		</section>
+		</SectionLayout>
 	)
 }

@@ -1,3 +1,4 @@
+import { SectionLayout } from "@/components/ui/section-layout"
 import { ATIK_SUMMARY_FEATURES } from "@/constants/summary.constant"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
@@ -5,7 +6,7 @@ import Image from "next/image"
 export default function FeaturesSummary() {
 	const t = useTranslations("Summary")
 	return (
-		<section className="py-16 md:py-32">
+		<SectionLayout className="py-16 md:py-32">
 			<div className="mx-auto max-w-5xl space-y-12 px-6">
 				<div className="relative z-10 grid items-center gap-4 md:grid-cols-2 md:gap-12">
 					<h2 className="text-4xl font-semibold text-foreground">{t("title")}</h2>
@@ -37,6 +38,6 @@ export default function FeaturesSummary() {
 					))}
 				</div>
 			</div>
-		</section>
+		</SectionLayout>
 	)
 }

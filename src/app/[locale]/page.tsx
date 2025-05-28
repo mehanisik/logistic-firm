@@ -19,11 +19,10 @@ export default function HomePage() {
 			<LogoCloud />
 			<Summary />
 			<FeatureAccordion />
-			<Story />
 			<Services />
-			<Stats />
 			<AboutUs />
 			<Tesimonials />
+			<Stats />
 			<TeamMembers />
 			<ContactUs />
 			<Footer />

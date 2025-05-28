@@ -58,7 +58,7 @@
 		"newsletterPlaceholder": "your.email@example.com",
 		"newsletterAriaLabel": "Subscribe to newsletter",
 		"companyName": "Atik Logistics",
-		"address": "Global Headquarters:\n123 Global Trade Tower, New York, NY 10001, USA", 
+		"address": "Global Headquarters:\n123 Global Trade Tower, New York, NY 10001, USA",
 		"phoneLabel": "Phone: +1-555-LOGISTICS (564-4784)",
 		"emailLabel": "Email: inquiries@atiklogistics.com",
 		"newsletterDescription": "Stay ahead in global trade with Atik Logistics Insights. Subscribe for the latest industry news, regulatory updates, and expert tips on optimizing your supply chain."
@@ -157,53 +157,54 @@
 		"headline2": "Streamlining Global Trade, Delivering Your World.",
 		"description": "Navigate the complexities of international shipping with Atik Logistics. ",
 		"getAQuote": "Get a Quote",
-		"exploreOurServices": "Explore Our Services"
+		"exploreOurServices": "Explore Our Services",
+		"contactUs": "Contact Us"
 	},
 	"Services": {
 		"coreServices": "Our Core Services",
 		"headline": "End-to-End Logistics for a Connected World",
 		"description": "At Atik Logistics, we provide a comprehensive suite of import/export services designed to optimize your supply chain, reduce complexities, and propel your business forward on the global stage.",
 		"stats": {
-			"countries-served":{
+			"countries-served": {
 				"name": "Countries Served"
 			},
-			"annual-shipments":{
+			"annual-shipments": {
 				"name": "Annual Shipments"
 			},
-			"client-satisfaction":{
+			"client-satisfaction": {
 				"name": "Client Satisfaction"
 			}
 		},
 		"features": {
-			"freight-forwarding":{
+			"freight-forwarding": {
 				"name": "Freight Forwarding",
 				"description": "Seamless air, sea, and land freight solutions connecting your business to over 180 countries. We ensure optimized routes, competitive rates, and timely deliveries for all cargo types.",
 				"cta": "Explore Forwarding",
 				"badge": "Core Service",
 				"altText": "Atik Logistics truck fleet moving cargo on a highway"
 			},
-			"warehousing":{
+			"warehousing": {
 				"name": "Warehousing",
 				"description": "Strategically located warehouses with advanced inventory management, order fulfillment, and value-added services like kitting and cross-docking.",
 				"cta": "Explore Warehousing",
 				"badge": "Core Service",
 				"altText": "Atik Logistics warehouse with automated systems"
 			},
-			"track-shipment":{
+			"track-shipment": {
 				"name": "Track Shipment",
 				"description": "Real-time tracking and visibility for your shipments, ensuring you always know where your cargo is and when it will arrive.",
 				"cta": "Track Your Shipment",
 				"badge": "Core Service",
 				"altText": "Atik Logistics tracking system showing shipment progress"
 			},
-			"customs-brokerage":{
+			"customs-brokerage": {
 				"name": "Customs Brokerage",
 				"description": "Expert handling of customs clearance, documentation, and compliance for all import/export shipments, ensuring smooth customs procedures.",
 				"cta": "Explore Customs",
 				"badge": "Core Service",
 				"altText": "Atik Logistics customs clearance process"
 			},
-			"project-cargo":{
+			"project-cargo": {
 				"name": "Project Cargo",
 				"description": "Expert handling of heavy lift, out-of-gauge, and complex project cargo. Atik Logistics offers turnkey solutions including route surveys, specialized equipment, and on-site coordination for industrial projects.",
 				"cta": "Detail Your Project",
@@ -308,7 +309,6 @@
 				"description": "Tailored solutions and dedicated support for every client."
 			}
 		}
-
 	},
 	"FeatureAccordion": {
 		"title": "Why Choose Atik Import Export?",
@@ -331,19 +331,18 @@
 				"content": "Long-term, collaborative relationships for mutual success and international expansion."
 			}
 		}
-
 	},
 	"Stats": {
 		"title": "Tailark in numbers",
 		"description": "Gemini is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.",
 		"stats": {
-			"countries-served":{
+			"countries-served": {
 				"name": "Countries Served"
 			},
-			"annual-shipments":{
+			"annual-shipments": {
 				"name": "Annual Shipments"
 			},
-			"client-satisfaction":{
+			"client-satisfaction": {
 				"name": "Client Satisfaction"
 			}
 		}

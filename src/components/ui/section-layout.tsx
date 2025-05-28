@@ -6,8 +6,8 @@ interface SectionLayoutProps extends Omit<HTMLAttributes<HTMLElement>, 'id'> {
   children: ReactNode;
   className?: string;
   containerClassName?: string;
-  noPadding?: boolean;
   fullWidth?: boolean;
+  noPadding?: boolean;
 }
 
 
@@ -17,8 +17,8 @@ export const SectionLayout = forwardRef<HTMLElement, SectionLayoutProps>(
     children,
     className,
     containerClassName,
-    noPadding = false,
     fullWidth = false,
+    noPadding = false,
     ...props
   }, ref) => {
     return (
@@ -27,16 +27,15 @@ export const SectionLayout = forwardRef<HTMLElement, SectionLayoutProps>(
         id={id}
         className={cn(
           'w-full flex justify-center bg-background relative',
+          className,
           !noPadding && 'py-16 sm:py-20 lg:py-24',
-          className
         )}
         {...props}
       >
         <div
           className={cn(
             'w-full',
-            !fullWidth && 'max-w-7xl',
-            !noPadding && 'px-4 sm:px-6 lg:px-8',
+            !fullWidth && 'max-w-[90rem]',
             containerClassName
           )}
         >

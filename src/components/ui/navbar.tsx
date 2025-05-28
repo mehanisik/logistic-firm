@@ -1,25 +1,25 @@
 'use client'
 import Link from 'next/link'
-import { Menu, Omega, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
-import { ThemeSwitcher } from '@/components/theme-switcher'
-import LanguageSwitcher from '@/components/language-switcher'
+import { IconOmega } from '@tabler/icons-react'
+import { ThemeSwitcher } from '../theme-switcher'
+import LanguageSwitcher from '../language-switcher'
 
 const menuItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about-us' },
-    { name: 'Services', href: '/service' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact Us', href: '/contact-us' },
+    { name: 'Features', href: '#link' },
+    { name: 'Solution', href: '#link' },
+    { name: 'Pricing', href: '#link' },
+    { name: 'About', href: '#link' },
 ]
 
 export default function Navbar() {
-    const [menuState, setMenuState] = React.useState(false)
-    const [isScrolled, setIsScrolled] = React.useState(false)
+    const [menuState, setMenuState] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50)
         }
@@ -31,15 +31,14 @@ export default function Navbar() {
             <nav
                 data-state={menuState && 'active'}
                 className="fixed z-20 w-full px-2">
-                <div className={cn('mx-auto mt-10 max-w-[90rem] transition-all duration-300', isScrolled && 'text-white font-bold bg-background/50 max-w-7xl rounded-2xl border backdrop-blur-lg mt-2 px-5')}>
+                <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
-                        <div className="flex w-full justify-between lg:w-auto ">
+                        <div className="flex w-full justify-between lg:w-auto">
                             <Link
                                 href="/"
                                 aria-label="home"
-                                className="flex items-center space-x-2 font-bold text-2xl lg:text-3xl text-white">
-                                <Omega className="size-7 lg:size-8" />
-                                <span className="hidden sm:inline">Atik</span>
+                                className="flex items-center space-x-2">
+                                <IconOmega />
                             </Link>
 
                             <button
@@ -50,19 +49,40 @@ export default function Navbar() {
                                 <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
                             </button>
                         </div>
-                            <ul className="flex gap-8 text-lg font-bold items-center">
+
+                        <div className="absolute inset-0 m-auto hidden size-fit lg:block">
+                            <ul className="flex gap-8 text-sm">
                                 {menuItems.map((item, index) => (
                                     <li key={index}>
                                         <Link
                                             href={item.href}
-                                            className="block duration-150 text-lg font-bold text-foreground hover:text-primary">
+                                            className="text-muted-foreground hover:text-accent-foreground block duration-150">
                                             <span>{item.name}</span>
                                         </Link>
                                     </li>
                                 ))}
-                                  <ThemeSwitcher />
-                                  <LanguageSwitcher />
                             </ul>
+                        </div>
+
+                        <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
+                            <div className="lg:hidden">
+                                <ul className="space-y-6 text-base">
+                                    {menuItems.map((item, index) => (
+                                        <li key={index}>
+                                            <Link
+                                                href={item.href}
+                                                className="text-muted-foreground hover:text-accent-foreground block duration-150">
+                                                <span>{item.name}</span>
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+                             <ThemeSwitcher/>
+                             <LanguageSwitcher/>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>

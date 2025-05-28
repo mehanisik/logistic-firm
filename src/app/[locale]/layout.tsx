@@ -10,17 +10,11 @@ import { notFound } from "next/navigation"
 import { jsonLdScriptProps } from "react-schemaorg"
 import type { WebSite } from "schema-dts"
 import "../globals.css"
-import Navbar from "@/components/ui/navbar"
+import localFont from "next/font/local"
 import type { ReactNode } from "react"
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
+const halenoirCompactFont = localFont({
+	src: "../../fonts/halenoir-compact.woff2",
 })
 
 export default async function RootLayout({
@@ -64,7 +58,7 @@ export default async function RootLayout({
 					})}
 				/>
 			</head>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
+			<body className={`${halenoirCompactFont.className} antialiased`} suppressHydrationWarning>
 				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
 					<NextIntlClientProvider>{children}</NextIntlClientProvider>
 				</ThemeProvider>

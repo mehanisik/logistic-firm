@@ -7,10 +7,10 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { ATIK_OFFICE_LOCATIONS } from "@/constants/contact.constant"
 import { IconBuildingSkyscraper, IconHeadset, IconMail, IconMapPin, IconMessageCircle, IconSend, IconUser } from "@tabler/icons-react"
+import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
-import Link from "next/link"
 import type { FormEvent } from "react"
-import { Cobe } from "../ui/cobe"
+import { Globe } from "../ui/globe"
 import { SectionLayout } from "../ui/section-layout"
 
 export default function ContactUs() {
@@ -23,131 +23,77 @@ export default function ContactUs() {
 		console.log("Form submitted:", data)
 	}
 
+	const offices = ATIK_OFFICE_LOCATIONS.map((office) => ({
+		...office,
+		name: t(`officeLocations.${office.id}.name`),
+		address: t(`officeLocations.${office.id}.addressLines`),
+	}))
+
 	return (
-		<SectionLayout className="py-16 md:py-24" id="contact-us">
-			<div className="flex flex-col gap-8 md:gap-12 items-center">
-				<div className="max-w-2xl w-full text-center mb-4 sm:mb-8">
-					<div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-semibold mb-3 uppercase tracking-wider">
-						<IconHeadset size={16} />
-						{t("letsConnect")}
-					</div>
-					<h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
-						{t("title")} <span className="text-primary">Atik Logistics</span>
-					</h1>
-					<p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto">{t("description")}</p>
-				</div>
-				<div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
-					<div className="bg-gradient-to-br from-background to-muted dark:from-background dark:to-muted border border-border shadow-xl rounded-2xl flex items-center justify-center h-full min-h-[280px] sm:min-h-[350px] md:min-h-[450px] p-4 md:p-6 aspect-square lg:aspect-auto">
-						<div className="w-full max-w-md mx-auto">
-							<Cobe />
+		<SectionLayout className="py-16" id="contact-us">
+			<div className="max-w-4xl mx-auto mb-10 text-center">
+				<h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2 flex items-center justify-center gap-2">
+					<IconHeadset className="w-7 h-7 text-primary" /> {t("letsConnect")}
+				</h2>
+				<p className="text-muted-foreground text-lg max-w-2xl mx-auto">{t("description")}</p>
+			</div>
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-7xl mx-auto">
+				<div className="md:col-span-1 flex flex-col gap-4">
+					<Card className="h-full p-6 border border-border bg-background/90 shadow-md flex flex-col">
+						<div className="flex items-center gap-2 mb-4">
+							<IconMapPin className="w-6 h-6 text-primary" />
+							<span className="font-semibold text-lg text-foreground">{t("ourGlobalPresence")}</span>
 						</div>
-					</div>
-
-					<div className="flex flex-col gap-6 h-full">
-						<Card className="flex-1 p-6 rounded-2xl shadow-lg border border-border">
-							<CardHeader className="p-0 mb-4">
-								<CardTitle className="text-xl sm:text-2xl font-semibold flex items-center gap-3 text-foreground">
-									<IconMail className="w-6 h-6 text-primary" /> {t("quickContact")}
-								</CardTitle>
-							</CardHeader>
-							<CardContent className="p-0 space-y-3 text-sm sm:text-base">
-								<div>
-									<Label htmlFor="email-contact" className="font-medium text-foreground">
-										{t("generalInquiries")}
-									</Label>
-									<Link href="mailto:inquiries@atiklogistics.com" className="block text-primary hover:underline" id="email-contact">
-										inquiries@atiklogistics.com
-									</Link>
-								</div>
-								<div>
-									<Label htmlFor="quote-contact" className="font-medium text-foreground">
-										{t("salesAndQuotes")}
-									</Label>
-									<Link href="mailto:quotes@atiklogistics.com" className="block text-primary hover:underline" id="quote-contact">
-										quotes@atiklogistics.com
-									</Link>
-								</div>
-								<div>
-									<Label htmlFor="phone-contact" className="font-medium text-foreground">
-										{t("globalSupportHotline")}
-									</Label>
-									<Link href="tel:+1555LOGISTICS" className="block text-primary hover:underline" id="phone-contact">
-										+1-555-LOGISTICS (564-4784)
-									</Link>
-								</div>
-							</CardContent>
-						</Card>
-
-						<Card className="flex-1 p-6 rounded-2xl shadow-lg border border-border">
-							<CardHeader className="p-0 mb-4" id="quote-form">
-								<CardTitle className="text-xl sm:text-2xl font-semibold flex items-center gap-3 text-foreground">
-									<IconMessageCircle className="w-6 h-6 text-primary" /> {t("sendUsAMessage")}
-								</CardTitle>
-							</CardHeader>
-							<CardContent className="p-0">
-								<form onSubmit={handleSubmit} className="space-y-4">
-									<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-										<div>
-											<Label htmlFor="name" className="mb-1 block text-sm font-medium">
-												{t("fullName")}
-											</Label>
-											<div className="relative">
-												<IconUser className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-4 h-4 pointer-events-none" />
-												<Input type="text" id="name" name="name" placeholder={t("namePlaceholder")} required className="pl-9" />
-											</div>
-										</div>
-										<div>
-											<Label htmlFor="email" className="mb-1 block text-sm font-medium">
-												{t("emailAddress")}
-											</Label>
-											<div className="relative">
-												<IconMail className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-4 h-4 pointer-events-none" />
-												<Input type="email" id="email" name="email" placeholder={t("emailPlaceholder")} required className="pl-9" />
-											</div>
-										</div>
-									</div>
+						<div className="space-y-4">
+							{offices.map((office) => (
+								<div key={office.id} className="flex items-start gap-3">
+									<IconMapPin className={`w-5 h-5 mt-1 ${office.isHub ? "text-primary" : "text-muted-foreground"}`} />
 									<div>
-										<Label htmlFor="company" className="mb-1 block text-sm font-medium">
-											{t("companyNameOptional")}
-										</Label>
-										<Input type="text" id="company" name="company" placeholder={t("companyPlaceholder")} />
+										<div className="font-semibold text-sm text-foreground mb-1">{office.name}</div>
+										<div className="text-xs text-muted-foreground whitespace-pre-line">{office.address}</div>
 									</div>
-									<div>
-										<Label htmlFor="message" className="mb-1 block text-sm font-medium">
-											{t("yourMessage")}
-										</Label>
-										<Textarea id="message" name="message" rows={4} placeholder={t("messagePlaceholder")} required className="resize-none" />
-									</div>
-									<Button type="submit" className="w-full flex items-center gap-2 text-base py-3 h-auto" size="lg">
-										<IconSend className="w-5 h-5" /> {t("submitYourInquiry")}
-									</Button>
-								</form>
-							</CardContent>
-						</Card>
-					</div>
+								</div>
+							))}
+						</div>
+					</Card>
+					<Card className="relative flex size-full w-full items-center justify-center overflow-hidden  border-none bg-background md:shadow-xl">
+						<Globe />
+						<div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+					</Card>
 				</div>
-				<div className="w-full mt-8 md:mt-12 border-t border-border pt-8 md:pt-12">
-					<h2 className="text-2xl sm:text-3xl font-bold text-center text-foreground mb-6 md:mb-8 flex items-center justify-center gap-3">
-						<IconBuildingSkyscraper className="w-7 h-7 text-primary" /> {t("ourGlobalPresence")}
-					</h2>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-						{ATIK_OFFICE_LOCATIONS.map((office) => (
-							<Card
-								key={office.id}
-								className={`p-6 rounded-xl shadow-md ${office.isHub ? "border-2 border-primary/50 bg-primary/5" : "border border-border"}`}
-							>
-								<CardHeader className="p-0 mb-2">
-									<CardTitle className="text-lg font-semibold flex items-center gap-2 text-foreground">
-										<IconMapPin className={`w-5 h-5 ${office.isHub ? "text-primary" : "text-muted-foreground"}`} />
-										{t(`officeLocations.${office.id}.name`)}
-									</CardTitle>
-								</CardHeader>
-								<CardContent className="p-0 text-sm text-muted-foreground space-y-0.5">
-									<p>{t(`officeLocations.${office.id}.addressLines`)}</p>
-								</CardContent>
-							</Card>
-						))}
-					</div>
+				<div className="md:col-span-2 flex flex-col">
+					<Card className="w-full p-8  border border-border bg-background/90 shadow-lg">
+						<CardHeader className="p-0 mb-6">
+							<div className="flex items-center gap-2 mb-2">
+								<IconMessageCircle className="w-6 h-6 text-primary" />
+								<span className="font-semibold text-xl text-foreground">{t("sendUsAMessage")}</span>
+							</div>
+							<CardTitle className="text-base font-medium text-muted-foreground">{t("quickContact")}</CardTitle>
+						</CardHeader>
+						<CardContent className="p-0">
+							<form onSubmit={handleSubmit} className="flex flex-col gap-6">
+								<div className="flex flex-col gap-2">
+									<Label htmlFor="name">{t("fullName")}</Label>
+									<Input id="name" name="name" placeholder={t("namePlaceholder")} required />
+								</div>
+								<div className="flex flex-col gap-2">
+									<Label htmlFor="email">{t("emailAddress")}</Label>
+									<Input id="email" name="email" type="email" placeholder={t("emailPlaceholder")} required />
+								</div>
+								<div className="flex flex-col gap-2">
+									<Label htmlFor="company">{t("companyNameOptional")}</Label>
+									<Input id="company" name="company" placeholder={t("companyPlaceholder")} />
+								</div>
+								<div className="flex flex-col gap-2">
+									<Label htmlFor="message">{t("yourMessage")}</Label>
+									<Textarea id="message" name="message" rows={4} placeholder={t("messagePlaceholder")} required />
+								</div>
+								<Button type="submit" className="w-full mt-2">
+									{t("submitYourInquiry")}
+								</Button>
+							</form>
+						</CardContent>
+					</Card>
 				</div>
 			</div>
 		</SectionLayout>

@@ -18,14 +18,6 @@ export default function Services() {
 					</div>
 					<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">{t("headline")}</h2>
 					<p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 md:mb-12">{t("description")}</p>
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
-						{SERVICES_STATS.map((stat) => (
-							<div key={stat.id} className="text-center p-4 rounded-lg bg-background shadow-sm">
-								<div className="text-3xl md:text-4xl font-bold text-primary mb-1">{stat.value}</div>
-								<div className="text-sm text-muted-foreground font-medium">{t(`stats.${stat.id}.name`)}</div>
-							</div>
-						))}
-					</div>
 				</div>
 
 				<div className="grid w-full auto-rows-[20rem] sm:auto-rows-[24rem] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:grid-rows-3">

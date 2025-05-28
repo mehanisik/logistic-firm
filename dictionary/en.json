@@ -1,360 +1,337 @@
 {
-	"Index": {
-		"boilerplateName": "Next.js i18n Template",
-		"title": "Next 15 Template with i18n and Shadcn UI",
-		"description": "A powerful starting point for your next multilingual, accessible web application.",
-		"cloneRepository": "Clone Repository",
-		"leaveStar": "Leave a Star",
-		"howToUse": "How to Use",
-		"gettingStarted": "Getting Started",
-		"installation": "Installation",
-		"howToContribute": "How to Contribute",
-		"omitrtlUsage": "OmitRTL Usage",
-		"OmitRTLInstruction": "To use OmitRTL, simply wrap the component you want to omit RTL support for with the OmitRTL component.",
-		"contribute": "Contribute",
-		"installationSteps": {
-			"cloneRepository": "Clone the repository:",
-			"installDependencies": "Install dependencies:",
-			"startDevServer": "Start the development server:"
-		},
-		"contributeSteps": {
-			"fork": "Fork the repository",
-			"createBranch": "Create a new branch:",
-			"commit": "Commit your changes:",
-			"push": "Push to the branch:",
-			"pullRequest": "Create a new Pull Request"
-		},
-		"error": {
-			"server": "Internal Server Error",
-			"sorry": "Sorry, we encountered an unexpected issue on our server.",
-			"tryAgain": " Try again later.",
-			"returnHome": "Return home"
-		}
-	},
-	"Footer": {
-		"copyright": "© {year} Atik Logistics. All Rights Reserved. Your Partner in Global Trade.",
-		"githubLink": "GitHub",
-		"quickLinks": "Quick Links",
-		"contactTitle": "Contact Atik Logistics",
-		"followUs": "Follow Us",
-		"nav": {
-			"home": "Home",
-			"about": "About Atik Logistics",
-			"services": "Our Services",
-			"blog": "Logistics Insights",
-			"contact": "Contact Us",
-			"track": "Track Shipment"
-		},
-		"legal": {
-			"privacy": "Privacy Policy",
-			"terms": "Terms of Service",
-			"sitemap": "Sitemap"
-		},
-		"social": {
-			"linkedin": "Connect with Atik Logistics on LinkedIn",
-			"twitter": "Follow Atik Logistics on Twitter",
-			"facebook": "Like Atik Logistics on Facebook"
-		},
-		"newsletterPlaceholder": "your.email@example.com",
-		"newsletterAriaLabel": "Subscribe to newsletter",
-		"companyName": "Atik Logistics",
-		"address": "Global Headquarters:\n123 Global Trade Tower, New York, NY 10001, USA", 
-		"phoneLabel": "Phone: +1-555-LOGISTICS (564-4784)",
-		"emailLabel": "Email: inquiries@atiklogistics.com",
-		"newsletterDescription": "Stay ahead in global trade with Atik Logistics Insights. Subscribe for the latest industry news, regulatory updates, and expert tips on optimizing your supply chain."
-	},
-	"Metadata": {
-		"title": "Next.js i18n Template - Multilingual Starter Template",
-		"description": "Next.js internationalization (i18n) starter kit with Arabic, Chinese, English, Spanish, and Japanese support. Includes shadcn UI, theme switching, and RTL support.",
-		"keywords": "Next.js, i18n, internationalization, Arabic, Chinese, Spanish, Japanese, multilingual, template, starter template, shadcn UI, RTL support"
-	},
-	"Contact": {
-		"letsConnect": "Let's Connect",
-		"title": "Get in Touch with",
-		"description": "Whether you have a specific shipping inquiry, need a comprehensive logistics consultation, or want to explore partnership opportunities, our global team is ready to assist you.",
-		"quickContact": "Quick Contact",
-		"generalInquiries": "General Inquiries:",
-		"salesAndQuotes": "Sales & Quotes:",
-		"globalSupportHotline": "Global Support Hotline:",
-		"sendUsAMessage": "Send Us a Message",
-		"fullName": "Full Name",
-		"emailAddress": "Email Address",
-		"companyNameOptional": "Company Name (Optional)",
-		"yourMessage": "Your Message",
-		"submitYourInquiry": "Submit Your Inquiry",
-		"ourGlobalPresence": "Our Global Presence",
-		"namePlaceholder": "e.g., Jane Doe",
-		"emailPlaceholder": "you@company.com",
-		"companyPlaceholder": "e.g., Acme Corp",
-		"messagePlaceholder": "Please describe your logistics needs or question in detail. Include information like type of goods, origin/destination, estimated volume/frequency, etc.",
-		"officeLocations": {
-			"global-headquarters": {
-				"name": "Global Headquarters",
-				"addressLines": "ORTA MAH. DEMİRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA/ İSTANBUL"
-			},
-			"european-hub": {
-				"name": "European Hub",
-				"addressLines": "ul.Marszałkowska 66, 00-401, Warszawa, Poland"
-			},
-			"asia-pacific-hub": {
-				"name": "Asia-Pacific Hub",
-				"addressLines": "Tehran, Iran"
-			}
-		}
-	},
-	"Testimonial": {
-		"title": "Trusted by Businesses Worldwide",
-		"description": "Hear directly from our valued clients who rely on Atik Logistics for their critical import/export operations and global supply chain management.",
-		"testimonials": {
-			"testimonial-1": {
-				"author": {
-					"name": "Sarah Chen",
-					"handle": "Supply Chain Manager, TechStyle Inc."
-				},
-				"text": "Atik Logistics has revolutionized our international supply chain. Their proactive communication and efficient customs handling saved us significant time and costs. Truly a reliable partner for global expansion."
-			},
-			"testimonial-2": {
-				"author": {
-					"name": "David Miller",
-					"handle": "Operations Director, Global Foods Ltd."
-				},
-				"text": "The team at Atik Logistics consistently goes above and beyond. Their expertise in handling perishable goods via their cold chain solutions is unmatched. We've seen a noticeable improvement in delivery times and product integrity."
-			},
-			"testimonial-3": {
-				"author": {
-					"name": "Maria Rodriguez",
-					"handle": "CEO, Artisan Crafts Co."
-				},
-				"text": "As a growing business expanding into new international markets, Atik Logistics provided the crucial guidance and tailored support we needed. Their personalized service made a complex import/export process feel simple and manageable."
-			},
-			"testimonial-4": {
-				"author": {
-					"name": "James Lee",
-					"handle": "Procurement Lead, Advanced Machinery Corp."
-				},
-				"text": "We entrusted Atik Logistics with a complex project cargo shipment of oversized machinery. Their meticulous planning, execution, and on-site coordination were flawless. Highly recommended for any challenging logistics needs."
-			}
-		}
-	},
-	"AboutUs": {
-		"aboutUsText": "At Atik Logistics, we are more than just a service provider; we are your strategic partner in navigating the global marketplace. Our journey began over fifteen years ago, fueled by a commitment to innovation, customer-centricity, and sustainable practices. We specialize in delivering exceptional import and export solutions, connecting businesses to new opportunities with efficiency and unwavering reliability. Trust us to build the pathways for your global success.",
-		"ourStory": "Our Story",
-		"headline1": "Pioneering Global Logistics,",
-		"headline2": "Built on",
-		"headlineAccent": "Trust & Innovation",
-		"subDescription": "Atik Logistics is dedicated to simplifying international trade. We provide comprehensive import/export services, leveraging cutting-edge technology and a global network to ensure your cargo moves seamlessly and efficiently across borders.",
-		"partnerWithUs": "Partner With Us",
-		"yearsOfExpertiseValue": "15+",
-		"yearsOfExpertiseLabel": "Years of Expertise",
-		"customerRetentionValue": "99.5%",
-		"customerRetentionLabel": "Customer Retention",
-		"globalClientsValue": "5000+",
-		"globalClientsLabel": "Global Clients"
-	},
-	"Hero": {
-		"imageAlt": "Global logistics network concept with interconnected lines over a world map",
-		"headline1": "Atik Logistics:",
-		"headline2": "Streamlining Global Trade, Delivering Your World.",
-		"description": "Navigate the complexities of international shipping with Atik Logistics. ",
-		"getAQuote": "Get a Quote",
-		"exploreOurServices": "Explore Our Services"
-	},
-	"Services": {
-		"coreServices": "Our Core Services",
-		"headline": "End-to-End Logistics for a Connected World",
-		"description": "At Atik Logistics, we provide a comprehensive suite of import/export services designed to optimize your supply chain, reduce complexities, and propel your business forward on the global stage.",
-		"stats": {
-			"countries-served":{
-				"name": "Countries Served"
-			},
-			"annual-shipments":{
-				"name": "Annual Shipments"
-			},
-			"client-satisfaction":{
-				"name": "Client Satisfaction"
-			}
-		},
-		"features": {
-			"freight-forwarding":{
-				"name": "Freight Forwarding",
-				"description": "Seamless air, sea, and land freight solutions connecting your business to over 180 countries. We ensure optimized routes, competitive rates, and timely deliveries for all cargo types.",
-				"cta": "Explore Forwarding",
-				"badge": "Core Service",
-				"altText": "Atik Logistics truck fleet moving cargo on a highway"
-			},
-			"warehousing":{
-				"name": "Warehousing",
-				"description": "Strategically located warehouses with advanced inventory management, order fulfillment, and value-added services like kitting and cross-docking.",
-				"cta": "Explore Warehousing",
-				"badge": "Core Service",
-				"altText": "Atik Logistics warehouse with automated systems"
-			},
-			"track-shipment":{
-				"name": "Track Shipment",
-				"description": "Real-time tracking and visibility for your shipments, ensuring you always know where your cargo is and when it will arrive.",
-				"cta": "Track Your Shipment",
-				"badge": "Core Service",
-				"altText": "Atik Logistics tracking system showing shipment progress"
-			},
-			"customs-brokerage":{
-				"name": "Customs Brokerage",
-				"description": "Expert handling of customs clearance, documentation, and compliance for all import/export shipments, ensuring smooth customs procedures.",
-				"cta": "Explore Customs",
-				"badge": "Core Service",
-				"altText": "Atik Logistics customs clearance process"
-			},
-			"project-cargo":{
-				"name": "Project Cargo",
-				"description": "Expert handling of heavy lift, out-of-gauge, and complex project cargo. Atik Logistics offers turnkey solutions including route surveys, specialized equipment, and on-site coordination for industrial projects.",
-				"cta": "Detail Your Project",
-				"badge": "Core Service",
-				"altText": "Atik Logistics coordinating heavy machinery transport for an industrial project"
-			}
-		}
-	},
-	"Team": {
-		"leadership": "Our Leadership",
-		"headline1": "Meet the Experts Driving",
-		"headline2": "Your",
-		"headlineAccent": "Logistics Success",
-		"description": "Our dedicated team of seasoned logistics professionals combines deep industry experience with a passion for innovative solutions, ensuring your cargo is always in the most capable hands.",
-		"joinOurTeam": "Join Our Team",
-		"connectOnLinkedIn": "Connect on LinkedIn",
-		"team": {
-			"alexandre-moreau": {
-				"role": "Founder & CEO"
-			},
-			"priya-sharma": {
-				"role": "Head of Global Operations"
-			},
-			"kenji-tanaka": {
-				"role": "Director of Technology & Innovation"
-			}
-		}
-	},
-	"ExtraServices": {
-		"headline": "Atik Logistics: Specialized Services",
-		"highlights": [
-			{
-				"imageUrl": "https://images.unsplash.com/photo-1740126103812-2106248b6ad3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fFBoYXJtYWNldXRpY2FsJTIwJTI2JTIwQ29sZCUyMENoYWluJTIwTG9naXN0aWNzfGVufDB8fDB8fHww",
-				"altText": "Temperature-controlled cargo containers for Atik Logistics pharmaceutical shipments",
-				"title": "Pharmaceutical & Cold Chain Logistics",
-				"category": "Specialized Solutions",
-				"description": "Atik Logistics provides validated, GDP-compliant cold chain solutions for pharmaceuticals and temperature-sensitive goods, ensuring product integrity from origin to destination with real-time monitoring.",
-				"stat": "Maintained <2°C Fluctuation",
-				"ctaLink": "/service/cold-chain-logistics",
-				"ctaText": "Explore Cold Chain"
-			},
-			{
-				"imageUrl": "https://plus.unsplash.com/premium_photo-1664302037749-f24d1344ee2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SW5kdXN0cmlhbCUyMFByb2plY3QlMjBDYXJnbyUyME1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
-				"altText": "Atik Logistics coordinating heavy machinery transport for an industrial project",
-				"title": "Industrial Project Cargo Management",
-				"category": "Heavy & Oversized",
-				"description": "Expert handling of heavy lift, out-of-gauge, and complex project cargo. Atik Logistics offers turnkey solutions including route surveys, specialized equipment, and on-site coordination for industrial projects.",
-				"stat": "Up to 500 Tons Capacity",
-				"ctaLink": "/service/project-cargo",
-				"ctaText": "Detail Your Project"
-			},
-			{
-				"imageUrl": "https://images.unsplash.com/photo-1739696278363-cb3c4bfc3cec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFN1c3RhaW5hYmxlJTIwJTI2JTIwR3JlZW4lMjBMb2dpc3RpY3N8ZW58MHx8MHx8fDA%3D",
-				"altText": "Sustainable packaging materials used by Atik Logistics for eco-friendly shipping",
-				"title": "Sustainable & Green Logistics",
-				"category": "Eco-Conscious Shipping",
-				"description": "Committed to reducing environmental impact, Atik Logistics offers carbon-neutral shipping options, route optimization for fuel efficiency, and sustainable packaging solutions for eco-conscious businesses.",
-				"stat": "20% CO₂ Reduction Target",
-				"ctaLink": "/sustainability",
-				"ctaText": "Our Green Initiatives"
-			},
-			{
-				"imageUrl": "https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-				"altText": "E-commerce packages being processed in an Atik Logistics fulfillment center",
-				"title": "E-commerce Fulfillment & Last-Mile Delivery",
-				"category": "Retail & E-commerce",
-				"description": "Integrated solutions for online retailers, including inventory management, pick-and-pack services, and efficient last-mile delivery networks to enhance customer satisfaction and accelerate growth.",
-				"stat": "99.8% Order Accuracy",
-				"ctaLink": "/service/ecommerce-fulfillment",
-				"ctaText": "Scale Your E-commerce"
-			}
-		]
-	},
-	"Navbar": {
-		"brand": "Atik",
-		"home": "Home",
-		"about": "About us",
-		"service": "Service",
-		"blog": "Blog",
-		"contact": "Contact Us",
-		"openMenuAria": "Open menu",
-		"closeMenuAria": "Close menu"
-	},
-	"Summary": {
-		"title": "Building Global Connections, Delivering Value",
-		"description": "Atik Import Export specializes in seamless international logistics and distribution of high-quality cleaning and care products. We connect businesses worldwide with reliable, secure, and timely solutions.",
-		"features": {
-			"fast-and-reliable": {
-				"title": "Fast & Reliable",
-				"description": "Timely, secure, and efficient delivery across the globe."
-			},
-			"specialized-expertise": {
-				"title": "Specialized Expertise",
-				"description": "Deep knowledge in handling cleaning and care products logistics."
-			},
-			"trust-and-security": {
-				"title": "Trust & Security",
-				"description": "Transparent, dependable, and secure handling of your goods."
-			},
-			"customer-centric": {
-				"title": "Customer-Centric",
-				"description": "Tailored solutions and dedicated support for every client."
-			}
-		}
-
-	},
-	"FeatureAccordion": {
-		"title": "Why Choose Atik Import Export?",
-		"description": "We offer end-to-end logistics, truck transportation, and soon, direct product sourcing—all with a focus on trust, integrity, and customer satisfaction.",
-		"items": {
-			"international-logistics": {
-				"title": "International Logistics",
-				"content": "Comprehensive global shipping for cleaning and care products, ensuring safe and timely delivery."
-			},
-			"truck-transportation": {
-				"title": "Truck Transportation",
-				"content": "Modern fleet and expert team for cost-effective, secure regional transport."
-			},
-			"distribution": {
-				"title": "Distribution",
-				"content": "Direct access to premium cleaning and care products through our expanding import-export channels."
-			},
-			"partnership-and-growth": {
-				"title": "Partnership & Growth",
-				"content": "Long-term, collaborative relationships for mutual success and international expansion."
-			}
-		}
-
-	},
-	"Stats": {
-		"title": "Tailark in numbers",
-		"description": "Gemini is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.",
-		"stats": {
-			"countries-served":{
-				"name": "Countries Served"
-			},
-			"annual-shipments":{
-				"name": "Annual Shipments"
-			},
-			"client-satisfaction":{
-				"name": "Client Satisfaction"
-			}
-		}
-	},
-	"LogoCloud": {
-		"title": "Trusted by Leading Brands",
-		"description": "Our partners and clients span the globe, reflecting our commitment to quality and reliability."
-	},
-	"Story": {
-		"title": "Our Story: Bridging Markets, Creating Opportunities",
-		"description": "Founded on trust, hard work, and integrity, Atik Import Export has grown into a vital link between international markets. We turn opportunities into achievements for our clients.",
-		"cta": "Learn More"
-	}
+  "Index": {
+    "boilerplateName": "Next.js i18n Template",
+    "title": "Next 15 Template with i18n and Shadcn UI",
+    "description": "A powerful starting point for your next multilingual, accessible web application.",
+    "cloneRepository": "Clone Repository",
+    "howToUse": "How to Use",
+    "gettingStarted": "Getting Started",
+    "installation": "Installation",
+    "howToContribute": "How to Contribute",
+    "error": {
+      "server": "Internal Server Error",
+      "sorry": "Sorry, we encountered an unexpected issue on our server.",
+      "tryAgain": " Try again later.",
+      "returnHome": "Return home"
+    }
+  },
+  "Footer": {
+    "copyright": "© {year} Atik Logistics. All Rights Reserved. Your Partner in Global Trade.",
+    "githubLink": "GitHub",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact Atik Logistics",
+    "followUs": "Follow Us",
+    "nav": {
+      "home": "Home",
+      "about": "About Atik Logistics",
+      "services": "Our Services",
+      "blog": "Logistics Insights",
+      "contact": "Contact Us",
+      "track": "Track Shipment"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "sitemap": "Sitemap"
+    },
+    "social": {
+      "linkedin": "Connect with Atik Logistics on LinkedIn",
+      "twitter": "Follow Atik Logistics on Twitter",
+      "facebook": "Like Atik Logistics on Facebook"
+    },
+    "newsletterPlaceholder": "your.email@example.com",
+    "newsletterAriaLabel": "Subscribe to newsletter",
+    "companyName": "Atik Logistics",
+    "address": "Global Headquarters:\n123 Global Trade Tower, New York, NY 10001, USA",
+    "phoneLabel": "Phone: +1-555-LOGISTICS (564-4784)",
+    "emailLabel": "Email: inquiries@atiklogistics.com",
+    "newsletterDescription": "Stay ahead in global trade with Atik Logistics Insights. Subscribe for the latest industry news, regulatory updates, and expert tips on optimizing your supply chain."
+  },
+  "Contact": {
+    "letsConnect": "Let's Connect",
+    "title": "Get in Touch with",
+    "description": "Whether you have a specific shipping inquiry, need a comprehensive logistics consultation, or want to explore partnership opportunities, our global team is ready to assist you.",
+    "quickContact": "Quick Contact",
+    "generalInquiries": "General Inquiries:",
+    "salesAndQuotes": "Sales & Quotes:",
+    "globalSupportHotline": "Global Support Hotline:",
+    "sendUsAMessage": "Send Us a Message",
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "companyNameOptional": "Company Name (Optional)",
+    "yourMessage": "Your Message",
+    "submitYourInquiry": "Submit Your Inquiry",
+    "ourGlobalPresence": "Our Global Presence",
+    "namePlaceholder": "e.g., Jane Doe",
+    "emailPlaceholder": "you@company.com",
+    "companyPlaceholder": "e.g., Acme Corp",
+    "messagePlaceholder": "Please describe your logistics needs or question in detail. Include information like type of goods, origin/destination, estimated volume/frequency, etc.",
+    "officeLocations": {
+      "global-headquarters": {
+        "name": "Global Headquarters",
+        "addressLines": "ORTA MAH. DEMİRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA/ İSTANBUL"
+      },
+      "european-hub": {
+        "name": "European Hub",
+        "addressLines": "ul.Marszałkowska 66, 00-401, Warszawa, Poland"
+      },
+      "asia-pacific-hub": {
+        "name": "Asia-Pacific Hub",
+        "addressLines": "Tehran, Iran"
+      }
+    }
+  },
+  "Testimonial": {
+    "title": "Trusted by Businesses Worldwide",
+    "description": "Hear directly from our valued clients who rely on Atik Logistics for their critical import/export operations and global supply chain management.",
+    "testimonials": {
+      "testimonial-1": {
+        "author": {
+          "name": "Sarah Chen",
+          "handle": "Supply Chain Manager, TechStyle Inc."
+        },
+        "text": "Atik Logistics has revolutionized our international supply chain. Their proactive communication and efficient customs handling saved us significant time and costs. Truly a reliable partner for global expansion."
+      },
+      "testimonial-2": {
+        "author": {
+          "name": "David Miller",
+          "handle": "Operations Director, Global Foods Ltd."
+        },
+        "text": "The team at Atik Logistics consistently goes above and beyond. Their expertise in handling perishable goods via their cold chain solutions is unmatched. We've seen a noticeable improvement in delivery times and product integrity."
+      },
+      "testimonial-3": {
+        "author": {
+          "name": "Maria Rodriguez",
+          "handle": "CEO, Artisan Crafts Co."
+        },
+        "text": "As a growing business expanding into new international markets, Atik Logistics provided the crucial guidance and tailored support we needed. Their personalized service made a complex import/export process feel simple and manageable."
+      },
+      "testimonial-4": {
+        "author": {
+          "name": "James Lee",
+          "handle": "Procurement Lead, Advanced Machinery Corp."
+        },
+        "text": "We entrusted Atik Logistics with a complex project cargo shipment of oversized machinery. Their meticulous planning, execution, and on-site coordination were flawless. Highly recommended for any challenging logistics needs."
+      }
+    }
+  },
+  "AboutUs": {
+    "aboutUsText": "At Atik Logistics, we are more than just a service provider; we are your strategic partner in navigating the global marketplace. Our journey began over fifteen years ago, fueled by a commitment to innovation, customer-centricity, and sustainable practices. We specialize in delivering exceptional import and export solutions, connecting businesses to new opportunities with efficiency and unwavering reliability. Trust us to build the pathways for your global success.",
+    "ourStory": "Our Story",
+    "headline1": "Pioneering Global Logistics,",
+    "headline2": "Built on",
+    "headlineAccent": "Trust & Innovation",
+    "subDescription": "Atik Logistics is dedicated to simplifying international trade. We provide comprehensive import/export services, leveraging cutting-edge technology and a global network to ensure your cargo moves seamlessly and efficiently across borders.",
+    "partnerWithUs": "Partner With Us",
+    "yearsOfExpertiseValue": "15+",
+    "yearsOfExpertiseLabel": "Years of Expertise",
+    "customerRetentionValue": "99.5%",
+    "customerRetentionLabel": "Customer Retention",
+    "globalClientsValue": "5000+",
+    "globalClientsLabel": "Global Clients"
+  },
+  "Hero": {
+    "imageAlt": "Global logistics network concept with interconnected lines over a world map",
+    "headline1": "Atik Logistics:",
+    "headline2": "Streamlining Global Trade, Delivering Your World.",
+    "description": "Navigate the complexities of international shipping with Atik Logistics. ",
+    "getAQuote": "Get a Quote",
+    "exploreOurServices": "Explore Our Services"
+  },
+  "Services": {
+    "coreServices": "Our Core Services",
+    "headline": "End-to-End Logistics for a Connected World",
+    "description": "At Atik Logistics, we provide a comprehensive suite of import/export services designed to optimize your supply chain, reduce complexities, and propel your business forward on the global stage.",
+    "stats": {
+      "countries-served": {
+        "name": "Countries Served"
+      },
+      "annual-shipments": {
+        "name": "Annual Shipments"
+      },
+      "client-satisfaction": {
+        "name": "Client Satisfaction"
+      }
+    },
+    "features": {
+      "freight-forwarding": {
+        "name": "Freight Forwarding",
+        "description": "Seamless air, sea, and land freight solutions connecting your business to over 180 countries. We ensure optimized routes, competitive rates, and timely deliveries for all cargo types.",
+        "cta": "Explore Forwarding",
+        "badge": "Core Service",
+        "altText": "Atik Logistics truck fleet moving cargo on a highway"
+      },
+      "warehousing": {
+        "name": "Warehousing",
+        "description": "Strategically located warehouses with advanced inventory management, order fulfillment, and value-added services like kitting and cross-docking.",
+        "cta": "Explore Warehousing",
+        "badge": "Core Service",
+        "altText": "Atik Logistics warehouse with automated systems"
+      },
+      "track-shipment": {
+        "name": "Track Shipment",
+        "description": "Real-time tracking and visibility for your shipments, ensuring you always know where your cargo is and when it will arrive.",
+        "cta": "Track Your Shipment",
+        "badge": "Core Service",
+        "altText": "Atik Logistics tracking system showing shipment progress"
+      },
+      "customs-brokerage": {
+        "name": "Customs Brokerage",
+        "description": "Expert handling of customs clearance, documentation, and compliance for all import/export shipments, ensuring smooth customs procedures.",
+        "cta": "Explore Customs",
+        "badge": "Core Service",
+        "altText": "Atik Logistics customs clearance process"
+      },
+      "project-cargo": {
+        "name": "Project Cargo",
+        "description": "Expert handling of heavy lift, out-of-gauge, and complex project cargo. Atik Logistics offers turnkey solutions including route surveys, specialized equipment, and on-site coordination for industrial projects.",
+        "cta": "Detail Your Project",
+        "badge": "Core Service",
+        "altText": "Atik Logistics coordinating heavy machinery transport for an industrial project"
+      }
+    }
+  },
+  "Team": {
+    "leadership": "Our Leadership",
+    "headline1": "Meet the Experts Driving",
+    "headline2": "Your",
+    "headlineAccent": "Logistics Success",
+    "description": "Our dedicated team of seasoned logistics professionals combines deep industry experience with a passion for innovative solutions, ensuring your cargo is always in the most capable hands.",
+    "joinOurTeam": "Join Our Team",
+    "connectOnLinkedIn": "Connect on LinkedIn",
+    "team": {
+      "alexandre-moreau": {
+        "role": "Founder & CEO"
+      },
+      "priya-sharma": {
+        "role": "Head of Global Operations"
+      },
+      "kenji-tanaka": {
+        "role": "Director of Technology & Innovation"
+      }
+    }
+  },
+  "ExtraServices": {
+    "headline": "Atik Logistics: Specialized Services",
+    "highlights": [
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1740126103812-2106248b6ad3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fFBoYXJtYWNldXRpY2FsJTIwJTI2JTIwQ29sZCUyMENoYWluJTIwTG9naXN0aWNzfGVufDB8fDB8fHww",
+        "altText": "Temperature-controlled cargo containers for Atik Logistics pharmaceutical shipments",
+        "title": "Pharmaceutical & Cold Chain Logistics",
+        "category": "Specialized Solutions",
+        "description": "Atik Logistics provides validated, GDP-compliant cold chain solutions for pharmaceuticals and temperature-sensitive goods, ensuring product integrity from origin to destination with real-time monitoring.",
+        "stat": "Maintained <2°C Fluctuation",
+        "ctaLink": "/service/cold-chain-logistics",
+        "ctaText": "Explore Cold Chain"
+      },
+      {
+        "imageUrl": "https://plus.unsplash.com/premium_photo-1664302037749-f24d1344ee2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SW5kdXN0cmlhbCUyMFByb2plY3QlMjBDYXJnbyUyME1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
+        "altText": "Atik Logistics coordinating heavy machinery transport for an industrial project",
+        "title": "Industrial Project Cargo Management",
+        "category": "Heavy & Oversized",
+        "description": "Expert handling of heavy lift, out-of-gauge, and complex project cargo. Atik Logistics offers turnkey solutions including route surveys, specialized equipment, and on-site coordination for industrial projects.",
+        "stat": "Up to 500 Tons Capacity",
+        "ctaLink": "/service/project-cargo",
+        "ctaText": "Detail Your Project"
+      },
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1739696278363-cb3c4bfc3cec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFN1c3RhaW5hYmxlJTIwJTI2JTIwR3JlZW4lMjBMb2dpc3RpY3N8ZW58MHx8MHx8fDA%3D",
+        "altText": "Sustainable packaging materials used by Atik Logistics for eco-friendly shipping",
+        "title": "Sustainable & Green Logistics",
+        "category": "Eco-Conscious Shipping",
+        "description": "Committed to reducing environmental impact, Atik Logistics offers carbon-neutral shipping options, route optimization for fuel efficiency, and sustainable packaging solutions for eco-conscious businesses.",
+        "stat": "20% CO₂ Reduction Target",
+        "ctaLink": "/sustainability",
+        "ctaText": "Our Green Initiatives"
+      },
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "altText": "E-commerce packages being processed in an Atik Logistics fulfillment center",
+        "title": "E-commerce Fulfillment & Last-Mile Delivery",
+        "category": "Retail & E-commerce",
+        "description": "Integrated solutions for online retailers, including inventory management, pick-and-pack services, and efficient last-mile delivery networks to enhance customer satisfaction and accelerate growth.",
+        "stat": "99.8% Order Accuracy",
+        "ctaLink": "/service/ecommerce-fulfillment",
+        "ctaText": "Scale Your E-commerce"
+      }
+    ]
+  },
+  "Navbar": {
+    "brand": "Atik",
+    "home": "Home",
+    "about": "About us",
+    "service": "Service",
+    "blog": "Blog",
+    "contact": "Contact Us",
+    "openMenuAria": "Open menu",
+    "closeMenuAria": "Close menu"
+  },
+  "Summary": {
+    "title": "Building Global Connections, Delivering Value",
+    "description": "Atik Import Export specializes in seamless international logistics and distribution of high-quality cleaning and care products. We connect businesses worldwide with reliable, secure, and timely solutions.",
+    "features": {
+      "fast-and-reliable": {
+        "title": "Fast & Reliable",
+        "description": "Timely, secure, and efficient delivery across the globe."
+      },
+      "specialized-expertise": {
+        "title": "Specialized Expertise",
+        "description": "Deep knowledge in handling cleaning and care products logistics."
+      },
+      "trust-and-security": {
+        "title": "Trust & Security",
+        "description": "Transparent, dependable, and secure handling of your goods."
+      },
+      "customer-centric": {
+        "title": "Customer-Centric",
+        "description": "Tailored solutions and dedicated support for every client."
+      }
+    }
+  },
+  "FeatureAccordion": {
+    "title": "Why Choose Atik Import Export?",
+    "description": "We offer end-to-end logistics, truck transportation, and soon, direct product sourcing—all with a focus on trust, integrity, and customer satisfaction.",
+    "items": {
+      "international-logistics": {
+        "title": "International Logistics",
+        "content": "Comprehensive global shipping for cleaning and care products, ensuring safe and timely delivery."
+      },
+      "truck-transportation": {
+        "title": "Truck Transportation",
+        "content": "Modern fleet and expert team for cost-effective, secure regional transport."
+      },
+      "distribution": {
+        "title": "Distribution",
+        "content": "Direct access to premium cleaning and care products through our expanding import-export channels."
+      },
+      "partnership-and-growth": {
+        "title": "Partnership & Growth",
+        "content": "Long-term, collaborative relationships for mutual success and international expansion."
+      }
+    }
+  },
+  "Stats": {
+    "title": "Tailark in numbers",
+    "description": "Gemini is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.",
+    "stats": {
+      "countries-served": {
+        "name": "Countries Served"
+      },
+      "annual-shipments": {
+        "name": "Annual Shipments"
+      },
+      "client-satisfaction": {
+        "name": "Client Satisfaction"
+      }
+    }
+  },
+  "LogoCloud": {
+    "title": "Trusted by Leading Brands",
+    "description": "Our partners and clients span the globe, reflecting our commitment to quality and reliability."
+  },
+  "Story": {
+    "title": "Our Story: Bridging Markets, Creating Opportunities",
+    "description": "Founded on trust, hard work, and integrity, Atik Import Export has grown into a vital link between international markets. We turn opportunities into achievements for our clients.",
+    "cta": "Learn More"
+  }
 }

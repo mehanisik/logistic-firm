@@ -1,8 +1,7 @@
+import { TestimonialsSection } from "@/components/ui/marquee"
+import { SectionLayout } from "@/components/ui/section-layout"
 import { TESTIMONIALS } from "@/constants/testimonial.constant"
-import type { AtikTestimonial } from "@/types/testimonial.types"
 import { useTranslations } from "next-intl"
-import { TestimonialsSection } from "../ui/marquee"
-import { SectionLayout } from "../ui/section-layout"
 
 export default function Tesimonials() {
 	const t = useTranslations("Testimonial")

@@ -7,9 +7,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { IconBrandFacebook, IconBrandLinkedin, IconBrandTwitter, IconMoon, IconPlant2, IconSend, IconSun } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
-import Image from "next/image"
 import Link from "next/link"
-import * as React from "react"
+import { type MouseEvent, useRef, useState } from "react"
 
 interface NavLinkItem {
 	href: string
@@ -26,8 +25,8 @@ interface SocialLinkItem {
 export default function Footer() {
 	const t = useTranslations("Footer")
 	const { theme, setTheme } = useTheme()
-	const [cursor, setCursor] = React.useState<{ x: number; y: number } | null>(null)
-	const footerRef = React.useRef<HTMLDivElement>(null)
+	const [cursor, setCursor] = useState<{ x: number; y: number } | null>(null)
+	const footerRef = useRef<HTMLDivElement>(null)
 	const currentYear = new Date().getFullYear()
 
 	const footerNavLinks: NavLinkItem[] = [
@@ -66,7 +65,7 @@ export default function Footer() {
 		},
 	]
 
-	const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+	const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
 		const rect = footerRef.current?.getBoundingClientRect()
 		if (!rect) return
 		setCursor({

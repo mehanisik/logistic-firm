@@ -12,7 +12,7 @@ const GLOBE_CONFIG: COBEOptions = {
   onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,
-  theta: 0.3,
+  theta: 0.2,
   dark: 0,
   diffuse: 0.4,
   mapSamples: 16000,
@@ -21,9 +21,9 @@ const GLOBE_CONFIG: COBEOptions = {
   markerColor: [251 / 255, 100 / 255, 21 / 255],
   glowColor: [1, 1, 1],
   markers: [
-    { location: [28.9784,41.0082], size: 0.012 },
-    { location: [31.1342,29.9792], size: 0.012},
-    { location: [55.2962,25.2769], size: 0.012 },
+    { location: [28.9784,41.0082], size: 0.1 }, 
+    { location: [31.1342,29.9792], size: 0.1 }, 
+    { location: [55.2962,25.2769], size: 0.1 }, 
   ],
 }
 
@@ -38,7 +38,7 @@ export function Globe({
   let phi = 0
   let width = 0
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const pointerInteracting = useRef(null)
+  const pointerInteracting = useRef<number | null>(null)
   const pointerInteractionMovement = useRef(0)
   const [r, setR] = useState(0)
 
@@ -47,7 +47,7 @@ export function Globe({
     dark: theme === "dark" ? 1 : 0,
   } as COBEOptions;
 
-  const updatePointerInteraction = (value: any) => {
+  const updatePointerInteraction = (value: number | null) => {
     pointerInteracting.current = value
     if (canvasRef.current) {
       canvasRef.current.style.cursor = value ? "grabbing" : "grab"
@@ -63,7 +63,7 @@ export function Globe({
   }
 
   const onRender = useCallback(
-    (state: Record<string, any>) => {
+    (state: Record<string, unknown>) => {
       if (!pointerInteracting.current) phi += 0.005
       state.phi = phi + r
       state.width = width * 2

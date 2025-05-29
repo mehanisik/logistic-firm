@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Flower2Icon } from "lucide-react";
 
 export default function Preloader() {
   const [show, setShow] = useState(true);

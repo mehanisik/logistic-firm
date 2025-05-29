@@ -1,23 +1,21 @@
 "use client"
 
-import { Check } from "lucide-react"
 import { useEffect, useState } from "react"
 
 import { usePathname, useRouter } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
-import { Button } from "./ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu"
+import Image from "next/image"
 
 const languageDetails = [
 	{
 		code: "en",
-		label: "English",
-		icon: <span className="font-bold text-sm">EN</span>,
+		label: "EN",
+		icon: <Image src="/images/us.svg" alt="English" width={18} height={18} />,
 	},
 	{
 		code: "tr",
-		label: "Türkçe",
-		icon: <span className="font-bold text-sm">TR</span>,
+		label: "TR",
+		icon: <Image src="/images/tr.svg" alt="Turkish" width={18} height={18} />,
 	},
 ] as const
 
@@ -48,42 +46,32 @@ const LanguageSwitcher = () => {
 
 	const changeLanguage = (newLocale: Locale) => {
 		if (newLocale === currentLocale) return
-
 		setCurrentLocale(newLocale)
 		document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`
 		router.push(pathname, { locale: newLocale })
 	}
 
-	const selectedLanguageDetail = languageDetails.find((lang) => lang.code === currentLocale) || languageDetails[0]
-
 	return (
-		<DropdownMenu dir="ltr">
-			<DropdownMenuTrigger asChild>
-				<Button variant="outline" size="sm" className="flex items-center gap-2">
-					{selectedLanguageDetail.icon}
-					<span className="hidden sm:inline">{selectedLanguageDetail.label}</span>
-					<span className="sr-only">Change language</span>
-				</Button>
-			</DropdownMenuTrigger>
-			<DropdownMenuContent align="end" className="min-w-[180px]">
-				{languageDetails.map((lang) => (
-					<DropdownMenuItem
+		<div className="flex gap-2">
+			{languageDetails.map((lang) => {
+				const isActive = currentLocale === lang.code
+				return (
+					<button
 						key={lang.code}
+						type="button"
 						onClick={() => changeLanguage(lang.code)}
+						aria-current={isActive ? "true" : undefined}
 						className={cn(
-							"flex items-center justify-between cursor-pointer",
-							currentLocale === lang.code && "bg-accent text-accent-foreground",
+							"flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-semibold transition-colors border border-transparent focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
+							isActive ? "bg-accent text-primary dark:text-white" : "text-muted-foreground hover:bg-accent hover:text-primary",
 						)}
 					>
-						<div className="flex items-center gap-2">
-							{lang.icon}
-							<span>{lang.label}</span>
-						</div>
-						{currentLocale === lang.code && <Check className="h-4 w-4" />}
-					</DropdownMenuItem>
-				))}
-			</DropdownMenuContent>
-		</DropdownMenu>
+						{lang.icon}
+						<span>{lang.label}</span>
+					</button>
+				)
+			})}
+		</div>
 	)
 }
 

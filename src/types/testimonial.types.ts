@@ -1,4 +1,4 @@
-import type { TestimonialAuthor } from "../../ui/testimonial-card"
+import type { TestimonialAuthor } from "@/components/ui/testimonial-card"
 
 export interface AtikTestimonial {
 	author: TestimonialAuthor

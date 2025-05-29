@@ -2,59 +2,81 @@
 
 import { Button } from "@/components/ui/button"
 import Navbar from "@/components/ui/navbar"
+import { cn } from "@/lib/utils"
+import { IconMouse } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
 import Link from "next/link"
 
+const HERO_CONFIG = {
+	backgroundImageUrl: "https://images.pexels.com/photos/3277769/pexels-photo-3277769.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
+	altText: "Global logistics network concept",
+	contactLink: "#contact-us",
+	imagePadding: "p-4 md:p-6 lg:p-10",
+	imageBorderRadius: "rounded-xl md:rounded-2xl",
+}
+
 export default function Hero() {
 	const t = useTranslations("Hero")
-	return (
-		<section id="hero" className="relative h-[100vh] w-full overflow-hidden">
-			<div
-				style={{
-					backgroundImage:
-						"url('https://images.pexels.com/photos/3277769/pexels-photo-3277769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-					backgroundRepeat: "no-repeat",
-				}}
-				className="absolute inset-0"
-			/>
 
+	const headline1 = t("headline1")
+	const headline2 = t("headline2")
+	const contactUsText = t("contactUs")
+
+	return (
+		<section id="hero" aria-labelledby="hero-heading" className="relative flex min-h-screen w-full flex-col overflow-hidden bg-background">
+			<a
+				href="#main-content"
+				className="sr-only focus:not-sr-only absolute top-2 left-2 z-50 bg-primary text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+			>
+				Skip to main content
+			</a>
 			<div className="relative z-30">
 				<Navbar />
 			</div>
 
-			<div className="relative z-20 h-full flex justify-center items-center px-4">
-				<div className="max-w-4xl w-full text-center">
-					<div className="p-8 md:p-12 rounded-2xl border border-border md:bg-transparent md:backdrop-blur-none md:border-none">
-						<div className="space-y-6">
-							<h1 className="text-4xl md:text-5xl uppercase lg:text-6xl xl:text-7xl font-bold leading-tight text-foreground drop-shadow-2xl">
-								{t("headline1")}
+			<main id="main-content" className="relative z-10 flex flex-grow flex-col h-full">
+				<div className={cn("relative flex-grow m-8", HERO_CONFIG.imagePadding)}>
+					<Image
+						src={HERO_CONFIG.backgroundImageUrl}
+						alt={HERO_CONFIG.altText}
+						fill
+						className={cn("object-cover object-center", HERO_CONFIG.imageBorderRadius)}
+						priority
+						quality={85}
+						unoptimized={process.env.NODE_ENV === "development"}
+					/>
+					<div aria-hidden="true" className={cn("absolute inset-0 bg-black/20 dark:bg-black/40", HERO_CONFIG.imageBorderRadius)} />
+				</div>
+
+				<div className="absolute inset-0 z-20 flex items-center justify-center p-4 text-center">
+					<div className="w-full max-w-4xl">
+						<div className="space-y-6 md:space-y-8 p-6 rounded-lg">
+							<h1
+								id="hero-heading"
+								className="text-4xl font-bold uppercase leading-tight text-foreground drop-shadow-lg sm:text-5xl lg:text-6xl xl:text-7xl"
+							>
+								{headline1} <br className="md:hidden" />
+								<span className="block text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light normal-case text-foreground/80">
+									{headline2}
+								</span>
 							</h1>
-							<p className="text-xl md:text-2xl lg:text-3xl font-light text-foreground/95 drop-shadow-lg max-w-3xl mx-auto">
-								{t("headline2")}
-							</p>
 							<div className="pt-6">
 								<Button
 									size="lg"
-									className="px-8 py-4 text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 rounded-xl"
+									className="rounded-xl dark:bg-black dark:text-primary text-primary-foreground px-8 py-4 text-lg font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
 									asChild
 								>
-									<Link href="#contact-us">{t("contactUs")}</Link>
+									<Link href={HERO_CONFIG.contactLink}>{contactUsText}</Link>
 								</Button>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</main>
 
-			<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-				<div className="animate-bounce">
-					<div className="w-6 h-10 border-2 border-border/50 rounded-full flex justify-center">
-						<div className="w-1 h-3 bg-background/70 rounded-full mt-2 animate-pulse" />
-					</div>
-				</div>
+			<div className="absolute bottom-8 left-1/2 z-30 -translate-x-1/2 transform">
+				<IconMouse className="h-8 w-8 text-white/70 group-hover:text-white animate-bounce transition-all  hover:scale-110" />
 			</div>
 		</section>
 	)

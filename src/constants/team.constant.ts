@@ -1,5 +1,3 @@
-import type { TeamMember } from "@/types/team.types"
-
 const ATIK_TEAM_MEMBERS = [
 	{
 		id: "alexandre-moreau",

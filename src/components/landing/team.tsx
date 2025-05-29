@@ -1,7 +1,7 @@
 import { ATIK_TEAM_MEMBERS } from "@/constants/team.constant"
-import type { TeamMember } from "@/types/team.types"
 import { IconUsersGroup } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
+import Image from "next/image"
 import Link from "next/link"
 import { SectionLayout } from "../ui/section-layout"
 
@@ -26,10 +26,10 @@ export default function TeamMembers() {
 				<div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
 					{ATIK_TEAM_MEMBERS.map((member, index) => (
 						<div key={index} className="group overflow-hidden">
-							<img
+							<Image
 								className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
 								src={member.avatarUrl}
-								alt="team member"
+								alt={member.name}
 								width="826"
 								height="1239"
 							/>

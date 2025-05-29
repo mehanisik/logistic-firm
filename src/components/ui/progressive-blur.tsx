@@ -2,14 +2,14 @@
 import { cn } from '@/lib/utils';
 import { HTMLMotionProps, motion } from 'motion/react';
 
-export const GRADIENT_ANGLES = {
+const GRADIENT_ANGLES = {
   top: 0,
   right: 90,
   bottom: 180,
   left: 270,
 };
 
-export type ProgressiveBlurProps = {
+type ProgressiveBlurProps = {
   direction?: keyof typeof GRADIENT_ANGLES;
   blurLayers?: number;
   className?: string;

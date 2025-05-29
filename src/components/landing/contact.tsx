@@ -2,25 +2,61 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Globe } from "@/components/ui/globe"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { SectionLayout } from "@/components/ui/section-layout"
 import { Textarea } from "@/components/ui/textarea"
 import { ATIK_OFFICE_LOCATIONS } from "@/constants/contact.constant"
-import { IconBuildingSkyscraper, IconHeadset, IconMail, IconMapPin, IconMessageCircle, IconSend, IconUser } from "@tabler/icons-react"
-import { motion } from "framer-motion"
+import { IconHeadset, IconMapPin, IconMessageCircle } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
 import type { FormEvent } from "react"
-import { Globe } from "../ui/globe"
-import { SectionLayout } from "../ui/section-layout"
+import { useState } from "react"
+import { toast } from "sonner"
 
 export default function ContactUs() {
 	const t = useTranslations("Contact")
+	const [loading, setLoading] = useState(false)
+	const [lastFormData, setLastFormData] = useState<FormData | null>(null)
 
 	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
 		const formData = new FormData(event.currentTarget)
-		const data = Object.fromEntries(formData.entries())
-		console.log("Form submitted:", data)
+		setLastFormData(formData)
+		setLoading(true)
+		try {
+			const res = await fetch("/api/send", {
+				method: "POST",
+				body: formData,
+			})
+			if (!res.ok) throw new Error("Failed to send message")
+			toast.success(t("Thank you for contacting us! We will get back to you soon."))
+			event.currentTarget.reset()
+		} catch {
+			toast.error(t("There was an error submitting the form. Please try again."), {
+				action: {
+					label: t("Resend"),
+					onClick: handleResend,
+				},
+			})
+		}
+		setLoading(false)
+	}
+
+	const handleResend = async () => {
+		if (!lastFormData) return
+		setLoading(true)
+		try {
+			const res = await fetch("/api/send", {
+				method: "POST",
+				body: lastFormData,
+			})
+			if (!res.ok) throw new Error("Failed to send message")
+			toast.success(t("Thank you for contacting us! We will get back to you soon."))
+		} catch {
+			toast.error(t("There was an error submitting the form. Please try again."))
+		}
+		setLoading(false)
 	}
 
 	const offices = ATIK_OFFICE_LOCATIONS.map((office) => ({
@@ -56,10 +92,9 @@ export default function ContactUs() {
 							))}
 						</div>
 					</Card>
-					<Card className="relative flex size-full w-full items-center justify-center overflow-hidden  border-none bg-background md:shadow-xl">
+					<div className="relative w-full aspect-square max-w-xs mx-auto flex items-center justify-center">
 						<Globe />
-						<div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
-					</Card>
+					</div>
 				</div>
 				<div className="md:col-span-2 flex flex-col">
 					<Card className="w-full p-8  border border-border bg-background/90 shadow-lg">
@@ -88,8 +123,8 @@ export default function ContactUs() {
 									<Label htmlFor="message">{t("yourMessage")}</Label>
 									<Textarea id="message" name="message" rows={4} placeholder={t("messagePlaceholder")} required />
 								</div>
-								<Button type="submit" className="w-full mt-2">
-									{t("submitYourInquiry")}
+								<Button type="submit" className="w-full mt-2" disabled={loading}>
+									{loading ? t("Sending...") : t("submitYourInquiry")}
 								</Button>
 							</form>
 						</CardContent>

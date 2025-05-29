@@ -5,11 +5,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next"
 import { NextIntlClientProvider, hasLocale } from "next-intl"
 import { getTranslations, setRequestLocale } from "next-intl/server"
-import { Geist, Geist_Mono } from "next/font/google"
 import { notFound } from "next/navigation"
 import { jsonLdScriptProps } from "react-schemaorg"
 import type { WebSite } from "schema-dts"
 import "../globals.css"
+import { Toaster } from "@/components/ui/sonner"
 import localFont from "next/font/local"
 import type { ReactNode } from "react"
 
@@ -35,8 +35,11 @@ export default async function RootLayout({
 	return (
 		<html lang={locale} dir="ltr" suppressHydrationWarning>
 			<head>
+				<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 				<link rel="icon" href="/favicon.ico" />
-				<meta name="theme-color" content="#000000" />
+				<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+				<meta name="theme-color" content="#f24405" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 				<link rel="canonical" href="https://next-app-i18n-starter.vercel.app" />
@@ -45,7 +48,7 @@ export default async function RootLayout({
 				<link rel="alternate" hrefLang="ar" href="https://next-app-i18n-starter.vercel.app/ar" />
 				<link rel="alternate" hrefLang="zh" href="https://next-app-i18n-starter.vercel.app/zh" />
 				<meta name="keywords" content={t("keywords")} />
-				<meta name="author" content="Sovers Tonmoy Pandey" />
+				<meta name="author" content="Atik Import Export" />
 				<meta name="robots" content="index, follow" />
 				<script
 					{...jsonLdScriptProps<WebSite>({
@@ -58,9 +61,12 @@ export default async function RootLayout({
 					})}
 				/>
 			</head>
-			<body className={`${halenoirCompactFont.className} antialiased`} suppressHydrationWarning>
+			<body className={`${halenoirCompactFont.className} antialiased scroll-smooth`} suppressHydrationWarning>
 				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-					<NextIntlClientProvider>{children}</NextIntlClientProvider>
+					<NextIntlClientProvider>
+						<Toaster />
+						{children}
+					</NextIntlClientProvider>
 				</ThemeProvider>
 				<Analytics />
 				<SpeedInsights />
@@ -93,13 +99,13 @@ export async function generateMetadata({
 		openGraph: {
 			title: t("title"),
 			description: t("description"),
-			url: "https://next-app-i18n-starter.vercel.app",
-			siteName: "Next.js i18n Template",
+			url: "https://www.atikexp.com",
+			siteName: "Atik Import Export",
 			images: [
 				{
-					url: "https://next-app-i18n-starter.vercel.app/og-image.png",
-					width: 1200,
-					height: 630,
+					url: "/apple-touch-icon.png",
+					width: 180,
+					height: 180,
 					alt: t("title"),
 				},
 			],
@@ -110,17 +116,14 @@ export async function generateMetadata({
 			card: "summary_large_image",
 			title: t("title"),
 			description: t("description"),
-			images: ["https://next-app-i18n-starter.vercel.app/og-image.png"],
-			creator: "@s0ver5",
+			images: ["/apple-touch-icon.png"],
+			creator: "@atikimportexport",
 		},
 		alternates: {
-			canonical: "https://next-app-i18n-starter.vercel.app",
+			canonical: "https://www.atikexp.com",
 			languages: {
-				en: "https://next-app-i18n-starter.vercel.app/en",
-				ar: "https://next-app-i18n-starter.vercel.app/ar",
-				zh: "https://next-app-i18n-starter.vercel.app/zh",
-				es: "https://next-app-i18n-starter.vercel.app/es",
-				ja: "https://next-app-i18n-starter.vercel.app/jp",
+				en: "https://www.atikexp.com/en",
+				tr: "https://www.atikexp.com/tr",
 			},
 		},
 		robots: {

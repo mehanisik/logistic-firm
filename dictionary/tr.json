@@ -1,20 +1,4 @@
 {
-	"Index": {
-		"boilerplateName": "Next.js i18n Şablonu",
-		"title": "i18n ve Shadcn UI ile Next 15 Şablonu",
-		"description": "Bir sonraki çok dilli, erişilebilir web uygulamanız için güçlü bir başlangıç noktası.",
-		"cloneRepository": "Depoyu Klonla",
-		"howToUse": "Nasıl Kullanılır",
-		"gettingStarted": "Başlarken",
-		"installation": "Kurulum",
-		"howToContribute": "Nasıl Katkıda Bulunulur",
-		"error": {
-			"server": "Dahili Sunucu Hatası",
-			"sorry": "Üzgünüz, sunucumuzda beklenmedik bir sorunla karşılaştık.",
-			"tryAgain": " Lütfen daha sonra tekrar deneyin.",
-			"returnHome": "Ana Sayfaya Dön"
-		}
-	},
 	"Footer": {
 		"copyright": "© {year} Atik Lojistik. Tüm Hakları Saklıdır. Global Ticaretteki Ortağınız.",
 		"githubLink": "GitHub",
@@ -46,6 +30,11 @@
 		"phoneLabel": "Telefon: +90 XXX XXX XX XX",
 		"emailLabel": "E-posta: info@atiklojistik.com.tr",
 		"newsletterDescription": "Atik Lojistik Analizleri ile global ticarette bir adım önde olun. En son sektör haberleri, mevzuat güncellemeleri ve tedarik zincirinizi optimize etmek için uzman ipuçları için abone olun."
+	},
+	"Metadata": {
+		"title": "Atik Lojistik - Global Lojistik Çözümleri",
+		"description": "Atik Lojistik, dünya çapında lojistik hizmetleri sunan bir şirkettir. Müşteri memnuniyetini ve çevre koruma konusunda önem verir.",
+		"keywords": "Atik Lojistik, Global Lojistik, Lojistik Çözümleri, Lojistik Hizmetleri, Lojistik Şirketi, Lojistik"
 	},
 	"Contact": {
 		"letsConnect": "Bağlantı Kuralım",
@@ -136,7 +125,8 @@
 		"headline2": "Global Ticareti Kolaylaştırıyor, Dünyanızı Taşıyoruz.",
 		"description": "Atik Lojistik ile uluslararası taşımacılığın karmaşıklıklarında yol alın. Kesintisiz ithalat, ihracat ve tedarik zinciri yönetimi için kapsamlı, teknoloji odaklı çözümler sunarak işinizi benzersiz verimlilik ve güvenilirlikle dünya pazarlarına bağlıyoruz.",
 		"getAQuote": "Teklif Alın",
-		"exploreOurServices": "Hizmetlerimizi Keşfedin"
+		"exploreOurServices": "Hizmetlerimizi Keşfedin",
+		"contactUs": "İletişime Geçin"
 	},
 	"Services": {
 		"coreServices": "Temel Hizmetlerimiz",

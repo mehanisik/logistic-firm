@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const baseUrl = "https://next-app-i18n-starter.vercel.app"
+	const baseUrl = "https://www.atikexp.com"
 	const locales = ["en", "tr"] as const
 
 	return [

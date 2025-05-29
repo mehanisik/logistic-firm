@@ -42,18 +42,3 @@ export const SERVICES = [
 		className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
 	},
 ] as const
-
-export const SERVICES_STATS = [
-	{
-		id: "countries-served",
-		value: "180+",
-	},
-	{
-		id: "annual-shipments",
-		value: "1.2M+",
-	},
-	{
-		id: "client-satisfaction",
-		value: "4.9/5",
-	},
-] as const

@@ -7,7 +7,7 @@ export interface TestimonialAuthor {
   avatar: string
 }
 
-export interface TestimonialCardProps {
+interface TestimonialCardProps {
   author: TestimonialAuthor
   text: string
   href?: string

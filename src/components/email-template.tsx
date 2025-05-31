@@ -27,5 +27,3 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, em
 		<p style={{ whiteSpace: "pre-line" }}>{message}</p>
 	</div>
 )
-
-export default EmailTemplate

@@ -25,6 +25,4 @@ const ATIK_TEAM_MEMBERS = [
 	},
 ] as const
 
-export const ATIK_TEAM_ADDRESS = "ORTA MAH. DEMIRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA / ISTANBUL"
-
 export { ATIK_TEAM_MEMBERS }

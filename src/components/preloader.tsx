@@ -1,14 +1,31 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+
+let isFirstLoad = true
 
 export function Preloader() {
-	const [isLoading, setIsLoading] = useState(true)
+	const [isLoading, setIsLoading] = useState(isFirstLoad)
+	const [isFading, setIsFading] = useState(false)
+	const videoRef = useRef<HTMLVideoElement>(null)
 
 	useEffect(() => {
-		const timer = setTimeout(() => {
+		if (!isFirstLoad) {
 			setIsLoading(false)
-		}, 1500)
+			return
+		}
+
+		const timer = setTimeout(() => {
+			setIsFading(true)
+			setTimeout(() => {
+				setIsLoading(false)
+				isFirstLoad = false
+			}, 800)
+		}, 2400)
+
+		if (videoRef.current) {
+			videoRef.current.play().catch(console.error)
+		}
 
 		return () => clearTimeout(timer)
 	}, [])
@@ -16,14 +33,47 @@ export function Preloader() {
 	if (!isLoading) return null
 
 	return (
-		<div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm">
-			<div className="flex flex-col items-center gap-6">
-				<div className="relative">
-					<div className="h-24 w-24 animate-[morph_8s_ease-in-out_infinite,float_6s_ease-in-out_infinite] bg-gradient-to-br from-primary via-primary-400 to-primary-600 shadow-lg" />
-					<div className="absolute inset-0 animate-[morph_8s_ease-in-out_infinite_reverse,float_6s_ease-in-out_infinite_0.5s] bg-gradient-to-tr from-primary-600 via-primary-400 to-primary opacity-50 blur-sm" />
+		<>
+			<style jsx global>{`
+				body {
+					overflow: hidden;
+				}
+				#__next > *:not(:first-child) {
+					display: none !important;
+				}
+				@keyframes fadeOut {
+					from {
+						opacity: 1;
+						transform: scale(1);
+					}
+					to {
+						opacity: 0;
+						transform: scale(0.98);
+					}
+				}
+				.preloader-fade {
+					animation: fadeOut 800ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+				}
+			`}</style>
+			<div
+				className={`fixed inset-0 z-[9999] flex items-center justify-center bg-white backdrop-blur-sm transition-all duration-500 ${
+					isFading ? "preloader-fade" : ""
+				}`}
+			>
+				<div className="flex flex-col items-center gap-6">
+					<video
+						ref={videoRef}
+						autoPlay
+						muted
+						playsInline
+						className="h-[80vh] w-auto max-w-[90vw] object-contain"
+						style={{ maxHeight: "90vh" }}
+						onError={(e) => console.error("Video error:", e)}
+					>
+						<source src="/preloader.webm" type="video/webm" />
+					</video>
 				</div>
-				<p className="text-lg font-medium text-muted-foreground animate-pulse">Loading...</p>
 			</div>
-		</div>
+		</>
 	)
 }

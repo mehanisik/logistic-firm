@@ -42,11 +42,11 @@ export default async function RootLayout({
 				<meta name="theme-color" content="#f24405" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-				<link rel="canonical" href="https://next-app-i18n-starter.vercel.app" />
-				<link rel="alternate" hrefLang="x-default" href="https://next-app-i18n-starter.vercel.app" />
-				<link rel="alternate" hrefLang="en" href="https://next-app-i18n-starter.vercel.app/en" />
-				<link rel="alternate" hrefLang="ar" href="https://next-app-i18n-starter.vercel.app/ar" />
-				<link rel="alternate" hrefLang="zh" href="https://next-app-i18n-starter.vercel.app/zh" />
+				<link rel="canonical" href="https://www.atikexp.com" />
+				<link rel="alternate" hrefLang="x-default" href="https://www.atikexp.com" />
+				<link rel="alternate" hrefLang="en" href="https://www.atikexp.com/en" />
+				<link rel="alternate" hrefLang="ar" href="https://www.atikexp.com/ar" />
+				<link rel="alternate" hrefLang="zh" href="https://www.atikexp.com/zh" />
 				<meta name="keywords" content={t("keywords")} />
 				<meta name="author" content="Atik Import Export" />
 				<meta name="robots" content="index, follow" />
@@ -56,7 +56,7 @@ export default async function RootLayout({
 						"@type": "WebSite",
 						name: t("title"),
 						description: t("description"),
-						url: "https://next-app-i18n-starter.vercel.app",
+						url: "https://www.atikexp.com",
 						inLanguage: locale,
 					})}
 				/>

@@ -13,8 +13,9 @@ export async function POST(request: Request) {
 		const message = formData.get("message") as string
 
 		const { data, error } = await resend.emails.send({
-			from: email,
+			from: "Atik Import Export <info@atikimportexport.com>",
 			to: "info@atikimportexport.com",
+			replyTo: email,
 			subject: "New Message from Atik Import Export",
 			react: EmailTemplate({ name, email, company, message }) as React.ReactElement,
 		})

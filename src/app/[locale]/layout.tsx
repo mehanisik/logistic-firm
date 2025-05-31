@@ -10,6 +10,7 @@ import { jsonLdScriptProps } from "react-schemaorg"
 import type { WebSite } from "schema-dts"
 import "../globals.css"
 import { Toaster } from "@/components/ui/sonner"
+import { getBaseUrl } from "@/lib/utils"
 import localFont from "next/font/local"
 import type { ReactNode } from "react"
 
@@ -42,11 +43,9 @@ export default async function RootLayout({
 				<meta name="theme-color" content="#f24405" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-				<link rel="canonical" href="https://www.atikexp.com" />
-				<link rel="alternate" hrefLang="x-default" href="https://www.atikexp.com" />
-				<link rel="alternate" hrefLang="en" href="https://www.atikexp.com/en" />
-				<link rel="alternate" hrefLang="ar" href="https://www.atikexp.com/ar" />
-				<link rel="alternate" hrefLang="zh" href="https://www.atikexp.com/zh" />
+				<link rel="canonical" href={getBaseUrl()} />
+				<link rel="alternate" hrefLang="x-default" href={getBaseUrl()} />
+				<link rel="alternate" hrefLang="en" href={`${getBaseUrl()}/en`} />
 				<meta name="keywords" content={t("keywords")} />
 				<meta name="author" content="Atik Import Export" />
 				<meta name="robots" content="index, follow" />
@@ -56,7 +55,7 @@ export default async function RootLayout({
 						"@type": "WebSite",
 						name: t("title"),
 						description: t("description"),
-						url: "https://www.atikexp.com",
+						url: getBaseUrl(),
 						inLanguage: locale,
 					})}
 				/>
@@ -95,7 +94,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
 		openGraph: {
 			title: t("title"),
 			description: t("description"),
-			url: "https://www.atikexp.com",
+			url: getBaseUrl(),
 			siteName: "Atik Import Export",
 			images: [
 				{
@@ -116,10 +115,10 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
 			creator: "@atikimportexport",
 		},
 		alternates: {
-			canonical: "https://www.atikexp.com",
+			canonical: getBaseUrl(),
 			languages: {
-				en: "https://www.atikexp.com/en",
-				tr: "https://www.atikexp.com/tr",
+				en: `${getBaseUrl()}/en`,
+				tr: `${getBaseUrl()}/tr`,
 			},
 		},
 		robots: {

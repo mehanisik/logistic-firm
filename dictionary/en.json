@@ -309,7 +309,7 @@
 	},
 	"AboutUsPage": {
 		"meta": {
-			"title": "About Atik Import Export",
+			"title": "About Us | Atik Import Export",
 			"description": "Learn more about our company, mission, and values."
 		},
 		"title": "About Atik Import Export",
@@ -354,6 +354,12 @@
 		"meta": {
 			"title": "Contact | Atik Import Export",
 			"description": "Contact | Atik Import Export"
+		}
+	},
+	"HomePage": {
+		"meta": {
+			"title": "Home | Atik Import Export",
+			"description": "Home | Atik Import Export"
 		}
 	},
 

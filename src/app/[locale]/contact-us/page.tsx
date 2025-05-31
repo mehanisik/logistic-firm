@@ -8,13 +8,17 @@ import Navbar from "@/components/ui/navbar"
 import { Textarea } from "@/components/ui/textarea"
 import { ATIK_OFFICE_LOCATIONS } from "@/constants/contact.constant"
 import { IconMail, IconMapPin, IconPhone, IconSend } from "@tabler/icons-react"
-import type { Metadata } from "next"
+import type { Metadata, ResolvingMetadata } from "next"
 import { createTranslator, useTranslations } from "next-intl"
 import { getMessages } from "next-intl/server"
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-	const messages = await getMessages({ locale: params.locale })
-	const t = createTranslator({ locale: params.locale, messages, namespace: "ContactPage" })
+type Props = {
+	params: Promise<{ locale: string }>
+}
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+	const { locale } = await params
+	const messages = await getMessages({ locale })
+	const t = createTranslator({ locale, messages, namespace: "ContactPage" })
 	return {
 		title: t("meta.title", { default: "Contact Us" }),
 		description: t("meta.description", { default: "Contact us for any questions or inquiries." }),

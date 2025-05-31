@@ -1,3 +1,4 @@
+import { URL } from "node:url"
 import AboutUs from "@/components/landing/about-us"
 import ContactUs from "@/components/landing/contact"
 import FeatureAccordion from "@/components/landing/feature-accordion"
@@ -9,6 +10,40 @@ import Stats from "@/components/landing/stats"
 import Summary from "@/components/landing/summary"
 import TeamMembers from "@/components/landing/team"
 import Tesimonials from "@/components/landing/testimonial"
+import type { Metadata } from "next"
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+	const { locale } = await params
+	const messages = (await import(`../../../dictionary/${locale}.json`).catch(() => import("../../../dictionary/en.json"))).default
+	const t = (key: string) => messages.Metadata?.[key] || messages.Metadata?.[key] || ""
+	return {
+		title: t("title"),
+		description: t("description"),
+		keywords: t("keywords"),
+		metadataBase: new URL("https://www.atikexp.com"),
+		openGraph: {
+			title: t("title"),
+			description: t("description"),
+			url: "https://www.atikexp.com",
+			images: [
+				{
+					url: "/apple-icon.png",
+					width: 180,
+					height: 180,
+					alt: t("title"),
+				},
+			],
+			locale: locale,
+			type: "website",
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: t("title"),
+			description: t("description"),
+			images: ["/apple-icon.png"],
+		},
+	}
+}
 
 export default function HomePage() {
 	return (

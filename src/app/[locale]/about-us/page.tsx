@@ -1,13 +1,17 @@
 import AboutUs from "@/components/about-page"
 import Footer from "@/components/landing/footer"
 import Navbar from "@/components/ui/navbar"
-import type { Metadata } from "next"
+import type { Metadata, ResolvingMetadata } from "next"
 import { createTranslator, useTranslations } from "next-intl"
 import { getMessages } from "next-intl/server"
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-	const messages = await getMessages({ locale: params.locale })
-	const t = createTranslator({ locale: params.locale, messages, namespace: "AboutUsPage" })
+type Props = {
+	params: Promise<{ locale: string }>
+}
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+	const { locale } = await params
+	const messages = await getMessages({ locale })
+	const t = createTranslator({ locale, messages, namespace: "AboutUsPage" })
 	return {
 		title: t("meta.title", { default: "About Us" }),
 		description: t("meta.description", { default: "Learn more about our company, mission, and values." }),

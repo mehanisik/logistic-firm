@@ -253,6 +253,12 @@
 			"description": "İletişim | Atik İthalat İhracat"
 		}
 	},
+	"HomePage": {
+		"meta": {
+			"title": "Ana Sayfa | Atik İthalat İhracat",
+			"description": "Ana Sayfa | Atik İthalat İhracat"
+		}
+	},
 	"Summary": {
 		"title": "Global Bağlantılar Kuruyor, Değer Sunuyoruz",
 		"description": "Atik İthalat İhracat, sorunsuz uluslararası taşımacılık ve yakında çıkacak yüksek kaliteli temizlik ve bakım ürünlerinin dağıtımında uzmanlaşmıştır. İşletmeleri dünya çapında güvenilir, emniyetli ve zamanında çözümlerle buluşturuyoruz.",
@@ -323,7 +329,7 @@
 	},
 	"AboutUsPage": {
 		"meta": {
-			"title": "Atik İthalat İhracat Hakkında",
+			"title": "Hakkımızda | Atik İthalat İhracat",
 			"description": "Şirketimiz, misyonumuz ve değerlerimiz hakkında daha fazla bilgi edinin."
 		},
 		"title": "Atik İthalat İhracat Hakkında",

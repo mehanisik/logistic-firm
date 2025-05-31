@@ -2,7 +2,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { routing } from "@/i18n/routing"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import type { Metadata } from "next"
+import type { Metadata, ResolvingMetadata } from "next"
 import { NextIntlClientProvider, hasLocale } from "next-intl"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
@@ -81,11 +81,10 @@ export function generateStaticParams() {
 	return locales.map((locale) => ({ locale }))
 }
 
-export async function generateMetadata({
-	params,
-}: {
-	params: { locale: string }
-}): Promise<Metadata> {
+type Props = {
+	params: Promise<{ locale: string }>
+}
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
 	const { locale } = await params
 	const t = await getTranslations({ locale, namespace: "Metadata" })
 
@@ -93,9 +92,6 @@ export async function generateMetadata({
 		title: t("title"),
 		description: t("description"),
 		keywords: t("keywords"),
-		other: {
-			"google-site-verification": "sVYBYfSJfXdBca3QoqsZtD6lsWVH6sk02RCH4YAbcm8",
-		},
 		openGraph: {
 			title: t("title"),
 			description: t("description"),

@@ -1,5 +1,6 @@
 "use client"
 
+import { ContactForm } from "@/components/forms/contact-form"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Globe } from "@/components/ui/globe"
@@ -97,38 +98,7 @@ export default function ContactUs() {
 					</div>
 				</div>
 				<div className="md:col-span-2 flex flex-col">
-					<Card className="w-full p-8  border border-border bg-background/90 shadow-lg">
-						<CardHeader className="p-0 mb-6">
-							<div className="flex items-center gap-2 mb-2">
-								<IconMessageCircle className="w-6 h-6 text-primary" />
-								<span className="font-semibold text-xl text-foreground">{t("sendUsAMessage")}</span>
-							</div>
-							<CardTitle className="text-base font-medium text-muted-foreground">{t("quickContact")}</CardTitle>
-						</CardHeader>
-						<CardContent className="p-0">
-							<form onSubmit={handleSubmit} className="flex flex-col gap-6">
-								<div className="flex flex-col gap-2">
-									<Label htmlFor="name">{t("fullName")}</Label>
-									<Input id="name" name="name" placeholder={t("namePlaceholder")} required />
-								</div>
-								<div className="flex flex-col gap-2">
-									<Label htmlFor="email">{t("emailAddress")}</Label>
-									<Input id="email" name="email" type="email" placeholder={t("emailPlaceholder")} required />
-								</div>
-								<div className="flex flex-col gap-2">
-									<Label htmlFor="company">{t("companyNameOptional")}</Label>
-									<Input id="company" name="company" placeholder={t("companyPlaceholder")} />
-								</div>
-								<div className="flex flex-col gap-2">
-									<Label htmlFor="message">{t("yourMessage")}</Label>
-									<Textarea id="message" name="message" rows={4} placeholder={t("messagePlaceholder")} required />
-								</div>
-								<Button type="submit" className="w-full mt-2" disabled={loading}>
-									{loading ? t("Sending...") : t("submitYourInquiry")}
-								</Button>
-							</form>
-						</CardContent>
-					</Card>
+					<ContactForm />
 				</div>
 			</div>
 		</SectionLayout>

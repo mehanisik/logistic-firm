@@ -7,8 +7,14 @@ import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 import { IconOmega } from "@tabler/icons-react" 
 import { ThemeSwitcher } from "../theme-switcher"
-import LanguageSwitcher from "../language-switcher"
+import {LanguageSwitcher} from "../language-switcher"
 import { useTranslations } from "next-intl" 
+import { useTheme } from "next-themes"
+import Image from "next/image"
+
+import LogoLight from "../../../public/images/logo-light.svg"
+import LogoDark from "../../../public/images/logo-dark.svg"
+import { Logo } from "./logo"
 
 interface NavItem {
   id: string 
@@ -17,18 +23,24 @@ interface NavItem {
 
 const MENU_ITEMS_CONFIG: NavItem[] = [
   { id: "home", href: "/" }, 
-  { id: "about", href: "/#about-us" }, 
-  { id: "service", href: "/#services" },
-  { id: "contact", href: "/#contact-us" },
+  { id: "about", href: "/about-us" }, 
+  { id: "service", href: "/services" },
+  { id: "contact", href: "/contact-us" },
 ]
 
-export default function Navbar() {
+interface NavbarProps {
+  forceScrolled?: boolean
+}
+
+export default function Navbar({ forceScrolled }: NavbarProps = {}) {
   const t = useTranslations("Navbar") 
+  const { theme } = useTheme()
 
   const [menuState, setMenuState] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(forceScrolled ?? false)
 
   useEffect(() => {
+    if (forceScrolled) return;
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
@@ -48,7 +60,7 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll)
       window.removeEventListener("resize", closeMenuOnResize)
     }
-  }, [])
+  }, [forceScrolled])
 
   const menuItems = MENU_ITEMS_CONFIG.map(item => ({
     ...item,
@@ -73,16 +85,24 @@ export default function Navbar() {
     }
   )
 
+
+  const getLogo = () => {
+    if (theme === "dark") {
+      return LogoLight
+    }
+    if (theme === "light" && !isScrolled) {
+      return LogoLight
+    }
+    return LogoDark
+  }
+
   return (
-    <header className="fixed z-50 m-5 w-full"> 
+    <header className="fixed z-50 m-2  w-full"> 
       <nav data-state={menuState ? "active" : "inactive"} className="px-2">
         <div className={navContainerClasses}>
           <div className="relative flex items-center justify-between gap-6 py-3"> 
             <div className="flex shrink-0">
-              <Link href="/" aria-label={t('home')} className="flex items-center space-x-2 text-foreground">
-                <IconOmega />
-                <span className="font-semibold text-lg">{t("brand")}</span>
-              </Link>
+                <Logo isScrolled={isScrolled} />
             </div>
 
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:gap-x-8">
@@ -91,7 +111,10 @@ export default function Navbar() {
                   key={item.id}
                   href={item.href}
                   onClick={() => setMenuState(false)} 
-                  className="block rounded-md px-3 py-2 text-md text-muted-foreground font-bold transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
+                  className={cn(
+                    "block rounded-md px-3 py-2 text-md font-bold transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
+                    isScrolled ? "text-foreground" : "text-white"
+                  )}
                 >
                   {t(item.id)}
                 </Link>

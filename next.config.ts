@@ -28,6 +28,14 @@ const nextConfig: NextConfig = {
 				protocol: "https",
 				hostname: "images.pexels.com",
 			},
+			{
+				protocol: "https",
+				hostname: "avatar.iran.liara.run",
+			},
+			{
+				protocol: "https",
+				hostname: "i.ibb.co",
+			},
 		],
 	},
 }

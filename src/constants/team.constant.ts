@@ -1,28 +1,30 @@
 const ATIK_TEAM_MEMBERS = [
 	{
-		id: "alexandre-moreau",
-		name: "Alexandre Moreau",
-		avatarUrl: "https://alt.tailus.io/images/team/member-one.webp",
-		linkedinUrl: "https://linkedin.com/in/alexandremoreau-example",
+		id: "mehmet-akkaya",
+		name: "Mehmet AKKAYA",
+		avatarUrl: "/images/team-member-1.jpg",
+		linkedinUrl: "#",
+		phone: "+90 533 964 20 84",
+		email: "info@atikexp.com",
 	},
 	{
-		id: "priya-sharma",
-		name: "Priya Sharma",
-		role: "Head of Global Operations",
-		description:
-			"Priya is an expert in optimizing international freight operations and ensuring strict customs compliance. Her strategic oversight guarantees efficiency and reliability across our vast global network.",
-		avatarUrl: "https://alt.tailus.io/images/team/member-two.webp",
-		linkedinUrl: "https://linkedin.com/in/priyasharma-example",
+		id: "khalid-xkhospervaz",
+		name: "Khalid Xkhospervaz",
+		avatarUrl: "/images/team-member-2.jpg",
+		linkedinUrl: "#",
+		phone: "+90 534 846 95 50",
+		email: "Xoshparvaz@atikexp.com",
 	},
 	{
-		id: "kenji-tanaka",
-		name: "Kenji Tanaka",
-		role: "Director of Technology & Innovation",
-		description:
-			"Kenji spearheads the development of Atik Logistics' proprietary digital platform, integrating AI and IoT to provide clients with unparalleled shipment visibility and predictive analytics.",
-		avatarUrl: "https://alt.tailus.io/images/team/member-three.webp",
-		linkedinUrl: "https://linkedin.com/in/kenjitanaka-example",
+		id: "atilla-mert-akkaya",
+		name: "Atilla Mert AKKAYA",
+		avatarUrl: "/images/team-member-3.jpg",
+		linkedinUrl: "#",
+		phone: "+48 572 482 769",
+		email: "atilla@atikexp.com",
 	},
 ] as const
+
+export const ATIK_TEAM_ADDRESS = "ORTA MAH. DEMIRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA / ISTANBUL"
 
 export { ATIK_TEAM_MEMBERS }

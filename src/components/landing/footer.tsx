@@ -1,14 +1,17 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 import { IconBrandFacebook, IconBrandLinkedin, IconBrandTwitter, IconMoon, IconPlant2, IconSend, IconSun } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
+import Image from "next/image"
 import Link from "next/link"
 import { type MouseEvent, useRef, useState } from "react"
+import LogoDark from "../../../public/images/logo-dark.svg"
+import LogoLight from "../../../public/images/logo-light.svg"
+import { Logo } from "../ui/logo"
 
 interface NavLinkItem {
 	href: string
@@ -78,14 +81,6 @@ export default function Footer() {
 		setCursor(null)
 	}
 
-	const handleNewsletterSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-		event.preventDefault()
-		const formData = new FormData(event.currentTarget)
-		const email = formData.get("email")
-		console.log("Newsletter subscription for:", email)
-		event.currentTarget.reset()
-	}
-
 	return (
 		<footer
 			ref={footerRef}
@@ -118,34 +113,9 @@ export default function Footer() {
 			)}
 			<div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-16 relative z-10">
 				<div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
-					<div className="lg:col-span-4">
-						<Link href="/" className="inline-flex items-center gap-2 mb-4 group">
-							<IconPlant2 className="h-8 w-8 text-primary transition-transform duration-300 group-hover:rotate-12" />
-							<span className="text-2xl font-bold text-foreground">{t("companyName")}</span>
-						</Link>
+					<div className="lg:col-span-4 flex flex-col items-start justify-start">
+						<Logo isScrolled={true} width={180} height={80} />
 						<p className="mb-6 text-muted-foreground text-sm leading-relaxed">{t("newsletterDescription")}</p>
-						<form onSubmit={handleNewsletterSubmit} className="relative flex items-center">
-							<Label htmlFor="footer-newsletter-email" className="sr-only">
-								Email for newsletter
-							</Label>
-							<Input
-								type="email"
-								id="footer-newsletter-email"
-								name="email"
-								placeholder={t("newsletterPlaceholder")}
-								required
-								className="pr-12 py-3 h-auto text-base bg-background dark:bg-slate-800 border-border focus:border-primary"
-							/>
-							<Button
-								type="submit"
-								variant="ghost"
-								size="icon"
-								className="absolute right-1 top-1/2 -translate-y-1/2 h-9 w-9 rounded-md text-primary hover:bg-primary/10"
-								aria-label={t("newsletterAriaLabel")}
-							>
-								<IconSend className="h-5 w-5" />
-							</Button>
-						</form>
 					</div>
 
 					<div className="lg:col-span-2 md:justify-self-end">
@@ -198,9 +168,11 @@ export default function Footer() {
 												</Link>
 											</Button>
 										</TooltipTrigger>
-										<TooltipContent side="top">
-											<p>{social.tooltip}</p>
-										</TooltipContent>
+										<TooltipPrimitive.Portal>
+											<TooltipContent side="top" sideOffset={8}>
+												<p>{social.tooltip}</p>
+											</TooltipContent>
+										</TooltipPrimitive.Portal>
 									</Tooltip>
 								</TooltipProvider>
 							))}

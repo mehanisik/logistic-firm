@@ -2,28 +2,23 @@ import { SectionLayout } from "@/components/ui/section-layout"
 import { ATIK_SUMMARY_FEATURES } from "@/constants/summary.constant"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
+import BackgroundPattern from "../ui/pattern"
 
 export default function FeaturesSummary() {
 	const t = useTranslations("Summary")
 	return (
-		<SectionLayout noPadding containerClassName="bg-primary/5 p-10">
-			<div className="mx-auto max-w-5xl space-y-12 px-6">
+		<SectionLayout noPadding containerClassName="bg-primary/5 p-10 relative">
+			<div className="absolute inset-0 z-0 pointer-events-none">
+				<BackgroundPattern />
+			</div>
+			<div className="mx-auto relative max-w-5xl space-y-12 px-6 z-10">
 				<div className="relative z-10 grid items-center gap-4 md:grid-cols-2 md:gap-12">
 					<h2 className="text-4xl font-semibold text-foreground">{t("title")}</h2>
 					<p className="max-w-sm sm:ml-auto">{t("description")}</p>
 				</div>
 				<div className="relative rounded-3xl p-3 md:-mx-8 lg:col-span-3">
 					<div className="aspect-88/36 relative">
-						<div className="bg-linear-to-t z-1 from-background absolute inset-0 to-transparent" />
-						<Image
-							src={
-								"https://plus.unsplash.com/premium_photo-1661932015882-c35eee885897?q=80&w=2206&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-							}
-							className="absolute inset-0 z-10"
-							alt="logistics illustration"
-							width={2797}
-							height={1137}
-						/>
+						<Image src={"/images/summary.png"} className="absolute inset-0 z-10" alt="logistics illustration" width={2797} height={1137} />
 					</div>
 				</div>
 				<div className="relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4">

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 
+import { Button } from "@/components/ui/button"
 import { usePathname, useRouter } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
@@ -19,9 +20,15 @@ const languageDetails = [
 	},
 ] as const
 
+interface Language {
+	code: string
+	label: string
+	icon: React.ReactNode
+}
+
 type Locale = (typeof languageDetails)[number]["code"]
 
-const LanguageSwitcher = () => {
+export function LanguageSwitcher() {
 	const router = useRouter()
 	const pathname = usePathname()
 	const [currentLocale, setCurrentLocale] = useState<Locale>("en")
@@ -44,7 +51,7 @@ const LanguageSwitcher = () => {
 		}
 	}, [pathname])
 
-	const changeLanguage = (newLocale: Locale) => {
+	const handleChangeLanguage = (newLocale: Locale) => {
 		if (newLocale === currentLocale) return
 		setCurrentLocale(newLocale)
 		document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`
@@ -52,27 +59,28 @@ const LanguageSwitcher = () => {
 	}
 
 	return (
-		<div className="flex gap-2">
+		<div className="flex gap-2 items-center">
 			{languageDetails.map((lang) => {
 				const isActive = currentLocale === lang.code
 				return (
-					<button
+					<Button
 						key={lang.code}
 						type="button"
-						onClick={() => changeLanguage(lang.code)}
+						variant={isActive ? "secondary" : "ghost"}
+						size="sm"
+						onClick={() => handleChangeLanguage(lang.code)}
 						aria-current={isActive ? "true" : undefined}
+						aria-label={`Switch to ${lang.label}`}
 						className={cn(
-							"flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-semibold transition-colors border border-transparent focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
+							"flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-semibold border border-transparent focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-colors",
 							isActive ? "bg-accent text-primary dark:text-white" : "text-muted-foreground hover:bg-accent hover:text-primary",
 						)}
 					>
 						{lang.icon}
 						<span>{lang.label}</span>
-					</button>
+					</Button>
 				)
 			})}
 		</div>
 	)
 }
-
-export default LanguageSwitcher

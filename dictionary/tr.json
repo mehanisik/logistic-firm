@@ -1,15 +1,15 @@
 {
 	"Footer": {
-		"copyright": "© {year} Atik Lojistik. Tüm Hakları Saklıdır. Global Ticaretteki Ortağınız.",
+		"copyright": "© {year} Atik İthalat İhracat. Tüm Hakları Saklıdır. Global Ticaretteki Ortağınız.",
 		"githubLink": "GitHub",
 		"quickLinks": "Hızlı Bağlantılar",
-		"contactTitle": "Atik Lojistik ile İletişime Geçin",
+		"contactTitle": "Atik İthalat İhracat ile İletişime Geçin",
 		"followUs": "Bizi Takip Edin",
 		"nav": {
 			"home": "Ana Sayfa",
-			"about": "Atik Lojistik Hakkında",
+			"about": "Atik İthalat İhracat Hakkında",
 			"services": "Hizmetlerimiz",
-			"blog": "Lojistik Analizleri",
+			"blog": "Ticaret Analizleri",
 			"contact": "İletişim",
 			"track": "Gönderi Takibi"
 		},
@@ -19,27 +19,27 @@
 			"sitemap": "Site Haritası"
 		},
 		"social": {
-			"linkedin": "Atik Lojistik ile LinkedIn'de Bağlantı Kurun",
-			"twitter": "Atik Lojistik'i Twitter'da Takip Edin",
-			"facebook": "Atik Lojistik'i Facebook'ta Beğenin"
+			"linkedin": "Atik İthalat İhracat ile LinkedIn'de Bağlantı Kurun",
+			"twitter": "Atik İthalat İhracat'ı Twitter'da Takip Edin",
+			"facebook": "Atik İthalat İhracat'ı Facebook'ta Beğenin"
 		},
 		"newsletterPlaceholder": "e-posta.adresiniz@ornek.com",
 		"newsletterAriaLabel": "Bültene abone ol",
-		"companyName": "Atik Lojistik",
-		"address": "Global Merkez:\nORTA MAH. DEMİRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA/ İSTANBUL",
-		"phoneLabel": "Telefon: +90 XXX XXX XX XX",
-		"emailLabel": "E-posta: info@atiklojistik.com.tr",
-		"newsletterDescription": "Atik Lojistik Analizleri ile global ticarette bir adım önde olun. En son sektör haberleri, mevzuat güncellemeleri ve tedarik zincirinizi optimize etmek için uzman ipuçları için abone olun."
+		"companyName": "Atik İthalat İhracat",
+		"address": "ORTA MAH. DEMİRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA/ İSTANBUL",
+		"phoneLabel": "Telefon: +90 533 964 20 84",
+		"emailLabel": "E-posta: info@atikexp.com",
+		"newsletterDescription": "Atik İthalat İhracat ile güncel kalın. Hizmetlerimiz ve ürün tekliflerimiz hakkında en son haberler için abone olun."
 	},
 	"Metadata": {
-		"title": "Atik Lojistik - Global Lojistik Çözümleri",
-		"description": "Atik Lojistik, dünya çapında lojistik hizmetleri sunan bir şirkettir. Müşteri memnuniyetini ve çevre koruma konusunda önem verir.",
-		"keywords": "Atik Lojistik, Global Lojistik, Lojistik Çözümleri, Lojistik Hizmetleri, Lojistik Şirketi, Lojistik"
+		"title": "Atik İthalat İhracat – Temizlik ve Bakım Ürünleri için Global Ticaret ve Taşımacılık",
+		"description": "Atik İthalat İhracat: Temizlik ve bakım ürünleri için sorunsuz uluslararası taşımacılık ve özel çözümlerle güçlü ticari bağlantılar kuruyor. Global büyüme için güvenilir ortağınız.",
+		"keywords": "Atik İthalat İhracat, uluslararası ticaret, uluslararası taşımacılık, temizlik ürünleri, bakım ürünleri, ithalat ihracat, kamyon taşımacılığı, global tedarik zinciri, İstanbul ticaret, Varşova ticaret, Tahran ticaret"
 	},
 	"Contact": {
 		"letsConnect": "Bağlantı Kuralım",
-		"title": "İletişime Geçin:",
-		"description": "Belirli bir gönderi sorgunuz olsun, kapsamlı bir lojistik danışmanlığına ihtiyacınız olsun ya da ortaklık fırsatlarını keşfetmek isteyin, global ekibimiz size yardımcı olmaya hazırdır.",
+		"title": "Atik İthalat İhracat ile İletişime Geçin",
+		"description": "Uluslararası taşımacılık, kamyon bazlı çözümler veya yakında çıkacak temizlik ve bakım ürünleri yelpazemiz hakkında bilgi almak isteyin, özel ekibimiz ve uluslararası bağlantılarımız size yardımcı olmaya hazırdır.",
 		"quickContact": "Hızlı İletişim",
 		"generalInquiries": "Genel Sorularınız İçin:",
 		"salesAndQuotes": "Satış ve Teklifler İçin:",
@@ -50,278 +50,326 @@
 		"companyNameOptional": "Şirket Adı (İsteğe Bağlı)",
 		"yourMessage": "Mesajınız",
 		"submitYourInquiry": "Talebinizi Gönderin",
-		"ourGlobalPresence": "Global Varlığımız",
-		"namePlaceholder": "örn. Ayşe Yılmaz",
+		"ourGlobalPresence": "Lokasyonlarımız",
+		"namePlaceholder": "örn. John Doe",
 		"emailPlaceholder": "siz@sirket.com",
-		"companyPlaceholder": "örn. Örnek A.Ş.",
-		"messagePlaceholder": "Lütfen lojistik ihtiyaçlarınızı veya sorunuzu ayrıntılı olarak açıklayın. Mal türü, menşe/varış yeri, tahmini hacim/sıklık vb. bilgileri ekleyin.",
+		"companyPlaceholder": "örn. Global A.Ş.",
+		"messagePlaceholder": "Lütfen talebinizi açıklayın. Taşımacılık ihtiyaçlarınız için mal türü, menşe/varış yeri vb. bilgileri ekleyin. Ürünler için ilginizi belirtin.",
 		"officeLocations": {
 			"global-headquarters": {
-				"name": "Global Merkez",
+				"name": "Merkez Ofis (İstanbul, Türkiye)",
 				"addressLines": "ORTA MAH. DEMİRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA/ İSTANBUL"
 			},
 			"european-hub": {
-				"name": "Avrupa Merkezi",
-				"addressLines": "ul.Marszałkowska 66, 00-401, Varşova, Polonya"
+				"name": "Avrupa Bağlantısı (Varşova, Polonya)",
+				"addressLines": "Varşova, Polonya"
 			},
 			"asia-pacific-hub": {
-				"name": "Asya-Pasifik Merkezi",
+				"name": "Orta Doğu Bağlantısı (Tahran, İran)",
 				"addressLines": "Tahran, İran"
 			}
+		},
+		"toastMessages": {
+			"success": "Bizimle iletişime geçtiğiniz için teşekkür ederiz! En kısa sürede size geri döneceğiz.",
+			"error": "Form gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
+			"resendAction": "Tekrar Gönder",
+			"sending": "Gönderiliyor...",
+			"resending": "Tekrar gönderiliyor..."
+		},
+		"businessHours": "Çalışma Saatleri",
+		"mondayFriday": "Pazartesi - Cuma",
+		"saturday": "Cumartesi",
+		"sunday": "Pazar",
+		"closed": "Kapalı",
+		"emergencySupport": "Acil destek 7/24 mevcuttur",
+		"ctaTitle": "Acil Yardıma mı İhtiyacınız Var?",
+		"ctaDescription": "Ekibimiz acil talepler ve destek için 7/24 hizmetinizdedir.",
+		"ctaHotline": "Acil destek hattımız:",
+		"am": "ÖÖ",
+		"pm": "ÖS",
+		"phoneLabel": "Telefon: +90 533 964 20 84",
+		"emailLabel": "E-posta: info@atikexp.com",
+		"validation": {
+			"nameRequired": "İsim gereklidir",
+			"nameMin": "İsim en az 2 karakter olmalıdır",
+			"emailRequired": "E-posta gereklidir",
+			"emailInvalid": "Lütfen geçerli bir e-posta adresi girin",
+			"messageRequired": "Mesaj gereklidir",
+			"messageMin": "Mesaj en az 10 karakter olmalıdır"
 		}
 	},
 	"Testimonial": {
-		"title": "Dünya Çapında İşletmelerin Güvendiği",
-		"description": "Kritik ithalat/ihracat operasyonları ve global tedarik zinciri yönetimi için Atik Lojistik'e güvenen değerli müşterilerimizden doğrudan dinleyin.",
+		"title": "Ticaret ve Taşımacılıkta İşletmelerin Güvendiği",
+		"description": "Kritik uluslararası ticaret ve taşımacılık gereksinimleri için Atik İthalat İhracat'a güvenen müşterilerimizden dinleyin.",
 		"testimonials": {
 			"testimonial-1": {
 				"author": {
-					"name": "Sarah Chen",
-					"handle": "Tedarik Zinciri Yöneticisi, TechStyle Inc."
+					"name": "Ayşe Demir",
+					"handle": "Operasyon Yöneticisi"
 				},
-				"text": "Atik Lojistik, uluslararası tedarik zincirimizi kökten değiştirdi. Proaktif iletişimleri ve verimli gümrükleme işlemleri sayesinde önemli ölçüde zaman ve maliyet tasarrufu sağladık. Global genişleme için gerçekten güvenilir bir ortak."
+				"text": "Atik İthalat İhracat, günlük lojistik süreçlerimizde güvenilir bir iş ortağı oldu. Detaylara verdikleri önem ve zamanında teslimatları her seferinde beklentileri aşıyor. Hizmet odaklı çalışmaları takdire şayan."
 			},
 			"testimonial-2": {
 				"author": {
-					"name": "David Miller",
-					"handle": "Operasyon Direktörü, Global Foods Ltd."
+					"name": "Mehmet Yalçın",
+					"handle": "Tedarik Zinciri Uzmanı"
 				},
-				"text": "Atik Lojistik ekibi sürekli olarak beklenenin ötesine geçiyor. Soğuk zincir çözümleriyle bozulabilir ürünlerin taşınmasındaki uzmanlıkları eşsiz. Teslimat sürelerinde ve ürün bütünlüğünde gözle görülür bir iyileşme kaydettik."
+				"text": "Pek çok lojistik firmasıyla çalıştık ama Atik'in profesyonelliği gerçekten fark yaratıyor. Ekip her zaman ulaşılabilir, organize ve karşılaştığımız her soruna hızlıca çözüm sunuyor."
 			},
 			"testimonial-3": {
 				"author": {
-					"name": "Maria Rodriguez",
-					"handle": "CEO, Artisan Crafts Co."
+					"name": "Zeynep Koç",
+					"handle": "İthalat/İhracat Uzmanı"
 				},
-				"text": "Yeni uluslararası pazarlara açılan büyüyen bir işletme olarak, Atik Lojistik'in sağladığı kritik rehberlik ve özel destek bizim için çok değerliydi. Kişiselleştirilmiş hizmetleri, karmaşık bir ithalat/ihracat sürecini basit ve yönetilebilir hale getirdi."
+				"text": "Uluslararası taşımacılık karmaşık olabilir, ancak Atik süreci oldukça kolaylaştırıyor. Gümrük işlemlerinden son teslimata kadar her adım şeffaf ve sorunsuz ilerliyor. Gerçekten güvenebileceğiniz bir ekip."
 			},
 			"testimonial-4": {
 				"author": {
-					"name": "James Lee",
-					"handle": "Satın Alma Lideri, Advanced Machinery Corp."
+					"name": "Mustafa Aydın",
+					"handle": "Lojistik Direktörü"
 				},
-				"text": "Büyük boyutlu makinelerin karmaşık bir proje kargo sevkiyatını Atik Lojistik'e emanet ettik. Titiz planlamaları, uygulamaları ve yerinde koordinasyonları kusursuzdu. Her türlü zorlu lojistik ihtiyacı için şiddetle tavsiye edilir."
+				"text": "Atik'in verimlilik konusundaki titizliği ve açık iletişim tarzı onları öne çıkarıyor. Şimdiye kadar birlikte yürüttüğümüz tüm sevkiyatlar sorunsuz ve zamanında gerçekleşti. Tam anlamıyla güvenilir bir ortak."
 			}
 		}
 	},
 	"AboutUs": {
-		"aboutUsText": "Atik Lojistik'te bir hizmet sağlayıcıdan daha fazlasıyız; global pazarda yolunuzu bulmanızda stratejik ortağınızız. Yolculuğumuz on beş yıl önce yenilikçilik, müşteri odaklılık ve sürdürülebilir uygulamalara olan bağlılığımızla başladı. Olağanüstü ithalat ve ihracat çözümleri sunarak, işletmeleri verimlilik ve sarsılmaz güvenilirlikle yeni fırsatlara bağlıyoruz. Global başarınız için yolları inşa etmemize güvenin.",
-		"ourStory": "Hikayemiz",
-		"headline1": "Global Lojistikte Öncü,",
-		"headline2": "Temeli",
-		"headlineAccent": "Güven ve Yenilikçilik",
-		"subDescription": "Atik Lojistik, uluslararası ticareti basitleştirmeye adanmıştır. Kargonuzun sınırlar arasında sorunsuz ve verimli bir şekilde hareket etmesini sağlamak için en son teknolojiyi ve global bir ağı kullanarak kapsamlı ithalat/ihracat hizmetleri sunuyoruz.",
+		"aboutUsText": "Atik İthalat İhracat olarak, Avrupa ve Orta Doğu başta olmak üzere küresel pazarlarda güvenilir ticari köprüler kuruyoruz. Yüksek kaliteli ürünler, sorunsuz lojistik ve sağlam iş ortaklıklarıyla sürdürülebilir büyümeyi destekliyoruz.",
+		"ourStory": "Hakkımızda",
+		"headline1": "Global Ticari Bağlantılar Kuruyoruz,",
+		"headline2": "Temelimiz",
+		"headlineAccent": "Güven ve Sıkı Çalışma",
+		"subDescription": "Mükemmellik, dürüstlük ve müşteri memnuniyeti taahhüdüyle Atik İthalat İhracat, fırsatları başarılara dönüştürerek dünyayı her seferinde bir ticaretle daha da yakınlaştırıyor. Temizlik ve bakım ürünlerinin uluslararası taşımacılığında uzmanız ve bu ürünlerin tam yelpazesini dağıtım için hazırlıyoruz.",
 		"partnerWithUs": "Bizimle Ortak Olun",
-		"yearsOfExpertiseValue": "15+",
+		"yearsOfExpertiseValue": "5+",
 		"yearsOfExpertiseLabel": "Yıllık Uzmanlık",
-		"customerRetentionValue": "%99.5",
+		"customerRetentionValue": "%97",
 		"customerRetentionLabel": "Müşteri Bağlılığı",
-		"globalClientsValue": "5000+",
+		"globalClientsValue": "100+",
 		"globalClientsLabel": "Global Müşteri"
 	},
 	"Hero": {
-		"imageAlt": "Dünya haritası üzerinde birbirine bağlı çizgilerle global lojistik ağı konsepti",
-		"headline1": "Atik Lojistik:",
-		"headline2": "Global Ticareti Kolaylaştırıyor, Dünyanızı Taşıyoruz.",
-		"description": "Atik Lojistik ile uluslararası taşımacılığın karmaşıklıklarında yol alın. Kesintisiz ithalat, ihracat ve tedarik zinciri yönetimi için kapsamlı, teknoloji odaklı çözümler sunarak işinizi benzersiz verimlilik ve güvenilirlikle dünya pazarlarına bağlıyoruz.",
-		"getAQuote": "Teklif Alın",
-		"exploreOurServices": "Hizmetlerimizi Keşfedin",
-		"contactUs": "İletişime Geçin"
+		"imageAlt": "Temizlik ve bakım ürünlerini temsil eden konteynerler, kamyonlar ve ürün görselleriyle global ticaret konsepti",
+		"companyName": "Atik İthalat İhracat",
+		"headline1": "Global Ticaret",
+		"headline2": "Köprünüz"
 	},
 	"Services": {
 		"coreServices": "Temel Hizmetlerimiz",
-		"headline": "Bağlantılı Bir Dünya İçin Uçtan Uca Lojistik",
-		"description": "Atik Lojistik olarak, tedarik zincirinizi optimize etmek, karmaşıklıkları azaltmak ve işinizi global sahnede ileriye taşımak için tasarlanmış kapsamlı bir ithalat/ihracat hizmetleri paketi sunuyoruz.",
+		"headline": "Uluslararası Ticaret ve Taşımacılık Çözümleri",
+		"description": "Atik İthalat İhracat, temizlik ve bakım ürünleri için özel uluslararası taşımacılık, güvenilir kamyon bazlı çözümler sunar ve yakında yüksek kaliteli temizlik ve bakım ürünlerinin tam bir yelpazesini dağıtacaktır.",
 		"stats": {
 			"countries-served": {
-				"name": "Hizmet Verilen Ülke Sayısı"
+				"name": "Global Erişim"
 			},
 			"annual-shipments": {
-				"name": "Yıllık Gönderi Sayısı"
+				"name": "Başarılı Ticaretler"
 			},
 			"client-satisfaction": {
-				"name": "Müşteri Memnuniyeti"
+				"name": "Ortak Memnuniyeti"
 			}
 		},
 		"features": {
 			"freight-forwarding": {
-				"name": "Navlun Organizasyonu",
-				"description": "İşletmenizi 180'den fazla ülkeye bağlayan kesintisiz hava, deniz ve kara navlun çözümleri. Tüm kargo türleri için optimize edilmiş rotalar, rekabetçi fiyatlar ve zamanında teslimatlar sağlıyoruz.",
-				"cta": "Navlun Çözümlerini Keşfet",
+				"name": "Uluslararası Taşımacılık",
+				"description": "Atik İthalat İhracat, temizlik ve bakım ürünlerinin uluslararası taşımacılığında uzmanlaşmıştır. Mallarınızı dünyanın her yerine güvenli ve zamanında ulaştırıyoruz.",
+				"cta": "Taşımacılığı Keşfet",
 				"badge": "Temel Hizmet",
-				"altText": "Atik Lojistik kamyon filosu otoyolda kargo taşıyor"
+				"altText": "Atik İthalat İhracat markalı bir gemiye yüklenen kargo konteynerleri"
 			},
 			"warehousing": {
-				"name": "Depolama",
-				"description": "Gelişmiş envanter yönetimi, sipariş karşılama ve kit oluşturma ve çapraz sevkiyat gibi katma değerli hizmetler sunan stratejik konumlu depolar.",
-				"cta": "Depolama Çözümlerini Keşfet",
-				"badge": "Temel Hizmet",
-				"altText": "Atik Lojistik deposu otomatik sistemlerle"
+				"name": "Güvenli Depolama Çözümleri",
+				"description": "Taşımacılık hizmetlerimizi tamamlayan güvenli ve verimli depolama seçenekleri, temizlik ve bakım ürünlerinizin iyi korunmasını sağlar.",
+				"cta": "Depolama Hakkında Bilgi Edinin",
+				"badge": "Katma Değerli",
+				"altText": "Çeşitli paketlenmiş ürünleri depolayan düzenli bir depo"
 			},
 			"track-shipment": {
-				"name": "Gönderi Takibi",
-				"description": "Gönderileriniz için gerçek zamanlı takip ve görünürlük, böylece kargonuzun nerede olduğunu ve ne zaman varacağını her zaman bilirsiniz.",
-				"cta": "Gönderinizi Takip Edin",
-				"badge": "Temel Hizmet",
-				"altText": "Atik Lojistik takip sistemi gönderi ilerlemesini gösteriyor"
+				"name": "Gönderi Güncellemeleri",
+				"description": "Gönderileriniz hakkında gerçek zamanlı güncellemelerle bilgi sahibi olun, taşıma süreci boyunca şeffaflık sağlayın.",
+				"cta": "Gönderi Durumunu Öğren",
+				"badge": "Özellik",
+				"altText": "Gönderi takip noktalarını gösteren bir harita içeren dijital arayüz"
 			},
 			"customs-brokerage": {
-				"name": "Gümrük Müşavirliği",
-				"description": "Tüm ithalat/ihracat gönderileri için gümrükleme, dokümantasyon ve uyumluluk konularında uzman elleçleme, sorunsuz gümrük süreçleri sağlar.",
-				"cta": "Gümrük Çözümlerini Keşfet",
-				"badge": "Temel Hizmet",
-				"altText": "Atik Lojistik gümrükleme süreci"
+				"name": "Gümrük Kolaylaştırma",
+				"description": "Sorunsuz ve zamanında uluslararası ticaret operasyonları sağlamak için gümrük belgeleri ve prosedürleri konusunda uzman yardım.",
+				"cta": "Gümrük İşlerinizi Basitleştirin",
+				"badge": "Katma Değerli",
+				"altText": "Uluslararası gümrükle ilgili resmi belgeler ve pullar"
 			},
 			"project-cargo": {
-				"name": "Proje Kargo",
-				"description": "Ağır yük, gabari dışı ve karmaşık proje kargolarının uzman elleçlenmesi. Atik Lojistik, endüstriyel projeler için rota etütleri, özel ekipman ve yerinde koordinasyon dahil anahtar teslim çözümler sunar.",
-				"cta": "Projenizi Detaylandırın",
+				"name": "Kamyon Taşımacılığı",
+				"description": "Kamyon bazlı taşımacılık hizmetlerimizle kargonuzu güvenli, hızlı ve uygun maliyetli bir şekilde hedefine taşıyoruz. Modern filomuz ve deneyimli ekibimiz her zaman hizmetinizdedir.",
+				"cta": "Karayolu Taşımacılığı Bilgisi Alın",
 				"badge": "Temel Hizmet",
-				"altText": "Atik Lojistik endüstriyel bir proje için ağır makine taşımacılığını koordine ediyor"
+				"altText": "Manzaralı bir yolda ilerleyen Atik İthalat İhracat markalı kamyon"
 			}
-		}
+		},
+		"ctaTitle": "Özel Bir Çözüme mi İhtiyacınız Var?",
+		"ctaDescription": "Her işletme benzersizdir. Hizmetlerimizi özel ihtiyaçlarınıza göre nasıl uyarlayabileceğimizi konuşalım.",
+		"ctaContact": "Özel Teklif Alın",
+		"ctaDownload": "Broşürü İndir"
 	},
 	"Team": {
-		"leadership": "Liderliğimiz",
-		"headline1": "Uzmanlarla Tanışın",
+		"leadership": "Özel Ekibimiz",
+		"headline1": "Profesyonellerle Tanışın",
 		"headline2": "Sizin",
-		"headlineAccent": "Lojistik Başarınızı Sağlayan",
-		"description": "Deneyimli lojistik profesyonellerinden oluşan özel ekibimiz, derin endüstri deneyimini yenilikçi çözümlere olan tutkuyla birleştirerek kargonuzun her zaman en yetenekli ellerde olmasını sağlar.",
+		"headlineAccent": "Ticaret Başarınızı Sağlayan",
+		"description": "Deneyimli ekibimiz, Atik İthalat İhracat'ın temel değerleri olan güven ve sıkı çalışmaya bağlıdır, her ortaklığın değerli ve her ticaretin sorunsuz olmasını sağlar.",
 		"joinOurTeam": "Ekibimize Katılın",
-		"connectOnLinkedIn": "LinkedIn'de Bağlan",
+		"connectOnLinkedIn": "LinkedIn'de Bağlanın",
 		"team": {
-			"alexandre-moreau": {
-				"role": "Kurucu ve CEO"
+			"mehmet-akkaya": {
+				"role": "Kurucu ve Yönetim Kurulu Üyesi"
 			},
-			"priya-sharma": {
-				"role": "Global Operasyonlar Başkanı"
+			"khalid-xkhospervaz": {
+				"role": "Yönetim Kurulu Üyesi"
 			},
-			"kenji-tanaka": {
-				"role": "Teknoloji ve Yenilikçilik Direktörü"
+			"atilla-mert-akkaya": {
+				"role": "Ekip Üyesi"
 			}
 		}
 	},
-	"ExtraServices": {
-		"headline": "Atik Lojistik: Özel Hizmetler",
-		"highlights": [
-			{
-				"imageUrl": "https://images.unsplash.com/photo-1740126103812-2106248b6ad3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fFBoYXJtYWNldXRpY2FsJTIwJTI2JTIwQ29sZCUyMENoYWluJTIwTG9naXN0aWNzfGVufDB8fDB8fHww",
-				"altText": "Atik Lojistik ilaç sevkiyatları için sıcaklık kontrollü kargo konteynerleri",
-				"title": "İlaç ve Soğuk Zincir Lojistiği",
-				"category": "Özel Çözümler",
-				"description": "Atik Lojistik, ilaçlar ve sıcaklığa duyarlı mallar için doğrulanmış, GDP uyumlu soğuk zincir çözümleri sunarak, gerçek zamanlı izleme ile menşeden varış noktasına kadar ürün bütünlüğünü sağlar.",
-				"stat": "<2°C Dalgalanma Korundu",
-				"ctaLink": "/service/cold-chain-logistics",
-				"ctaText": "Soğuk Zinciri Keşfet"
-			},
-			{
-				"imageUrl": "https://plus.unsplash.com/premium_photo-1664302037749-f24d1344ee2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SW5kdXN0cmlhbCUyMFByb2plY3QlMjBDYXJnbyUyME1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
-				"altText": "Atik Lojistik endüstriyel bir proje için ağır makine taşımacılığını koordine ediyor",
-				"title": "Endüstriyel Proje Kargo Yönetimi",
-				"category": "Ağır ve Büyük Boyutlu",
-				"description": "Ağır yük, gabari dışı ve karmaşık proje kargolarının uzman elleçlenmesi. Atik Lojistik, endüstriyel projeler için rota etütleri, özel ekipman ve yerinde koordinasyon dahil anahtar teslim çözümler sunar.",
-				"stat": "500 Tona Kadar Kapasite",
-				"ctaLink": "/service/project-cargo",
-				"ctaText": "Projenizi Detaylandırın"
-			},
-			{
-				"imageUrl": "https://images.unsplash.com/photo-1739696278363-cb3c4bfc3cec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFN1c3RhaW5hYmxlJTIwJTI2JTIwR3JlZW4lMjBMb2dpc3RpY3N8ZW58MHx8MHx8fDA%3D",
-				"altText": "Atik Lojistik tarafından çevre dostu sevkiyat için kullanılan sürdürülebilir ambalaj malzemeleri",
-				"title": "Sürdürülebilir ve Yeşil Lojistik",
-				"category": "Çevre Bilinçli Sevkiyat",
-				"description": "Çevresel etkiyi azaltmaya kararlı olan Atik Lojistik, çevre bilinçli işletmeler için karbon-nötr sevkiyat seçenekleri, yakıt verimliliği için rota optimizasyonu ve sürdürülebilir ambalaj çözümleri sunar.",
-				"stat": "%20 CO₂ Azaltma Hedefi",
-				"ctaLink": "/sustainability",
-				"ctaText": "Yeşil Girişimlerimiz"
-			},
-			{
-				"imageUrl": "https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-				"altText": "Bir Atik Lojistik sipariş karşılama merkezinde işlenen e-ticaret paketleri",
-				"title": "E-ticaret Sipariş Karşılama ve Son Mil Teslimatı",
-				"category": "Perakende ve E-ticaret",
-				"description": "Çevrimiçi perakendeciler için envanter yönetimi, toplama ve paketleme hizmetleri ve müşteri memnuniyetini artırmak ve büyümeyi hızlandırmak için verimli son mil teslimat ağları dahil entegre çözümler.",
-				"stat": "%99.8 Sipariş Doğruluğu",
-				"ctaLink": "/service/ecommerce-fulfillment",
-				"ctaText": "E-ticaretinizi Ölçeklendirin"
-			}
-		]
-	},
 	"Navbar": {
-		"brand": "Atik",
+		"brand": "ATİK",
 		"home": "Ana Sayfa",
 		"about": "Hakkımızda",
 		"service": "Hizmetler",
-		"blog": "Blog",
+		"blog": "Analizler",
 		"contact": "İletişim",
 		"openMenuAria": "Menüyü aç",
-		"closeMenuAria": "Menüyü kapat"
+		"closeMenuAria": "Menüyü kapat",
+		"logoAlt": "Atik İthalat İhracat Logo"
+	},
+	"ServicesPage": {
+		"meta": {
+			"title": "Hizmetler | Atik İthalat İhracat",
+			"description": "Hizmetler | Atik İthalat İhracat"
+		}
+	},
+	"ContactPage": {
+		"meta": {
+			"title": "İletişim | Atik İthalat İhracat",
+			"description": "İletişim | Atik İthalat İhracat"
+		}
 	},
 	"Summary": {
-		"title": "Küresel Bağlantılar Kuruyor, Değer Sunuyoruz",
-		"description": "Atik Import Export, yüksek kaliteli temizlik ve bakım ürünlerinin uluslararası lojistiği ve dağıtımında uzmanlaşmıştır. İşletmeleri dünya çapında güvenilir, emniyetli ve zamanında çözümlerle buluşturuyoruz.",
+		"title": "Global Bağlantılar Kuruyor, Değer Sunuyoruz",
+		"description": "Atik İthalat İhracat, sorunsuz uluslararası taşımacılık ve yakında çıkacak yüksek kaliteli temizlik ve bakım ürünlerinin dağıtımında uzmanlaşmıştır. İşletmeleri dünya çapında güvenilir, emniyetli ve zamanında çözümlerle buluşturuyoruz.",
 		"features": {
 			"fast-and-reliable": {
-				"title": "Hızlı & Güvenilir",
-				"description": "Dünya çapında zamanında, güvenli ve verimli teslimat."
+				"title": "Güvenilir ve Zamanında",
+				"description": "Dünya çapında zamanında, güvenli ve verimli teslimat, mallarınızın hedefine verimli bir şekilde ulaşmasını sağlar."
 			},
 			"specialized-expertise": {
-				"title": "Uzmanlık",
-				"description": "Temizlik ve bakım ürünleri lojistiğinde derin bilgi birikimi."
+				"title": "Özel Odak",
+				"description": "Temizlik ve bakım ürünlerinin uluslararası ticareti ve taşımacılığında uzmanlık."
 			},
 			"trust-and-security": {
-				"title": "Güven & Emniyet",
-				"description": "Şeffaf, güvenilir ve emniyetli ürün yönetimi."
+				"title": "Güven ve Sıkı Çalışma",
+				"description": "Temel değerlerimiz, her ticaret için özen ve özveriyle sözlerimizi yerine getirmemizi sağlar."
 			},
 			"customer-centric": {
-				"title": "Müşteri Odaklı",
-				"description": "Her müşteri için özel çözümler ve adanmış destek."
+				"title": "Müşteri Başarısı",
+				"description": "Mükemmelliğe ve dünya çapındaki müşterilerimiz ve ortaklarımız için büyümeyi teşvik etmeye adanmıştır."
 			}
 		}
 	},
 	"FeatureAccordion": {
-		"title": "Neden Atik Import Export?",
-		"description": "Uçtan uca lojistik, kamyon taşımacılığı ve yakında doğrudan ürün tedariki—hepsi güven, dürüstlük ve müşteri memnuniyeti odaklı.",
+		"title": "Neden Atik İthalat İhracat ile Ortak Olmalısınız?",
+		"description": "Uçtan uca uluslararası taşımacılık, güvenilir kamyon bazlı çözümler sunuyoruz ve yakında premium temizlik ve bakım ürünlerine doğrudan erişim sağlayacağız - hepsi güven ve müşteri memnuniyeti odaklı.",
 		"items": {
 			"international-logistics": {
-				"title": "Uluslararası Lojistik",
-				"content": "Temizlik ve bakım ürünlerinde güvenli ve zamanında küresel taşımacılık."
+				"title": "Uluslararası Taşımacılık",
+				"content": "Temizlik ve bakım ürünlerinin dünya çapında güvenli ve zamanında teslimatında uzmanlaşmış kapsamlı global taşımacılık hizmetleri."
 			},
 			"truck-transportation": {
 				"title": "Kamyon Taşımacılığı",
-				"content": "Modern filo ve uzman ekip ile ekonomik ve güvenli bölgesel taşıma."
+				"content": "Modern filomuz ve deneyimli ekibimiz, kargonuzun güvenli, hızlı ve uygun maliyetli bir şekilde hedefine taşınmasını sağlar."
 			},
 			"distribution": {
-				"title": "Dağıtım (Çok Yakında)",
-				"content": "Genişleyen ithalat-ihracat kanallarımızla doğrudan premium ürün erişimi."
+				"title": "Ürün Dağıtımı (Çok Yakında)",
+				"content": "Atik'in mükemmellik taahhüdüyle tedarik edilen ve teslim edilen tam kapsamlı yüksek kaliteli temizlik ve bakım ürünlerimizi keşfetmeye hazır olun."
 			},
 			"partnership-and-growth": {
-				"title": "Ortaklık & Büyüme",
-				"content": "Karşılıklı başarı ve uluslararası büyüme için uzun vadeli iş birlikleri."
+				"title": "Ortaklık ve Büyüme",
+				"content": "Müşterilerimiz için uluslararası büyümeyi ve sürdürülebilir başarıyı teşvik eden güçlü, güvenilir ve kalıcı ticari bağlantılar kuruyoruz."
 			}
 		}
 	},
 	"Stats": {
-		"title": "Tailark Rakamlarla",
-		"description": "Gemini, sadece modellerden daha fazlası olmak üzere gelişiyor. Geliştiricilerin ve işletmelerin yenilik yapmasına yardımcı olan API'lere ve platformlara kadar tüm bir ekosistemi destekliyor.",
+		"title": "Atik İthalat İhracat: Rakamlarla",
+		"description": "Temizlik ve bakım ürünleri için global olarak güçlü ticari bağlantılar kurma ve değer sunma taahhüdümüzü gösteriyoruz.",
 		"stats": {
 			"countries-served": {
-				"name": "Hizmet Verilen Ülke Sayısı"
+				"name": "Bağlantı Kurulan Pazarlar"
 			},
 			"annual-shipments": {
-				"name": "Yıllık Gönderi Sayısı"
+				"name": "Yıllık Kolaylaştırılan Ticaretler"
 			},
 			"client-satisfaction": {
-				"name": "Müşteri Memnuniyeti"
+				"name": "Ortak Güven Oranı"
 			}
 		}
 	},
 	"LogoCloud": {
-		"title": "Lider Markaların Güvendiği",
-		"description": "Ortaklarımız ve müşterilerimiz, kalite ve güvenilirliğe olan bağlılığımızı yansıtarak dünyanın dört bir yanına yayılmıştır."
+		"title": "İşletmelerin Güvendiği",
+		"description": "Ortaklarımız ve müşterilerimiz, uluslararası ticarette kalite ve güvenilirliğe olan bağlılığımızı yansıtmaktadır."
 	},
 	"Story": {
-		"title": "Hikayemiz: Pazarları Birleştiriyor, Fırsatlar Yaratıyoruz",
-		"description": "Güven, emek ve dürüstlük temelleriyle kurulan Atik Import Export, uluslararası pazarlar arasında hayati bir köprüye dönüştü. Müşterilerimiz için fırsatları başarıya dönüştürüyoruz.",
-		"cta": "Daha Fazla Bilgi"
+		"title": "Temelimiz: Güven ve Sıkı Çalışma",
+		"description": "Atik İthalat İhracat'ta güven ve sıkı çalışma yaptığımız işin temelini oluşturur. Sürekli olarak sözlerimizi yerine getirir, özen ve özveriyle sorunsuz ve zamanında teslimatlar sağlarız. Şu anda web sitemizi ve tam kapsamlı temizlik ve bakım ürünlerimizi hazırlıyoruz. Yakında sunduğumuz her şeyi keşfetmeye hazır olun!",
+		"cta": "Değerlerimiz Hakkında Daha Fazla Bilgi Edinin"
+	},
+	"AboutUsPage": {
+		"meta": {
+			"title": "Atik İthalat İhracat Hakkında",
+			"description": "Şirketimiz, misyonumuz ve değerlerimiz hakkında daha fazla bilgi edinin."
+		},
+		"title": "Atik İthalat İhracat Hakkında",
+		"subtitle": "Güven, yenilik ve sorunsuz lojistik çözümleriyle küresel ticareti güçlendiriyoruz.",
+		"ourStoryTitle": "Hikayemiz",
+		"ourStoryText": "İstanbul'da kurulan Atik İthalat İhracat, Avrupa ve Orta Doğu'daki işletmeler için güvenilir bir ortak haline gelmiştir. Yolculuğumuz, pazarları birbirine bağlama ve kaliteli ürünleri benzersiz bir güvenilirlikle sunma vizyonuyla başladı. Bugün, müşterilerimizi dünya çapında fırsatlarla buluşturmaya devam ediyoruz.",
+		"missionTitle": "Misyonumuz",
+		"missionText": "Temizlik ve bakım ürünlerinde uzmanlaşmış, verimli, şeffaf ve müşteri odaklı uluslararası ticaret ve taşımacılık hizmetleri sunmak. Kalıcı ortaklıklar kurmayı ve müşterilerimiz için sürdürülebilir büyümeyi hedefliyoruz.",
+		"valuesTitle": "Temel Değerlerimiz",
+		"value1": "Her işlemde dürüstlük ve güven.",
+		"value2": "Yenilik ve sürekli gelişime bağlılık.",
+		"value3": "Müşteri başarısı en büyük önceliğimizdir.",
+		"partnerWithUs": "Bizimle Ortak Olun",
+		"contactEmail": "info@atikexp.com",
+		"subDescription": "Mükemmellik, dürüstlük ve müşteri memnuniyeti taahhüdüyle Atik İthalat İhracat, fırsatları başarılara dönüştürerek dünyayı her seferinde bir ticaretle daha da yakınlaştırıyor. Temizlik ve bakım ürünlerinin uluslararası taşımacılığında uzmanız ve bu ürünlerin tam yelpazesini dağıtım için hazırlıyoruz."
+	},
+	"About3": {
+		"stat1Value": "5+",
+		"stat1Label": "Yıllık Uzmanlık",
+		"stat2Value": "100+",
+		"stat2Label": "Global Müşteri",
+		"stat3Value": "20+",
+		"stat3Label": "Hizmet Verilen Ülke",
+		"stat4Value": "%97",
+		"stat4Label": "Müşteri Bağlılığı",
+		"breakoutTitle": "Küresel Ticarette Güvenilir Ortağınız",
+		"breakoutDescription": "Uluslararası taşımacılık ve ürün dağıtımı için özel çözümler sunuyor, işletmenizin rekabetçi dünyada başarılı olmasını sağlıyoruz.",
+		"breakoutButton": "Hizmetlerimizi Keşfedin",
+		"mainImageAlt": "Konteynerler ve kamyonlarla modern lojistik merkezi",
+		"secondaryImageAlt": "Küresel bir limanda verimli kargo elleçleme",
+		"breakoutAlt": "Lojistikte ekip çalışması ve ortaklık",
+		"title": "Biz Kimiz",
+		"description": "Atik İthalat İhracat, güvenilir lojistik, yenilikçi çözümler ve müşteri başarısına bağlılık ile küresel pazarları birbirine bağlamaya kendini adamıştır. Uluslararası ticaret ve taşımacılıktaki uzmanlığımız, işletmelerin sınırların ötesinde büyümesini sağlar."
+	},
+	"error": {
+		"title": "Bir hata oluştu",
+		"sorry": "Rahatsızlık için özür dileriz. Bir hata oluştu.",
+		"tryAgain": "Tekrar Dene",
+		"returnHome": "Ana Sayfaya Dön",
+		"notFound": {
+			"title": "Sayfa Bulunamadı",
+			"description": "Aradığınız sayfayı bulamadık. Lütfen URL'yi kontrol edin veya ana sayfaya dönün."
+		},
+		"global": {
+			"title": "Bir hata oluştu",
+			"description": "Rahatsızlık için özür dileriz. Kritik bir hata oluştu. Ekibimiz bilgilendirildi ve sorunu çözmek için çalışıyor."
+		}
 	}
 }

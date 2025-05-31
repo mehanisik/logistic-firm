@@ -7,7 +7,7 @@ export interface TestimonialAuthor {
   avatar: string
 }
 
-interface TestimonialCardProps {
+export interface TestimonialCardProps {
   author: TestimonialAuthor
   text: string
   href?: string
@@ -26,7 +26,7 @@ export function TestimonialCard({
     <Card
       {...(href ? { href } : {})}
       className={cn(
-        "flex flex-col rounded-lg border-t",
+        "flex flex-col rounded-lg shadow-lg",
         "bg-gradient-to-b from-muted/50 to-muted/10",
         "p-4 text-start sm:p-6",
         "hover:from-muted/60 hover:to-muted/20",
@@ -36,9 +36,6 @@ export function TestimonialCard({
       )}
     >
       <div className="flex items-center gap-3">
-        <Avatar className="h-12 w-12">
-          <AvatarImage src={author.avatar} alt={author.name} />
-        </Avatar>
         <div className="flex flex-col items-start">
           <h3 className="text-md font-semibold leading-none">
             {author.name}

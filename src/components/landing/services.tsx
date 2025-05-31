@@ -1,18 +1,16 @@
 "use client"
-
-import { useState } from "react"
-
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import type { CarouselApi } from "@/components/ui/carousel"
 import { SectionLayout } from "@/components/ui/section-layout"
 import { SERVICES } from "@/constants/services.constant"
+import { cn } from "@/lib/utils"
 import { IconTruck } from "@tabler/icons-react"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
+import { useState } from "react"
 
 export default function Services() {
 	const t = useTranslations("Services")
-
 	const [carouselApi, setCarouselApi] = useState<CarouselApi>()
 
 	return (
@@ -45,15 +43,16 @@ export default function Services() {
 								<div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-5/4 lg:aspect-16/9">
 									<Image
 										src={item.background}
-										alt={item.id}
+										alt={t(`features.${item.id}.altText`, { defaultValue: item.id })}
 										width={1000}
 										height={1000}
 										className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
 									/>
-									<div className="absolute inset-0 bg-black/20" />
-									<div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 text-primary-foreground md:p-8">
-										<div className="mb-2 pt-4 text-xl font-semibold md:mb-3 md:pt-4 lg:pt-4">{t(`features.${item.id}.name`)}</div>
-										<div className="mb-8 line-clamp-2 md:mb-12 lg:mb-9">{t(`features.${item.id}.description`)}</div>
+									<div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-5 md:p-8 rounded-b-xl bg-gradient-to-t from-black/80 via-black/40 to-transparent dark:from-black/90 dark:via-black/60 dark:to-transparent shadow-lg">
+										<div className="mb-2 text-lg md:text-xl font-bold text-white drop-shadow-sm">{t(`features.${item.id}.name`)}</div>
+										<div className="mb-4 md:mb-6 lg:mb-8 text-sm md:text-base text-gray-200 dark:text-gray-300 line-clamp-2">
+											{t(`features.${item.id}.description`)}
+										</div>
 									</div>
 								</div>
 							</div>
@@ -66,7 +65,10 @@ export default function Services() {
 					<button
 						type="button"
 						key={index}
-						className={`h-2 w-2 rounded-full transition-colors ${carouselApi?.selectedScrollSnap() === index ? "bg-primary" : "bg-primary/20"}`}
+						className={cn(
+							"h-2 w-2 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+							carouselApi?.selectedScrollSnap() === index ? "bg-primary" : "bg-primary/20",
+						)}
 						onClick={() => carouselApi?.scrollTo(index)}
 						aria-label={`Go to slide ${index + 1}`}
 					/>

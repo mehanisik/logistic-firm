@@ -1,101 +1,42 @@
-import { InfiniteSlider } from "@/components/ui/infinite-slider"
-import { ProgressiveBlur } from "@/components/ui/progressive-blur"
+"use client"
+
 import { SectionLayout } from "@/components/ui/section-layout"
+import { type LogoInfo, PARTNER_LOGOS } from "@/constants/logos.constant"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
 
 export default function LogoCloud() {
 	const t = useTranslations("LogoCloud")
 	return (
-		<SectionLayout id="logo-cloud">
-			<div className="group relative m-auto max-w-7xl px-6">
-				<div className="flex flex-col items-center md:flex-row">
-					<div className="md:max-w-44 md:border-r md:pr-6">
-						<p className="text-end text-sm text-muted-foreground">{t("title")}</p>
-						<p className="text-xs text-muted-foreground mt-1">{t("description")}</p>
+		<SectionLayout id="logo-cloud" className="py-10 sm:py-16">
+			<div className="group relative m-auto max-w-7xl px-4 sm:px-6">
+				<div className="flex flex-col items-center md:flex-row md:gap-8">
+					<div className="md:max-w-xs text-center md:text-end mb-6 md:mb-0 md:border-r md:pr-8">
+						<p className="text-base font-medium text-foreground">{t("title")}</p>
+						<p className="text-sm text-muted-foreground mt-1">{t("description")}</p>
 					</div>
-					<div className="relative py-6 md:w-[calc(100%-11rem)]">
-						<InfiniteSlider speedOnHover={20} speed={40} gap={112}>
-							<div className="flex">
-								<Image
-									className="mx-auto h-5 w-fit dark:invert"
-									src="https://html.tailus.io/blocks/customers/nvidia.svg"
-									alt="Nvidia Logo"
-									height="20"
-									width={20}
-								/>
+					<div className="relative w-full flex-1 overflow-hidden">
+						<div className="group flex overflow-hidden p-2 [--gap:3rem] [gap:var(--gap)] flex-row [--duration:100s]">
+							<div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
+								{[...Array(4)].map((_, setIndex) =>
+									PARTNER_LOGOS.map((logo: LogoInfo, index: number) => (
+										<div className="flex-shrink-0 h-8 sm:h-10 mx-1" key={`${logo.alt}-${index}`}>
+											<Image
+												className="h-full w-auto object-contain dark:invert dark:brightness-0"
+												src={logo.src}
+												alt={logo.alt}
+												height={36}
+												width={36}
+												priority={index < 7}
+											/>
+										</div>
+									)),
+								)}
 							</div>
+						</div>
 
-							<div className="flex">
-								<Image
-									className="mx-auto h-4 w-fit dark:invert"
-									src="https://html.tailus.io/blocks/customers/column.svg"
-									alt="Column Logo"
-									height="16"
-									width={16}
-								/>
-							</div>
-							<div className="flex">
-								<Image
-									className="mx-auto h-4 w-fit dark:invert"
-									src="https://html.tailus.io/blocks/customers/github.svg"
-									alt="GitHub Logo"
-									height="16"
-									width={16}
-								/>
-							</div>
-							<div className="flex">
-								<Image
-									className="mx-auto h-5 w-fit dark:invert"
-									src="https://html.tailus.io/blocks/customers/nike.svg"
-									alt="Nike Logo"
-									height="20"
-									width={20}
-								/>
-							</div>
-							<div className="flex">
-								<Image
-									className="mx-auto h-5 w-fit dark:invert"
-									src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-									alt="Lemon Squeezy Logo"
-									height="20"
-									width={20}
-								/>
-							</div>
-							<div className="flex">
-								<Image
-									className="mx-auto h-4 w-fit dark:invert"
-									src="https://html.tailus.io/blocks/customers/laravel.svg"
-									alt="Laravel Logo"
-									height="16"
-									width={16}
-								/>
-							</div>
-							<div className="flex">
-								<Image
-									className="mx-auto h-7 w-fit dark:invert"
-									src="https://html.tailus.io/blocks/customers/lilly.svg"
-									alt="Lilly Logo"
-									height="28"
-									width={28}
-								/>
-							</div>
-
-							<div className="flex">
-								<Image
-									className="mx-auto h-6 w-fit dark:invert"
-									src="https://html.tailus.io/blocks/customers/openai.svg"
-									alt="OpenAI Logo"
-									height="24"
-									width={24}
-								/>
-							</div>
-						</InfiniteSlider>
-
-						<div className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20" />
-						<div className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20" />
-						<ProgressiveBlur className="pointer-events-none absolute left-0 top-0 h-full w-20" direction="left" blurIntensity={1} />
-						<ProgressiveBlur className="pointer-events-none absolute right-0 top-0 h-full w-20" direction="right" blurIntensity={1} />
+						<div className="absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-background to-transparent pointer-events-none z-10" />
+						<div className="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-background to-transparent pointer-events-none z-10" />
 					</div>
 				</div>
 			</div>

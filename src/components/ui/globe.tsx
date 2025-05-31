@@ -1,15 +1,13 @@
 "use client"
 
 import createGlobe, { COBEOptions } from "cobe"
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef } from "react"
 import { useTheme } from "next-themes"
-
 import { cn } from "@/lib/utils"
 
 const GLOBE_CONFIG: COBEOptions = {
   width: 600,
   height: 600,
-  onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.2,
@@ -21,10 +19,11 @@ const GLOBE_CONFIG: COBEOptions = {
   markerColor: [251 / 255, 100 / 255, 21 / 255],
   glowColor: [1, 1, 1],
   markers: [
-    { location: [28.9784,41.0082], size: 0.1 }, 
-    { location: [31.1342,29.9792], size: 0.1 }, 
-    { location: [55.2962,25.2769], size: 0.1 }, 
+    { location: [28.9784, 41.0082], size: 0.1 },
+    { location: [31.1342, 29.9792], size: 0.1 },
+    { location: [55.2962, 25.2769], size: 0.1 },
   ],
+  onRender: () => {},
 }
 
 export function Globe({
@@ -34,87 +33,93 @@ export function Globe({
   className?: string
   config?: COBEOptions
 }) {
-  const { theme } = useTheme();
-  let phi = 0
-  let width = 0
+  const { theme } = useTheme()
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const pointerInteracting = useRef<number | null>(null)
-  const pointerInteractionMovement = useRef(0)
-  const [r, setR] = useState(0)
 
-  const themeConfig = {
-    ...config,
-    dark: theme === "dark" ? 1 : 0,
-  } as COBEOptions;
+  const isDragging = useRef(false)
+  const startX = useRef(0)
+  const phi = useRef(0)
+  const velocity = useRef(0)
+  const width = useRef(0)
 
-  const updatePointerInteraction = (value: number | null) => {
-    pointerInteracting.current = value
+  const updateCursor = (active: boolean) => {
     if (canvasRef.current) {
-      canvasRef.current.style.cursor = value ? "grabbing" : "grab"
+      canvasRef.current.style.cursor = active ? "grabbing" : "grab"
     }
   }
 
-  const updateMovement = (clientX: any) => {
-    if (pointerInteracting.current !== null) {
-      const delta = clientX - pointerInteracting.current
-      pointerInteractionMovement.current = delta
-      setR(delta / 200)
-    }
+  const onPointerDown = (clientX: number) => {
+    isDragging.current = true
+    startX.current = clientX
+    updateCursor(true)
   }
 
-  const onRender = useCallback(
-    (state: Record<string, unknown>) => {
-      if (!pointerInteracting.current) phi += 0.005
-      state.phi = phi + r
-      state.width = width * 2
-      state.height = width * 2
-    },
-    [r],
-  )
-
-  const onResize = () => {
-    if (canvasRef.current) {
-      width = canvasRef.current.offsetWidth
-    }
+  const onPointerUp = () => {
+    isDragging.current = false
+    updateCursor(false)
   }
+
+  const onPointerMove = (clientX: number) => {
+    if (!isDragging.current) return
+    const delta = clientX - startX.current
+    startX.current = clientX
+    velocity.current = delta * 0.01
+  }
+
+  const onRender = useCallback((state: Record<string, any>) => {
+    if (!isDragging.current) {
+      phi.current += 0.005 
+    } else {
+      phi.current += velocity.current
+      velocity.current *= 0.95 
+    }
+
+    state.phi = phi.current
+    state.width = width.current * 2
+    state.height = width.current * 2
+  }, [])
 
   useEffect(() => {
-    window.addEventListener("resize", onResize)
-    onResize()
+    const resize = () => {
+      if (canvasRef.current) {
+        width.current = canvasRef.current.offsetWidth
+      }
+    }
+
+    resize()
+    window.addEventListener("resize", resize)
 
     const globe = createGlobe(canvasRef.current!, {
-      ...themeConfig,
-      width: width * 2,
-      height: width * 2,
+      ...config,
+      dark: theme === "dark" ? 1 : 0,
+      width: width.current * 2,
+      height: width.current * 2,
       onRender,
     })
 
-    setTimeout(() => (canvasRef.current!.style.opacity = "1"))
-    return () => globe.destroy()
-  }, [theme])
+    setTimeout(() => {
+      if (canvasRef.current) canvasRef.current.style.opacity = "1"
+    })
+
+    return () => {
+      globe.destroy()
+      window.removeEventListener("resize", resize)
+    }
+  }, [theme, config, onRender])
 
   return (
-    <div
-      className={cn(
-        "absolute inset-0 mx-auto w-full",
-        className,
-      )}
-    >
+    <div className={cn("absolute inset-0 mx-auto w-full", className)}>
       <canvas
-        className={cn(
-          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]",
-        )}
         ref={canvasRef}
-        onPointerDown={(e) =>
-          updatePointerInteraction(
-            e.clientX - pointerInteractionMovement.current,
-          )
-        }
-        onPointerUp={() => updatePointerInteraction(null)}
-        onPointerOut={() => updatePointerInteraction(null)}
-        onMouseMove={(e) => updateMovement(e.clientX)}
+        className={cn(
+          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
+        )}
+        onPointerDown={(e) => onPointerDown(e.clientX)}
+        onPointerUp={onPointerUp}
+        onPointerOut={onPointerUp}
+        onMouseMove={(e) => onPointerMove(e.clientX)}
         onTouchMove={(e) =>
-          e.touches[0] && updateMovement(e.touches[0].clientX)
+          e.touches.length > 0 && onPointerMove(e.touches[0].clientX)
         }
       />
     </div>

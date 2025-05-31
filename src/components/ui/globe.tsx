@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import createGlobe, { COBEOptions } from "cobe"
-import { useCallback, useEffect, useRef } from "react"
-import { useTheme } from "next-themes"
-import { cn } from "@/lib/utils"
+import createGlobe, { type COBEOptions } from "cobe";
+import { useCallback, useEffect, useRef } from "react";
+import { useTheme } from "next-themes";
+import { cn } from "@/lib/utils";
 
 const GLOBE_CONFIG: COBEOptions = {
   width: 600,
@@ -24,70 +24,70 @@ const GLOBE_CONFIG: COBEOptions = {
     { location: [55.2962, 25.2769], size: 0.1 },
   ],
   onRender: () => {},
-}
+};
 
 export function Globe({
   className,
   config = GLOBE_CONFIG,
 }: {
-  className?: string
-  config?: COBEOptions
+  className?: string;
+  config?: COBEOptions;
 }) {
-  const { theme } = useTheme()
-  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const { theme } = useTheme();
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const isDragging = useRef(false)
-  const startX = useRef(0)
-  const phi = useRef(0)
-  const velocity = useRef(0)
-  const width = useRef(0)
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const phi = useRef(0);
+  const velocity = useRef(0);
+  const width = useRef(0);
 
   const updateCursor = (active: boolean) => {
     if (canvasRef.current) {
-      canvasRef.current.style.cursor = active ? "grabbing" : "grab"
+      canvasRef.current.style.cursor = active ? "grabbing" : "grab";
     }
-  }
+  };
 
   const onPointerDown = (clientX: number) => {
-    isDragging.current = true
-    startX.current = clientX
-    updateCursor(true)
-  }
+    isDragging.current = true;
+    startX.current = clientX;
+    updateCursor(true);
+  };
 
   const onPointerUp = () => {
-    isDragging.current = false
-    updateCursor(false)
-  }
+    isDragging.current = false;
+    updateCursor(false);
+  };
 
   const onPointerMove = (clientX: number) => {
-    if (!isDragging.current) return
-    const delta = clientX - startX.current
-    startX.current = clientX
-    velocity.current = delta * 0.01
-  }
+    if (!isDragging.current) return;
+    const delta = clientX - startX.current;
+    startX.current = clientX;
+    velocity.current = delta * 0.01;
+  };
 
   const onRender = useCallback((state: Record<string, any>) => {
     if (!isDragging.current) {
-      phi.current += 0.005 
+      phi.current += 0.005;
     } else {
-      phi.current += velocity.current
-      velocity.current *= 0.95 
+      phi.current += velocity.current;
+      velocity.current *= 0.95;
     }
 
-    state.phi = phi.current
-    state.width = width.current * 2
-    state.height = width.current * 2
-  }, [])
+    state.phi = phi.current;
+    state.width = width.current * 2;
+    state.height = width.current * 2;
+  }, []);
 
   useEffect(() => {
     const resize = () => {
       if (canvasRef.current) {
-        width.current = canvasRef.current.offsetWidth
+        width.current = canvasRef.current.offsetWidth;
       }
-    }
+    };
 
-    resize()
-    window.addEventListener("resize", resize)
+    resize();
+    window.addEventListener("resize", resize);
 
     const globe = createGlobe(canvasRef.current!, {
       ...config,
@@ -95,24 +95,24 @@ export function Globe({
       width: width.current * 2,
       height: width.current * 2,
       onRender,
-    })
+    });
 
     setTimeout(() => {
-      if (canvasRef.current) canvasRef.current.style.opacity = "1"
-    })
+      if (canvasRef.current) canvasRef.current.style.opacity = "1";
+    });
 
     return () => {
-      globe.destroy()
-      window.removeEventListener("resize", resize)
-    }
-  }, [theme, config, onRender])
+      globe.destroy();
+      window.removeEventListener("resize", resize);
+    };
+  }, [theme, config, onRender]);
 
   return (
     <div className={cn("absolute inset-0 mx-auto w-full", className)}>
       <canvas
         ref={canvasRef}
         className={cn(
-          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
+          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]",
         )}
         onPointerDown={(e) => onPointerDown(e.clientX)}
         onPointerUp={onPointerUp}
@@ -123,5 +123,5 @@ export function Globe({
         }
       />
     </div>
-  )
+  );
 }

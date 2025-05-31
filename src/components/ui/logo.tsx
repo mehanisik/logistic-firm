@@ -1,6 +1,6 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image"; 
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
@@ -16,10 +16,9 @@ interface LogoProps {
 }
 
 export function Logo({ isScrolled, width = 100, height = 50 }: LogoProps) {
-
   const [currentLogo, setCurrentLogo] = useState<StaticImageData>(LogoLightImg);
   const t = useTranslations("Navbar");
-  const { theme, resolvedTheme } = useTheme(); 
+  const { theme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     const activeTheme = resolvedTheme || theme;
@@ -29,16 +28,20 @@ export function Logo({ isScrolled, width = 100, height = 50 }: LogoProps) {
     } else {
       setCurrentLogo(isScrolled ? LogoDarkImg : LogoLightImg);
     }
-  }, [theme, resolvedTheme, isScrolled]); 
+  }, [theme, resolvedTheme, isScrolled]);
 
   return (
-    <Link href="/" aria-label={t("home")} className="flex shrink-0 items-center">
+    <Link
+      href="/"
+      aria-label={t("home")}
+      className="flex shrink-0 items-center"
+    >
       <Image
-        src={currentLogo} 
-        alt={t("logoAlt")} 
+        src={currentLogo}
+        alt={t("logoAlt")}
         width={width}
         height={height}
-        priority 
+        priority
       />
     </Link>
   );

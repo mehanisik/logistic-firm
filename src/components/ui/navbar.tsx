@@ -1,108 +1,106 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { IconMenu2, IconX } from "@tabler/icons-react" 
-import { Button } from "@/components/ui/button"
-import { useEffect, useState } from "react" 
-import { cn } from "@/lib/utils"
-import { IconOmega } from "@tabler/icons-react" 
-import { ThemeSwitcher } from "../theme-switcher"
-import {LanguageSwitcher} from "../language-switcher"
-import { useTranslations } from "next-intl" 
-import { useTheme } from "next-themes"
-import Image from "next/image"
+import Link from "next/link";
+import { IconMenu2, IconX } from "@tabler/icons-react";
+import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
+import { IconOmega } from "@tabler/icons-react";
+import { ThemeSwitcher } from "../theme-switcher";
+import { LanguageSwitcher } from "../language-switcher";
+import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
+import Image from "next/image";
 
-import LogoLight from "../../../public/images/logo-light.svg"
-import LogoDark from "../../../public/images/logo-dark.svg"
-import { Logo } from "./logo"
+import LogoLight from "../../../public/images/logo-light.svg";
+import LogoDark from "../../../public/images/logo-dark.svg";
+import { Logo } from "./logo";
 
 interface NavItem {
-  id: string 
-  href: string
+  id: string;
+  href: string;
 }
 
 const MENU_ITEMS_CONFIG: NavItem[] = [
-  { id: "home", href: "/" }, 
-  { id: "about", href: "/about-us" }, 
+  { id: "home", href: "/" },
+  { id: "about", href: "/about-us" },
   { id: "service", href: "/services" },
   { id: "contact", href: "/contact-us" },
-]
+];
 
 interface NavbarProps {
-  forceScrolled?: boolean
+  forceScrolled?: boolean;
 }
 
 export default function Navbar({ forceScrolled }: NavbarProps = {}) {
-  const t = useTranslations("Navbar") 
-  const { theme } = useTheme()
+  const t = useTranslations("Navbar");
+  const { theme } = useTheme();
 
-  const [menuState, setMenuState] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(forceScrolled ?? false)
+  const [menuState, setMenuState] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(forceScrolled ?? false);
 
   useEffect(() => {
     if (forceScrolled) return;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
     const closeMenuOnResize = () => {
-      if (window.innerWidth >= 1024) { 
-        setMenuState(false)
+      if (window.innerWidth >= 1024) {
+        setMenuState(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    window.addEventListener("resize", closeMenuOnResize)
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", closeMenuOnResize);
 
-    handleScroll()
-    closeMenuOnResize()
+    handleScroll();
+    closeMenuOnResize();
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-      window.removeEventListener("resize", closeMenuOnResize)
-    }
-  }, [forceScrolled])
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", closeMenuOnResize);
+    };
+  }, [forceScrolled]);
 
-  const menuItems = MENU_ITEMS_CONFIG.map(item => ({
+  const menuItems = MENU_ITEMS_CONFIG.map((item) => ({
     ...item,
-    name: t(item.id as any) 
+    name: t(item.id as any),
   }));
 
-
   const navContainerClasses = cn(
-    "mx-auto mt-2 max-w-6xl px-4 sm:px-6 lg:px-8 transition-all duration-300", 
+    "mx-auto mt-2 max-w-6xl px-4 sm:px-6 lg:px-8 transition-all duration-300",
     isScrolled
-      ? "bg-background/80 backdrop-blur-md rounded-xl border border-border shadow-sm lg:mt-2" 
-      : "lg:mt-4" 
-  )
+      ? "bg-background/80 backdrop-blur-md rounded-xl border border-border shadow-sm lg:mt-2"
+      : "lg:mt-4",
+  );
 
   const mobileMenuContainerClasses = cn(
-    "lg:hidden", 
-    "absolute top-full left-0 right-0 z-40 mt-2 w-[calc(100%-1rem)] mx-auto", 
+    "lg:hidden",
+    "absolute top-full left-0 right-0 z-40 mt-2 w-[calc(100%-1rem)] mx-auto",
     "origin-top scale-95 opacity-0 transition-all duration-200 ease-out",
-    "bg-background border border-border rounded-2xl p-6 shadow-xl", 
+    "bg-background border border-border rounded-2xl p-6 shadow-xl",
     {
-      "transform-none scale-100 opacity-100": menuState, 
-    }
-  )
-
+      "transform-none scale-100 opacity-100": menuState,
+    },
+  );
 
   const getLogo = () => {
     if (theme === "dark") {
-      return LogoLight
+      return LogoLight;
     }
     if (theme === "light" && !isScrolled) {
-      return LogoLight
+      return LogoLight;
     }
-    return LogoDark
-  }
+    return LogoDark;
+  };
 
   return (
-    <header className="fixed z-50 m-2  w-full"> 
+    <header className="fixed z-50 m-2  w-full">
       <nav data-state={menuState ? "active" : "inactive"} className="px-2">
         <div className={navContainerClasses}>
-          <div className="relative flex items-center justify-between gap-6 py-3"> 
+          <div className="relative flex items-center justify-between gap-6 py-3">
             <div className="flex shrink-0">
-                <Logo isScrolled={isScrolled} />
+              <Logo isScrolled={isScrolled} />
             </div>
 
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:gap-x-8">
@@ -110,10 +108,10 @@ export default function Navbar({ forceScrolled }: NavbarProps = {}) {
                 <Link
                   key={item.id}
                   href={item.href}
-                  onClick={() => setMenuState(false)} 
+                  onClick={() => setMenuState(false)}
                   className={cn(
                     "block rounded-md px-3 py-2 text-md font-bold transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
-                    isScrolled ? "text-foreground" : "text-white"
+                    isScrolled ? "text-foreground" : "text-white",
                   )}
                 >
                   {t(item.id)}
@@ -130,33 +128,42 @@ export default function Navbar({ forceScrolled }: NavbarProps = {}) {
                   variant="ghost"
                   size="icon"
                   onClick={() => setMenuState(!menuState)}
-                  aria-label={menuState ? t("closeMenuAria") : t("openMenuAria")}
+                  aria-label={
+                    menuState ? t("closeMenuAria") : t("openMenuAria")
+                  }
                   aria-expanded={menuState}
                   className="text-foreground hover:bg-accent hover:text-accent-foreground"
                 >
-                  {menuState ? <IconX className="h-6 w-6" /> : <IconMenu2 className="h-6 w-6" />}
+                  {menuState ? (
+                    <IconX className="h-6 w-6" />
+                  ) : (
+                    <IconMenu2 className="h-6 w-6" />
+                  )}
                 </Button>
               </div>
             </div>
           </div>
         </div>
 
-        <div className={mobileMenuContainerClasses} data-state={menuState ? "open" : "closed"}>
-            <ul className="space-y-4">
-              {menuItems.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setMenuState(false)} 
-                    className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+        <div
+          className={mobileMenuContainerClasses}
+          data-state={menuState ? "open" : "closed"}
+        >
+          <ul className="space-y-4">
+            {menuItems.map((item) => (
+              <li key={item.id}>
+                <Link
+                  href={item.href}
+                  onClick={() => setMenuState(false)}
+                  className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </nav>
     </header>
-  )
+  );
 }

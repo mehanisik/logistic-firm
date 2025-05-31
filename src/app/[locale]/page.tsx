@@ -12,7 +12,11 @@ import TeamMembers from "@/components/landing/team"
 import Tesimonials from "@/components/landing/testimonial"
 import type { Metadata } from "next"
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+type Props = {
+	params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { locale } = await params
 	const messages = (await import(`../../../dictionary/${locale}.json`).catch(() => import("../../../dictionary/en.json"))).default
 	const t = (key: string) => messages.Metadata?.[key] || messages.Metadata?.[key] || ""

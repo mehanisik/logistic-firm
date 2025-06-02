@@ -38,7 +38,7 @@ export default function Hero() {
       <Navbar />
       <div className="absolute hidden md:block inset-5 rounded-xl overflow-hidden">
         <Image
-          src={"/images/hero-image.png"}
+          src="/images/hero-image.webp"
           alt={t("companyName")}
           fill
           className="object-cover object-center"

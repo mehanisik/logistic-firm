@@ -21,7 +21,7 @@ export default function FeaturesSummary() {
         <div className="relative rounded-3xl p-3 md:-mx-8 lg:col-span-3">
           <div className="aspect-88/36 relative">
             <Image
-              src={"/images/summary.png"}
+              src={"/images/summary.webp"}
               fill
               className="object-cover z-10"
               alt="logistics illustration"

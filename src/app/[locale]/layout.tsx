@@ -11,7 +11,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import "../../styles/globals.css";
-import { Preloader } from "@/components/preloader";
+import { PreloaderWrapper } from "@/components/ui/preloader-wrapper";
 
 export const metadata: Metadata = {
   title: {
@@ -172,9 +172,10 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider>
-            <Toaster />
-            {children}
-            <Preloader />
+            <PreloaderWrapper>
+              <Toaster />
+              {children}
+            </PreloaderWrapper>
           </NextIntlClientProvider>
         </ThemeProvider>
         <Analytics />

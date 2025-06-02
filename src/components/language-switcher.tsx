@@ -7,18 +7,10 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-const languageDetails = [
-  {
-    code: "en",
-    label: "EN",
-    icon: <Image src="/images/us.svg" alt="English" width={18} height={18} />,
-  },
-  {
-    code: "tr",
-    label: "TR",
-    icon: <Image src="/images/tr.svg" alt="Turkish" width={18} height={18} />,
-  },
-] as const;
+const languages = [
+  { label: "🇬🇧 English", value: "en" },
+  { label: "🇹🇷 Türkçe", value: "tr" },
+];
 
 interface Language {
   code: string;
@@ -26,7 +18,7 @@ interface Language {
   icon: React.ReactNode;
 }
 
-type Locale = (typeof languageDetails)[number]["code"];
+type Locale = (typeof languages)[number]["value"];
 
 export function LanguageSwitcher() {
   const router = useRouter();
@@ -40,15 +32,13 @@ export function LanguageSwitcher() {
       ?.split("=")[1] as Locale | undefined;
 
     const urlLocale = pathname.split("/")[1] as Locale;
-    const validUrlLocale = languageDetails.find(
-      (lang) => lang.code === urlLocale,
-    );
+    const validUrlLocale = languages.find((lang) => lang.value === urlLocale);
 
     if (validUrlLocale) {
       setCurrentLocale(urlLocale);
     } else if (
       cookieLocale &&
-      languageDetails.find((lang) => lang.code === cookieLocale)
+      languages.find((lang) => lang.value === cookieLocale)
     ) {
       setCurrentLocale(cookieLocale);
     } else {
@@ -65,15 +55,15 @@ export function LanguageSwitcher() {
 
   return (
     <div className="flex gap-2 items-center">
-      {languageDetails.map((lang) => {
-        const isActive = currentLocale === lang.code;
+      {languages.map((lang) => {
+        const isActive = currentLocale === lang.value;
         return (
           <Button
-            key={lang.code}
+            key={lang.value}
             type="button"
             variant={isActive ? "secondary" : "ghost"}
             size="sm"
-            onClick={() => handleChangeLanguage(lang.code)}
+            onClick={() => handleChangeLanguage(lang.value)}
             aria-current={isActive ? "true" : undefined}
             aria-label={`Switch to ${lang.label}`}
             className={cn(
@@ -83,7 +73,6 @@ export function LanguageSwitcher() {
                 : "text-muted-foreground hover:bg-accent hover:text-primary",
             )}
           >
-            {lang.icon}
             <span>{lang.label}</span>
           </Button>
         );

@@ -31,27 +31,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t("description"),
     keywords: t("keywords"),
     metadataBase: new URL(getBaseUrl()),
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url: getBaseUrl(),
-      images: [
-        {
-          url: "/apple-icon.png",
-          width: 180,
-          height: 180,
-          alt: t("title"),
-        },
-      ],
-      locale: locale,
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-      images: ["/apple-icon.png"],
-    },
   };
 }
 

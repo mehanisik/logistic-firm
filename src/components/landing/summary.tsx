@@ -22,10 +22,10 @@ export default function FeaturesSummary() {
           <div className="aspect-88/36 relative">
             <Image
               src={"/images/summary.png"}
-              className="absolute inset-0 z-10"
+              fill
+              className="object-cover z-10"
               alt="logistics illustration"
-              width={2797}
-              height={1137}
+              sizes="(max-width: 639px) 90vw, (max-width: 1023px) 70vw, 1000px"
             />
           </div>
         </div>

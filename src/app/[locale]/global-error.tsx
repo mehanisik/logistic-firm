@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { IconError404 } from "@tabler/icons-react";
 import { useTheme } from "next-themes";
 
-// Define messages directly since we can't use useTranslations in global-error
 const messages = {
   en: {
     title: "Something went wrong",
@@ -29,7 +28,6 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  // Get locale from document lang attribute
   const locale = document.documentElement.lang || "en";
   const t = messages[locale as keyof typeof messages];
   const { theme } = useTheme();

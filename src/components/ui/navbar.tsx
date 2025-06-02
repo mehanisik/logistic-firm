@@ -5,15 +5,11 @@ import { IconMenu2, IconX } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { IconOmega } from "@tabler/icons-react";
 import { ThemeSwitcher } from "../theme-switcher";
 import { LanguageSwitcher } from "../language-switcher";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 
-import LogoLight from "../../../public/images/logo-light.svg";
-import LogoDark from "../../../public/images/logo-dark.svg";
 import { Logo } from "./logo";
 
 interface NavItem {
@@ -84,15 +80,6 @@ export default function Navbar({ forceScrolled }: NavbarProps = {}) {
     },
   );
 
-  const getLogo = () => {
-    if (theme === "dark") {
-      return LogoLight;
-    }
-    if (theme === "light" && !isScrolled) {
-      return LogoLight;
-    }
-    return LogoDark;
-  };
 
   return (
     <header className="fixed z-50 m-2  w-full">
@@ -100,7 +87,7 @@ export default function Navbar({ forceScrolled }: NavbarProps = {}) {
         <div className={navContainerClasses}>
           <div className="relative flex items-center justify-between gap-6 py-3">
             <div className="flex shrink-0">
-              <Logo isScrolled={isScrolled} />
+              <Logo isScrolled={isScrolled} className="w-[90px]" />
             </div>
 
             <div className="hidden lg:flex lg:items-center lg:justify-center lg:gap-x-8">

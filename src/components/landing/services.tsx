@@ -43,7 +43,7 @@ export default function Services() {
         }}
       >
         <CarouselContent className="ml-0 2xl:mr-[max(0rem,calc(50vw-700px))] 2xl:ml-[max(8rem,calc(50vw-700px))]">
-          {SERVICES.map((item) => (
+          {SERVICES.map((item, index) => (
             <CarouselItem
               key={item.id}
               className="max-w-[320px] pl-[20px] lg:max-w-[360px]"
@@ -52,12 +52,10 @@ export default function Services() {
                 <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-5/4 lg:aspect-16/9">
                   <Image
                     src={item.background}
-                    alt={t(`features.${item.id}.altText`, {
-                      defaultValue: item.id,
-                    })}
-                    width={1000}
-                    height={1000}
+                    alt={t(`features.${item.id}.altText`)}
+                    fill
                     className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-5 md:p-8 rounded-b-xl bg-gradient-to-t from-black/80 via-black/40 to-transparent dark:from-black/90 dark:via-black/60 dark:to-transparent shadow-lg">
                     <div className="mb-2 text-lg md:text-xl font-bold text-white drop-shadow-sm">

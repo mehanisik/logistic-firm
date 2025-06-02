@@ -46,7 +46,7 @@ export default function AboutUs() {
     >
       <div className="relative flex flex-col md:flex-row h-full w-full justify-between">
         <motion.div
-          className="md:sticky md:top-0 self-start text-xl md:text-3xl lg:text-4xl xl:text-5xl text-center md:text-left font-bold text-black dark:text-white mb-4 md:mb-6 px-2 md:px-4 w-full md:w-1/2 flex items-center justify-center md:justify-start"
+          className="relative text-xl md:text-3xl lg:text-4xl xl:text-5xl text-center md:text-left font-bold text-black dark:text-white mb-4 md:mb-6 px-2 md:px-4 w-full md:w-1/2 flex items-center justify-center md:justify-start"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}

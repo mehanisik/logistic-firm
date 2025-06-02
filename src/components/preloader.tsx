@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 let isFirstLoad = true;
+const LOADING_TIME = 2300;
 
 export function Preloader() {
   const [isLoading, setIsLoading] = useState(isFirstLoad);
@@ -10,6 +11,8 @@ export function Preloader() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
+    if (window.innerHeight < 850) return;
+
     if (!isFirstLoad) {
       setIsLoading(false);
       return;
@@ -21,7 +24,7 @@ export function Preloader() {
         setIsLoading(false);
         isFirstLoad = false;
       }, 800);
-    }, 2400);
+    }, LOADING_TIME);
 
     if (videoRef.current) {
       videoRef.current.play().catch(console.error);

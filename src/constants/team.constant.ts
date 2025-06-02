@@ -9,11 +9,11 @@ const ATIK_TEAM_MEMBERS = [
   },
   {
     id: "khalid-xkhospervaz",
-    name: "Khalid Xkhospervaz",
+    name: "Khalid KHOSPERVAZ",
     avatarUrl: "/images/team-member-2.jpg",
     linkedinUrl: "#",
     phone: "+90 534 846 95 50",
-    email: "Xoshparvaz@atikexp.com",
+    email: "khospervaz@atikexp.com",
   },
   {
     id: "atilla-mert-akkaya",

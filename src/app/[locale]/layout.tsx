@@ -1,73 +1,170 @@
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
+import { halenoir } from "@/fonts";
 import { routing } from "@/i18n/routing";
+import { cn, getBaseUrl } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { jsonLdScriptProps } from "react-schemaorg";
-import type { WebSite } from "schema-dts";
-import "../globals.css";
-import { Toaster } from "@/components/ui/sonner";
-import { getBaseUrl } from "@/lib/utils";
-import localFont from "next/font/local";
 import type { ReactNode } from "react";
+import "../../styles/globals.css";
+import { Preloader } from "@/components/preloader";
 
-const halenoirCompactFont = localFont({
-  src: "../../fonts/halenoir-compact.woff2",
-});
+export const metadata: Metadata = {
+  title: {
+    default: "Atik Import Export - Global Logistics Solutions",
+    template: "%s | Atik Import Export",
+  },
+  description:
+    "Atik Import Export provides comprehensive logistics solutions including freight forwarding, customs brokerage, warehousing, and project cargo services worldwide.",
+  keywords: [
+    "logistics",
+    "freight forwarding",
+    "customs brokerage",
+    "warehousing",
+    "project cargo",
+    "international shipping",
+    "supply chain",
+    "import export",
+    "global logistics",
+  ],
+  authors: [{ name: "Atik Import Export" }],
+  creator: "Atik Import Export",
+  publisher: "Atik Import Export",
+  formatDetection: {
+    email: false,
+    telephone: false,
+    address: false,
+  },
+  metadataBase: new URL(getBaseUrl()),
+  alternates: {
+    canonical: getBaseUrl(),
+    languages: {
+      en: `${getBaseUrl()}/en`,
+      tr: `${getBaseUrl()}/tr`,
+    },
+  },
+  openGraph: {
+    title: "Atik Import Export - Global Logistics Solutions",
+    description:
+      "Comprehensive logistics solutions including freight forwarding, customs brokerage, warehousing, and project cargo services worldwide.",
+    url: getBaseUrl(),
+    siteName: "Atik Import Export",
+    images: [
+      {
+        url: "/web-app-manifest-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "Atik Import Export Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Atik Import Export - Global Logistics Solutions",
+    description:
+      "Comprehensive logistics solutions including freight forwarding, customs brokerage, warehousing, and project cargo services worldwide.",
+    images: ["/web-app-manifest-512x512.png"],
+  },
+  icons: {
+    icon: [
+      {
+        url: "/web-app-manifest-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/web-app-manifest-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: "/apple-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+    other: [
+      {
+        rel: "shortcut icon",
+        url: "/favicon.ico",
+      },
+    ],
+  },
+  manifest: "/manifest.json",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "Logistics",
+  other: {
+    "og:logo": "/web-app-manifest-512x512.png",
+  },
+  verification: {
+    google:
+      "google-site-verification=ZVuwP6pq2K2iuqdUqTbpXW-Zb800mT40ViR0YRP0ZDE",
+  },
+};
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+type RootLayoutProperties = {
+  readonly children: ReactNode;
+  readonly params: Promise<{
+    locale: string;
+  }>;
+};
 
 export default async function RootLayout({
   children,
   params,
-}: {
-  children: ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
+}: RootLayoutProperties) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
   setRequestLocale(locale);
-
   const t = await getTranslations({ locale, namespace: "Metadata" });
+
   return (
-    <html lang={locale} dir="ltr" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/svg+xml" href="/icon0.svg" />
-        <link rel="icon" type="image/png" href="/icon1.png" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#f24405" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
         />
-        <link rel="canonical" href={getBaseUrl()} />
-        <link rel="alternate" hrefLang="x-default" href={getBaseUrl()} />
-        <link rel="alternate" hrefLang="en" href={`${getBaseUrl()}/en`} />
-        <meta name="keywords" content={t("keywords")} />
-        <meta name="author" content="Atik Import Export" />
-        <meta name="robots" content="index, follow" />
-        <script
-          {...jsonLdScriptProps<WebSite>({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: t("title"),
-            description: t("description"),
-            url: getBaseUrl(),
-            inLanguage: locale,
-          })}
+        <meta name="apple-mobile-web-app-title" content="Atik Import Export" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="/web-app-manifest-512x512.png" />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta
+          property="twitter:image"
+          content="/web-app-manifest-512x512.png"
         />
       </head>
-      <body
-        className={`${halenoirCompactFont.className} antialiased scroll-smooth`}
-        suppressHydrationWarning
-      >
+      <body className={cn(halenoir.className, "scroll-smooth antialiased")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -77,6 +174,7 @@ export default async function RootLayout({
           <NextIntlClientProvider>
             <Toaster />
             {children}
+            <Preloader />
           </NextIntlClientProvider>
         </ThemeProvider>
         <Analytics />
@@ -84,68 +182,4 @@ export default async function RootLayout({
       </body>
     </html>
   );
-}
-
-const locales = ["en", "tr"] as const;
-
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
-
-type Props = {
-  params: Promise<{ locale: string }>;
-};
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata,
-): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Metadata" });
-
-  return {
-    title: t("title"),
-    description: t("description"),
-    keywords: t("keywords"),
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url: getBaseUrl(),
-      siteName: "Atik Import Export",
-      images: [
-        {
-          url: "/apple-touch-icon.png",
-          width: 180,
-          height: 180,
-          alt: t("title"),
-        },
-      ],
-      locale: locale,
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-      images: ["/apple-touch-icon.png"],
-      creator: "@atikimportexport",
-    },
-    alternates: {
-      canonical: getBaseUrl(),
-      languages: {
-        en: `${getBaseUrl()}/en`,
-        tr: `${getBaseUrl()}/tr`,
-      },
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
-    },
-  };
 }

@@ -128,8 +128,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-16 relative z-10">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4 flex flex-col items-start justify-start">
-            <Logo isScrolled={true} width={180} height={80} />
-            <p className="mb-6 text-muted-foreground text-sm leading-relaxed">
+            <Logo isScrolled={true} className="w-[150px] h-auto" />
+
+            <p className="mb-6 text-muted-foreground text-sm mt-2 leading-relaxed">
               {t("newsletterDescription")}
             </p>
           </div>

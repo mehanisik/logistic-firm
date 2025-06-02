@@ -78,8 +78,8 @@ export default function FeatureAccordion() {
                     }
                     className="size-full object-cover object-left-top dark:mix-blend-lighten"
                     alt={t(`items.${selectedItem}.title`)}
-                    width={1207}
-                    height={929}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
                   />
                 </motion.div>
               </AnimatePresence>

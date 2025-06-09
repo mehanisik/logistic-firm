@@ -1,15 +1,15 @@
 import { URL } from "node:url";
-import AboutUs from "@/components/landing/about-us";
-import ContactUs from "@/components/landing/contact";
-import FeatureAccordion from "@/components/landing/feature-accordion";
-import Footer from "@/components/landing/footer";
-import Hero from "@/components/landing/hero";
-import LogoCloud from "@/components/landing/logo-cloud";
-import Services from "@/components/landing/services";
-import Stats from "@/components/landing/stats";
-import Summary from "@/components/landing/summary";
-import TeamMembers from "@/components/landing/team";
-import Tesimonials from "@/components/landing/testimonial";
+import AboutUs from "@/components/features/landing/about-us";
+import ContactUs from "@/components/features/landing/contact";
+import FeatureAccordion from "@/components/features/landing/feature-accordion";
+import Footer from "@/components/features/landing/footer";
+import Hero from "@/components/features/landing/hero";
+import LogoCloud from "@/components/features/landing/logo-cloud";
+import Services from "@/components/features/landing/services";
+import Stats from "@/components/features/landing/stats";
+import Summary from "@/components/features/landing/summary";
+import TeamMembers from "@/components/features/landing/team";
+import Tesimonials from "@/components/features/landing/testimonial";
 import { getBaseUrl } from "@/lib/utils";
 import type { Metadata } from "next";
 
@@ -34,9 +34,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   return (
-    <main>
+    <main className="relative">
       <Hero />
       <LogoCloud />
       <Summary />

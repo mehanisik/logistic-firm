@@ -1,0 +1,52 @@
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 0.08;
+  }
+  50% {
+    opacity: 0.12;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fade-up 1s cubic-bezier(0.25, 0.4, 0.25, 1) forwards;
+  }
+
+  .animate-flicker {
+    animation: flicker 4s ease-in-out infinite;
+  }
+
+  .animate-flicker-delayed {
+    animation: flicker 3s ease-in-out infinite 1s;
+  }
+
+  .bg-gradient-flicker {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--primary-500) 50%,
+      transparent 100%
+    );
+  }
+
+  .bg-gradient-flicker-secondary {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--primary-400) 50%,
+      transparent 100%
+    );
+  }
+}

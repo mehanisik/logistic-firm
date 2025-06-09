@@ -1,6 +1,6 @@
-import AboutUs from "@/components/about-page";
-import Footer from "@/components/landing/footer";
-import Navbar from "@/components/ui/navbar";
+import AboutUs from "@/components/features/about/about-page";
+import Footer from "@/components/features/landing/footer";
+import { BackLink } from "@/components/features/shared/back-link";
 import type { Metadata, ResolvingMetadata } from "next";
 import { createTranslator, useTranslations } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -28,8 +28,8 @@ export default function AboutUsPage() {
 
   return (
     <div className="w-full h-full">
-      <Navbar forceScrolled />
       <div className="w-full h-full py-10">
+        <BackLink />
         <section className="pt-20 pb-10 px-4 max-w-7xl mx-auto">
           <AboutUs />
         </section>

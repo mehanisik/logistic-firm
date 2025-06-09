@@ -4,7 +4,7 @@ const ATIK_TEAM_MEMBERS = [
     name: "Mehmet AKKAYA",
     linkedinUrl: "#",
     phone: "+90 533 964 20 84",
-    email: "info@atikexp.com",
+    email: "mehmet@atikexp.com",
   },
   {
     id: "khalid-xkhospervaz",

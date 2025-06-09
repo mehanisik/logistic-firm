@@ -2,7 +2,12 @@ import createNextBundleAnalyzer from "@next/bundle-analyzer";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
-const nextConfig: NextConfig = {};
+const nextConfig: NextConfig = {
+  experimental: {
+    reactCompiler: true,
+    optimizePackageImports: ["framer-motion"],
+  },
+};
 
 const withBundleAnalyzer = createNextBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",

@@ -18,7 +18,6 @@ A modern web application for Atik Import Export, a leading logistics and import/
 - **Framework:** [Next.js 14](https://nextjs.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Components:** [shadcn/ui](https://ui.shadcn.com/)
-- **Email:** [Resend](https://resend.com)
 - **Icons:** [Tabler Icons](https://tabler-icons.io/)
 - **Deployment:** [Vercel](https://vercel.com)
 
@@ -35,10 +34,7 @@ A modern web application for Atik Import Export, a leading logistics and import/
    npm install
    ```
 
-3. Set up environment variables:
-   ```env
-   RESEND_API_KEY=your_resend_api_key
-   ```
+  
 
 4. Run the development server:
    ```bash

@@ -1,130 +1,99 @@
 "use client";
 
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { IconMenu2, IconX } from "@tabler/icons-react";
-import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import { ThemeSwitcher } from "../theme-switcher";
-import { LanguageSwitcher } from "../language-switcher";
 import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
-
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { ThemeSwitcher } from "@/components/shared/theme-switcher";
+import { LanguageSwitcher } from "@/components/shared/language-switcher";
 import { Logo } from "./logo";
+import { MENU_ITEMS } from "@/constants/navigation";
 
-interface NavItem {
-  id: string;
-  href: string;
-}
-
-const MENU_ITEMS_CONFIG: NavItem[] = [
-  { id: "home", href: "/" },
-  { id: "about", href: "/about-us" },
-  { id: "service", href: "/services" },
-  { id: "contact", href: "/contact-us" },
-];
-
-interface NavbarProps {
-  forceScrolled?: boolean;
-}
-
-export default function Navbar({ forceScrolled }: NavbarProps = {}) {
+export default function Navbar() {
   const t = useTranslations("Navbar");
-  const { theme } = useTheme();
-
-  const [menuState, setMenuState] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(forceScrolled ?? false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    if (forceScrolled) return;
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    const closeMenuOnResize = () => {
-      if (window.innerWidth >= 1024) {
-        setMenuState(false);
-      }
+    const onScroll = () => setIsScrolled(window.scrollY > 50);
+    const onResize = () => {
+      if (window.innerWidth >= 1024) setMenuOpen(false);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", closeMenuOnResize);
-
-    handleScroll();
-    closeMenuOnResize();
+    window.addEventListener("scroll", onScroll);
+    window.addEventListener("resize", onResize);
+    onScroll();
+    onResize();
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", closeMenuOnResize);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
     };
-  }, [forceScrolled]);
+  }, []);
 
-  const menuItems = MENU_ITEMS_CONFIG.map((item) => ({
+  const menuItems = MENU_ITEMS.map((item) => ({
     ...item,
-    name: t(item.id as any),
+    label: t(item.id as any),
   }));
 
-  const navContainerClasses = cn(
-    "mx-auto mt-2 max-w-6xl px-4 sm:px-6 lg:px-8 transition-all duration-300",
-    isScrolled
-      ? "bg-background/80 backdrop-blur-md rounded-xl border border-border shadow-sm lg:mt-2"
-      : "lg:mt-4",
-  );
-
-  const mobileMenuContainerClasses = cn(
-    "lg:hidden",
-    "absolute top-full left-0 right-0 z-40 mt-2 w-[calc(100%-1rem)] mx-auto",
-    "origin-top scale-95 opacity-0 transition-all duration-200 ease-out",
-    "bg-background border border-border rounded-2xl p-6 shadow-xl",
-    {
-      "transform-none scale-100 opacity-100": menuState,
-    },
-  );
-
-
   return (
-    <header className="fixed z-50 m-2  w-full">
-      <nav data-state={menuState ? "active" : "inactive"} className="px-2">
-        <div className={navContainerClasses}>
-          <div className="relative flex items-center justify-between gap-6 py-3">
-            <div className="flex shrink-0">
-              <Logo isScrolled={isScrolled} className="w-[90px]" />
-            </div>
+    <header className="fixed z-50 w-full px-4 sm:px-6 md:px-8">
+      <nav className="mx-auto max-w-6xl">
+        <div
+          className={cn(
+            "mt-2 transition-all duration-300",
+            isScrolled
+              ? "bg-background/80 backdrop-blur-md px-4 rounded-xl border border-border shadow-sm lg:mt-2"
+              : "lg:mt-4"
+          )}
+        >
+          <div className="flex items-center justify-between gap-4 py-2.5 sm:py-3">
+            <Logo
+              isScrolled={isScrolled}
+              className="w-[80px] sm:w-[90px] md:w-[100px] h-auto"
+              withLink={true}
+            />
 
-            <div className="hidden lg:flex lg:items-center lg:justify-center lg:gap-x-8">
-              {menuItems.map((item) => (
+            <div className="hidden lg:flex lg:items-center lg:gap-x-6 xl:gap-x-8">
+              {menuItems.map(({ id, href, label }) => (
                 <Link
-                  key={item.id}
-                  href={item.href}
-                  onClick={() => setMenuState(false)}
+                  key={id}
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
                   className={cn(
-                    "block rounded-md px-3 py-2 text-md font-bold transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
-                    isScrolled ? "text-foreground" : "text-white",
+                    "block rounded-md px-3 py-2 text-sm sm:text-base font-medium transition-colors",
+                    "focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
+                    "hover:bg-accent hover:text-accent-foreground",
+                    isScrolled ? "text-foreground" : "text-white"
                   )}
                 >
-                  {t(item.id)}
+                  {label}
                 </Link>
               ))}
             </div>
 
             <div className="flex items-center gap-x-2 sm:gap-x-3">
-              <ThemeSwitcher />
-              <LanguageSwitcher />
+              <ThemeSwitcher isScrolled={isScrolled} />
+              <LanguageSwitcher isScrolled={isScrolled} />
 
               <div className="lg:hidden">
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => setMenuState(!menuState)}
-                  aria-label={
-                    menuState ? t("closeMenuAria") : t("openMenuAria")
-                  }
-                  aria-expanded={menuState}
-                  className="text-foreground hover:bg-accent hover:text-accent-foreground"
+                  onClick={() => setMenuOpen((open) => !open)}
+                  aria-label={menuOpen ? t("closeMenuAria") : t("openMenuAria")}
+                  aria-expanded={menuOpen}
+                  className={cn(
+                    "h-8 w-8 sm:h-9 sm:w-9 hover:bg-accent hover:text-accent-foreground",
+                    isScrolled ? "text-foreground" : "text-white"
+                  )}
                 >
-                  {menuState ? (
-                    <IconX className="h-6 w-6" />
+                  {menuOpen ? (
+                    <IconX className="h-5 w-5 sm:h-6 sm:w-6" />
                   ) : (
-                    <IconMenu2 className="h-6 w-6" />
+                    <IconMenu2 className="h-5 w-5 sm:h-6 sm:w-6" />
                   )}
                 </Button>
               </div>
@@ -133,18 +102,28 @@ export default function Navbar({ forceScrolled }: NavbarProps = {}) {
         </div>
 
         <div
-          className={mobileMenuContainerClasses}
-          data-state={menuState ? "open" : "closed"}
+          className={cn(
+            "lg:hidden absolute top-full left-0 right-0 z-40 mt-2",
+            "origin-top scale-95 opacity-0 transition-all duration-200 ease-out",
+            "bg-background border border-border rounded-2xl p-4 sm:p-6 shadow-xl",
+            "invisible pointer-events-none",
+            menuOpen && "visible pointer-events-auto transform-none scale-100 opacity-100"
+          )}
         >
-          <ul className="space-y-4">
-            {menuItems.map((item) => (
-              <li key={item.id}>
+          <ul className="space-y-2 sm:space-y-3">
+            {menuItems.map(({ id, href, label }) => (
+              <li key={id}>
                 <Link
-                  href={item.href}
-                  onClick={() => setMenuState(false)}
-                  className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  className={cn(
+                    "block rounded-md px-3 py-2 text-sm sm:text-base font-medium",
+                    "transition-colors hover:bg-accent hover:text-accent-foreground",
+                    "focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
+                    "text-foreground"
+                  )}
                 >
-                  {item.name}
+                  {label}
                 </Link>
               </li>
             ))}

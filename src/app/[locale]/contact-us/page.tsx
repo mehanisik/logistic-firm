@@ -1,7 +1,7 @@
-import { ContactForm } from "@/components/forms/contact-form";
-import Footer from "@/components/landing/footer";
+import { ContactForm } from "@/components/features/contact/contact-form";
+import Footer from "@/components/features/landing/footer";
+import { BackLink } from "@/components/features/shared/back-link";
 import { Badge } from "@/components/ui/badge";
-import Navbar from "@/components/ui/navbar";
 import { ATIK_OFFICE_LOCATIONS } from "@/constants/contact.constant";
 import { IconMail, IconMapPin, IconPhone } from "@tabler/icons-react";
 import type { Metadata, ResolvingMetadata } from "next";
@@ -31,8 +31,8 @@ export default function ContactPage() {
 
   return (
     <div className="w-full h-full">
-      <Navbar forceScrolled />
       <div className="w-full h-full py-10">
+        <BackLink />
         <section className="pt-20 pb-10 px-4 max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">

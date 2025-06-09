@@ -17,6 +17,8 @@ const badgeVariants = cva(
           "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
           "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
+        futuristic:
+          "relative bg-transparent text-primary-500 font-bold tracking-wider transition-all duration-300 [--offset:10px] [--border-size:2px] before:absolute before:inset-0 before:border-[var(--border-size)] before:border-primary-500/30 before:transition-transform before:duration-300 before:ease-in-out after:absolute after:inset-[var(--offset)] after:border-[var(--border-size)] after:border-primary-500/30 after:transition-transform after:duration-300 after:ease-in-out hover:before:scale-x-0 hover:after:scale-y-0 [&>span]:relative [&>span]:z-10",
       },
     },
     defaultVariants: {
@@ -39,8 +41,10 @@ function Badge({
       data-slot="badge"
       className={cn(badgeVariants({ variant }), className)}
       {...props}
-    />
+    >
+      {variant === "futuristic" ? <span>{props.children}</span> : props.children}
+    </Comp>
   );
 }
 
-export { Badge, badgeVariants };
+export { Badge };

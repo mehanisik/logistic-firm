@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./animations.css";
 
 @plugin "tailwindcss-animate";
 
@@ -194,6 +195,7 @@
     transform: translateX(-100%);
   }
 }
+
 @keyframes marque2 {
   0% {
     transform: translateX(100%);
@@ -251,6 +253,16 @@
   }
 }
 
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 0.06;
+  }
+  50% {
+    opacity: 0.12;
+  }
+}
+
 @layer utilities {
   .perspective-1000 {
     perspective: 1000px;
@@ -265,5 +277,31 @@
   .transform-gpu {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+  }
+
+  .clip-path-diagonal {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0,
+      5% 5%,
+      5% 95%,
+      0 100%
+    );
+  }
+
+  .clip-path-diagonal-reverse {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0,
+      95% 5%,
+      95% 95%,
+      100% 100%
+    );
   }
 }

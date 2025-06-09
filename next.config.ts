@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
 };
 
 const withBundleAnalyzer = createNextBundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
+  enabled: process.env.NEXT_PUBLIC_ANALYZE === "true",
 });
 
 const withNextIntl = createNextIntlPlugin();

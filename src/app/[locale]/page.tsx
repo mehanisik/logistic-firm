@@ -35,8 +35,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function HomePage() {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-
   return (
     <main className="relative">
       <Hero />

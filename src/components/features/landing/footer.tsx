@@ -78,7 +78,7 @@ export default function Footer() {
   const socialLinks: SocialLinkItem[] = [
     {
       Icon: IconBrandLinkedin,
-      href: "https://linkedin.com/company/atiklogistics",
+      href: "https://www.linkedin.com/in/mehmet-akkaya-86539555",
       label: "LinkedIn",
       tooltip: t("social.linkedin"),
     },
@@ -162,15 +162,12 @@ export default function Footer() {
               {t("quickLinks")}
             </h3>
             <nav className="space-y-2 sm:space-y-2.5">
-              {footerNavLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <Link
+                href="/"
+                className="block text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+              >
+                {t("nav.home")}
+              </Link>
             </nav>
           </div>
 
@@ -211,7 +208,7 @@ export default function Footer() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
-                      href="https://www.linkedin.com/company/atiklogistics"
+                      href="https://www.linkedin.com/in/mehmet-akkaya-86539555"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors duration-200"

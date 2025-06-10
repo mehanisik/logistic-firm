@@ -34,10 +34,10 @@ export default function ServicesPage() {
   }, [selectedServiceId]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-background/80">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+    <section className="w-full h-full">
+      <div className="w-full h-full py-10">
         <BackLink />
-        <section className="max-w-7xl mx-auto">
+        <div className="px-4 max-w-7xl mx-auto">
           <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
               <IconTruck className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -129,9 +129,9 @@ export default function ServicesPage() {
               </TabsContent>
             ))}
           </Tabs>
-        </section>
+        </div>
       </div>
       <Footer />
-    </div>
+    </section>
   );
 }

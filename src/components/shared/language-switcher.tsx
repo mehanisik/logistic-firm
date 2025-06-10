@@ -18,8 +18,8 @@ import { useEffect, useState } from "react";
 import React from "react";
 
 const languages = [
-  { code: "en", flag: "🇬🇧" },
-  { code: "tr", flag: "🇹🇷" },
+  { code: "en", flag: "🇬🇧", name: "English" },
+  { code: "tr", flag: "🇹🇷", name: "Türkçe" },
 ] as const;
 
 type LanguageCode = (typeof languages)[number]["code"];
@@ -31,10 +31,10 @@ interface LanguageSwitcherProps {
 export const LanguageSwitcher = ({ isScrolled }: LanguageSwitcherProps) => {
   const router = useRouter();
   const pathname = usePathname();
-  const defaultLocale = useLocale();
+  const locale = useLocale();
   const { resolvedTheme } = useTheme();
   const [currentLocale, setCurrentLocale] = useState<LanguageCode>(
-    defaultLocale as LanguageCode,
+    locale as LanguageCode,
   );
   const t = useTranslations("LanguageSwitcher");
 
@@ -44,42 +44,33 @@ export const LanguageSwitcher = ({ isScrolled }: LanguageSwitcherProps) => {
   };
 
   useEffect(() => {
-    const getStoredLocale = (): LanguageCode => {
-      const urlLocale = pathname.split("/")[1] as LanguageCode;
-      if (languages.some((lang) => lang.code === urlLocale)) {
-        return urlLocale;
-      }
+    setCurrentLocale(locale as LanguageCode);
+  }, [locale]);
 
-      const cookieLocale = document.cookie
-        .split("; ")
-        .find((row) => row.startsWith("NEXT_LOCALE="))
-        ?.split("=")[1] as LanguageCode | undefined;
-
-      if (
-        cookieLocale &&
-        languages.some((lang) => lang.code === cookieLocale)
-      ) {
-        return cookieLocale;
-      }
-
-      return "tr";
-    };
-
-    const storedLocale = getStoredLocale();
-    if (storedLocale !== currentLocale) {
-      setCurrentLocale(storedLocale);
-    }
-  }, [pathname, currentLocale]);
-
-  const switchLanguage = (newLocale: LanguageCode) => {
+  const switchLanguage = async (newLocale: LanguageCode) => {
     if (newLocale === currentLocale) return;
 
-    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
+    try {
+      // Set the cookie first
+      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
 
-    setCurrentLocale(newLocale);
+      // Update the state
+      setCurrentLocale(newLocale);
 
-    const newPath = pathname.replace(/^\/[^/]+/, `/${newLocale}`);
-    router.push(newPath);
+      // Get the current path without the locale prefix
+      const pathWithoutLocale = pathname.replace(/^\/[^/]+/, "");
+
+      // Construct the new path with the new locale
+      const newPath = `/${newLocale}${pathWithoutLocale}`;
+
+      // Use replace instead of push to avoid adding to history
+      await router.replace(newPath, { locale: newLocale });
+
+      // Force a hard refresh to ensure all components re-render with new locale
+      window.location.href = newPath;
+    } catch (error) {
+      console.error("Failed to switch language:", error);
+    }
   };
 
   return (
@@ -110,7 +101,7 @@ export const LanguageSwitcher = ({ isScrolled }: LanguageSwitcherProps) => {
           {t("title")}
         </DropdownMenuLabel>
         <DropdownMenuSeparator className="my-1.5 bg-border/50" />
-        {languages.map(({ code, flag }, index) => (
+        {languages.map(({ code, flag, name }, index) => (
           <React.Fragment key={code}>
             <DropdownMenuItem
               onClick={() => switchLanguage(code)}
@@ -124,7 +115,7 @@ export const LanguageSwitcher = ({ isScrolled }: LanguageSwitcherProps) => {
               )}
             >
               <span className="text-base">{flag}</span>
-              <span>{t(code)}</span>
+              <span>{name}</span>
             </DropdownMenuItem>
             {index < languages.length - 1 && (
               <DropdownMenuSeparator className="my-1 bg-border/50" />

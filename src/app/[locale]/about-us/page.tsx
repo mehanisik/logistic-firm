@@ -30,9 +30,7 @@ export default function AboutUsPage() {
     <div className="w-full h-full">
       <div className="w-full h-full py-10">
         <BackLink />
-        <section className="pt-20 pb-10 px-4 max-w-7xl mx-auto">
-          <AboutUs />
-        </section>
+        <AboutUs />
       </div>
       <Footer />
     </div>

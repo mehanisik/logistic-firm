@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
-  IconArrowRight,
+  IconBuilding,
   IconCircleCheck,
   IconGlobe,
   IconShip,
@@ -64,15 +63,16 @@ export default function AboutUs() {
   ];
 
   return (
-    <section className="py-20 px-4 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
-        <Badge variant="outline" className="mb-4">
+    <section className="px-4 max-w-7xl mx-auto">
+      <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
+        <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
+          <IconBuilding className="h-4 w-4 sm:h-5 sm:w-5" />
           {t("ourStoryTitle")}
-        </Badge>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+        </div>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
           {t("title")}
-        </h2>
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        </h1>
+        <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl sm:max-w-3xl mx-auto px-4">
           {t("subtitle")}
         </p>
       </div>
@@ -144,13 +144,6 @@ export default function AboutUs() {
                 {index < features.length - 1 && <Separator className="mt-4" />}
               </div>
             ))}
-
-            <div className="pt-4">
-              <Button className="w-full" size="lg">
-                {t("partnerWithUs")}
-                <IconArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
           </CardContent>
         </Card>
       </div>
@@ -160,12 +153,6 @@ export default function AboutUs() {
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="text-2xl font-semibold mb-4">{t("subtitle")}</h3>
             <p className="text-muted-foreground mb-6">{t("subDescription")}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">{t("contactEmail")}</Button>
-              <Button variant="outline" size="lg">
-                {t("title")}
-              </Button>
-            </div>
           </div>
         </CardContent>
       </Card>

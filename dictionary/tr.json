@@ -357,7 +357,7 @@
     "value2": "Yenilik ve sürekli gelişime bağlılık.",
     "value3": "Müşteri başarısı en büyük önceliğimizdir.",
     "partnerWithUs": "Bizimle Ortak Olun",
-    "contactEmail": "info@atikexp.com",
+    "contactEmail": "atilla@atikexp.com",
     "subDescription": "Mükemmellik, dürüstlük ve müşteri memnuniyeti taahhüdüyle Atik İthalat İhracat, fırsatları başarılara dönüştürerek dünyayı her seferinde bir ticaretle daha da yakınlaştırıyor. Temizlik ve bakım ürünlerinin uluslararası taşımacılığında uzmanız ve bu ürünlerin tam yelpazesini dağıtım için hazırlıyoruz."
   },
   "About3": {
@@ -407,5 +407,8 @@
     "ariaLabel": "Dili değiştir",
     "ariaDescription": "Tercih ettiğiniz dili seçin",
     "currentLanguage": "Mevcut dil"
+  },
+  "Common": {
+    "backToHome": "Ana Sayfaya Dön"
   }
 }

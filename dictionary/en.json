@@ -101,7 +101,9 @@
       "messageRequired": "Message is required",
       "messageMin": "Message must be at least 10 characters"
     },
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "am": "AM",
+    "pm": "PM"
   },
   "Testimonial": {
     "testimonials": "Testimonials",
@@ -340,7 +342,7 @@
     "value2": "Commitment to innovation and continuous improvement.",
     "value3": "Customer success as our top priority.",
     "partnerWithUs": "Partner With Us",
-    "contactEmail": "info@atikexp.com",
+    "contactEmail": "atilla@atikexp.com",
     "subDescription": "With a commitment to excellence, integrity, and customer satisfaction, Atik Import Export turns opportunities into achievements, bringing the world closer—one trade at a time. We specialize in the international transportation of cleaning and care products and are preparing our full range of these products for distribution."
   },
   "About3": {

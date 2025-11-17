@@ -15,21 +15,27 @@ import { PreloaderWrapper } from "@/components/ui/preloader-wrapper";
 
 export const metadata: Metadata = {
   title: {
-    default: "Atik Import Export - Global Logistics Solutions",
+    default: "Atik Import Export - Global Trade & Transportation",
     template: "%s | Atik Import Export",
   },
   description:
-    "Atik Import Export provides comprehensive logistics solutions including freight forwarding, customs brokerage, warehousing, and project cargo services worldwide.",
+    "Atik Import Export connects global markets through reliable international transportation and specialized solutions for cleaning and care products. Your partner for global trade.",
   keywords: [
+    "Atik Import Export",
+    "international trade",
+    "international transportation",
+    "cleaning products",
+    "care products",
+    "import export",
+    "truck transportation",
+    "global supply chain",
+    "Istanbul trade",
+    "Warsaw trade",
+    "Tehran trade",
     "logistics",
     "freight forwarding",
     "customs brokerage",
     "warehousing",
-    "project cargo",
-    "international shipping",
-    "supply chain",
-    "import export",
-    "global logistics",
   ],
   authors: [{ name: "Atik Import Export" }],
   creator: "Atik Import Export",
@@ -48,17 +54,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Atik Import Export - Global Logistics Solutions",
+    title: "Atik Import Export - Global Trade & Transportation",
     description:
-      "Comprehensive logistics solutions including freight forwarding, customs brokerage, warehousing, and project cargo services worldwide.",
+      "Atik Import Export connects global markets through reliable international transportation and specialized solutions for cleaning and care products. Your partner for global trade.",
     url: getBaseUrl(),
     siteName: "Atik Import Export",
     images: [
       {
         url: "/web-app-manifest-512x512.png",
-        width: 512,
-        height: 512,
-        alt: "Atik Import Export Logo",
+        width: 1200,
+        height: 630,
+        alt: "Atik Import Export - Global Trade & Transportation",
       },
     ],
     locale: "en_US",
@@ -66,10 +72,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Atik Import Export - Global Logistics Solutions",
+    title: "Atik Import Export - Global Trade & Transportation",
     description:
-      "Comprehensive logistics solutions including freight forwarding, customs brokerage, warehousing, and project cargo services worldwide.",
-    images: ["/web-app-manifest-512x512.png"],
+      "Atik Import Export connects global markets through reliable international transportation and specialized solutions for cleaning and care products. Your partner for global trade.",
+    images: [
+      {
+        url: "/web-app-manifest-512x512.png",
+        width: 1200,
+        height: 630,
+        alt: "Atik Import Export - Global Trade & Transportation",
+      },
+    ],
   },
   icons: {
     icon: [

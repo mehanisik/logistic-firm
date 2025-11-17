@@ -2,32 +2,69 @@ import { ContactForm } from "@/components/features/contact/contact-form";
 import Footer from "@/components/features/landing/footer";
 import { BackLink } from "@/components/features/shared/back-link";
 import { ATIK_OFFICE_LOCATIONS } from "@/constants/contact.constant";
+import { generatePageMetadata } from "@/lib/metadata";
 import {
   IconMail,
   IconMapPin,
   IconPhone,
   IconPhoneCall,
 } from "@tabler/icons-react";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 import { createTranslator, useTranslations } from "next-intl";
 import { getMessages } from "next-intl/server";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata,
-): Promise<Metadata> {
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const messages = await getMessages({ locale });
   const t = createTranslator({ locale, messages, namespace: "ContactPage" });
-  return {
-    title: t("meta.title", { default: "Contact Us" }),
-    description: t("meta.description", {
-      default: "Contact us for any questions or inquiries.",
-    }),
-  };
+  const localeCode = locale === "tr" ? "tr_TR" : "en_US";
+
+  const defaultTitle = locale === "tr" ? "İletişim" : "Contact Us";
+  const defaultDescription =
+    locale === "tr"
+      ? "Atik İthalat İhracat ile iletişime geçin. Uluslararası taşımacılık, kamyon bazlı çözümler veya temizlik ve bakım ürünlerimiz hakkında bilgi alın."
+      : "Get in touch with Atik Import Export. Contact us for international transportation, truck-based solutions, or information about our cleaning and care products.";
+  const defaultKeywords =
+    locale === "tr"
+      ? [
+          "Atik İthalat İhracat iletişim",
+          "lojistik iletişim",
+          "İstanbul lojistik",
+          "Varşova lojistik",
+          "Tahran lojistik",
+          "uluslararası ticaret iletişim",
+          "taşımacılık sorgulama",
+        ]
+      : [
+          "contact Atik Import Export",
+          "logistics contact",
+          "Istanbul logistics",
+          "Warsaw logistics",
+          "Tehran logistics",
+          "international trade contact",
+          "transportation inquiry",
+        ];
+
+  return generatePageMetadata({
+    title: t("meta.title", { default: defaultTitle }),
+    description: t("meta.description", { default: defaultDescription }),
+    keywords: defaultKeywords,
+    url: `/${locale}/contact-us`,
+    locale: localeCode,
+    image: {
+      url: "/web-app-manifest-512x512.png",
+      width: 1200,
+      height: 630,
+      alt:
+        locale === "tr"
+          ? "Atik İthalat İhracat İletişim"
+          : "Contact Atik Import Export",
+    },
+  });
 }
 
 export default function ContactPage() {

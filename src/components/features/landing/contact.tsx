@@ -1,7 +1,15 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Globe } from "@/components/ui/globe";
+import dynamic from "next/dynamic";
+
+const Globe = dynamic(
+  () => import("@/components/ui/globe").then((mod) => ({ default: mod.Globe })),
+  {
+    ssr: false,
+    loading: () => <div className="absolute inset-0 bg-muted animate-pulse" />,
+  },
+);
 import { SectionLayout } from "@/components/ui/section-layout";
 import { ATIK_OFFICE_LOCATIONS } from "@/constants/contact.constant";
 import { IconMapPin } from "@tabler/icons-react";

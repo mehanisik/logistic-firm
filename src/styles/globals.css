@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "./animations.css";
 
-@plugin "tailwindcss-animate";
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -196,15 +194,6 @@
   }
 }
 
-@keyframes marque2 {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
 .animate-marquee {
   animation: marquee var(--duration, 30s) linear infinite;
 }
@@ -217,42 +206,6 @@
   animation-play-state: paused;
 }
 
-@keyframes loading {
-  0% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-@keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-  50% {
-    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-  }
-  100% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(180deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(360deg);
-  }
-}
-
 @keyframes flicker {
   0%,
   100% {
@@ -260,48 +213,5 @@
   }
   50% {
     opacity: 0.12;
-  }
-}
-
-@layer utilities {
-  .perspective-1000 {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-  }
-
-  .backface-hidden {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  }
-
-  .transform-gpu {
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-  }
-
-  .clip-path-diagonal {
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 100%,
-      0 100%,
-      0 0,
-      5% 5%,
-      5% 95%,
-      0 100%
-    );
-  }
-
-  .clip-path-diagonal-reverse {
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 100%,
-      0 100%,
-      0 0,
-      95% 5%,
-      95% 95%,
-      100% 100%
-    );
   }
 }

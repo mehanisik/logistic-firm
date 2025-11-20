@@ -53,7 +53,7 @@ export function BrandDialog({ brand, isOpen, onClose }: BrandDialogProps) {
 								fill
 								className={cn(
 									"object-contain transition-all duration-300",
-									brand.invertDark !== false && "dark:brightness-0 dark:invert"
+									brand.invertDark !== false && "dark:brightness-0 dark:invert",
 								)}
 							/>
 						</div>

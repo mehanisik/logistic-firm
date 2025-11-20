@@ -44,7 +44,9 @@ export default function LogoCloud() {
 										>
 											<Image
 												className={`h-full w-auto object-contain transition-all duration-300 ${
-													logo.invertDark !== false ? "dark:brightness-0 dark:invert" : ""
+													logo.invertDark !== false
+														? "dark:brightness-0 dark:invert"
+														: ""
 												}`}
 												src={logo.src}
 												alt={logo.alt}

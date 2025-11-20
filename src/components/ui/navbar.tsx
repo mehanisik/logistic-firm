@@ -86,7 +86,7 @@ export default function Navbar() {
 									aria-label={menuOpen ? t("closeMenuAria") : t("openMenuAria")}
 									aria-expanded={menuOpen}
 									className={cn(
-										"h-8 w-8 sm:h-9 sm:w-9 hover:bg-accent hover:text-accent-foreground",
+										"h-10 w-10 sm:h-11 sm:w-11 hover:bg-accent hover:text-accent-foreground",
 										isScrolled ? "text-foreground" : "text-white",
 									)}
 								>
@@ -119,7 +119,7 @@ export default function Navbar() {
 										href={href}
 										onClick={() => setMenuOpen(false)}
 										className={cn(
-											"block rounded-md px-3 py-2 text-sm sm:text-base font-medium",
+											"block rounded-md px-4 py-3 text-base font-medium",
 											"transition-colors hover:bg-accent hover:text-accent-foreground",
 											"focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
 											"text-foreground",

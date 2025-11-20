@@ -1,13 +1,11 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import {
-	Dialog,
-	DialogContent,
-	DialogDescription,
-	DialogHeader,
-	DialogTitle,
-	DialogTrigger,
-} from "@/components/ui/dialog";
+import dynamic from "next/dynamic";
+
+const LegalDialog = dynamic(
+	() => import("@/components/features/landing/legal-dialog"),
+	{ ssr: false },
+);
 import { Logo } from "@/components/ui/logo";
 import {
 	Tooltip,
@@ -165,7 +163,7 @@ export default function Footer() {
 						<nav className="space-y-2 sm:space-y-2.5">
 							<Link
 								href="/"
-								className="block text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+								className="block py-2 text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
 							>
 								{t("nav.home")}
 							</Link>
@@ -237,56 +235,35 @@ export default function Footer() {
 					</p>
 					<nav className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-1.5 sm:gap-y-2 text-[10px] sm:text-xs">
 						{legalNavLinks.map((link) => (
-							<Dialog
+							<button
 								key={link.label}
-								open={openDialog}
-								onOpenChange={setOpenDialog}
+								type="button"
+								onClick={() =>
+									handleDialogOpen(link.href.includes("privacy") ? "privacy" : "terms")
+								}
+								className="p-2 text-muted-foreground hover:text-primary transition-colors duration-200"
 							>
-								<DialogTrigger asChild>
-									<button
-										type="button"
-										onClick={() =>
-											handleDialogOpen(
-												link.href.includes("privacy") ? "privacy" : "terms",
-											)
-										}
-										className="text-muted-foreground hover:text-primary transition-colors duration-200"
-									>
-										{link.label}
-									</button>
-								</DialogTrigger>
-								<DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-									<DialogHeader>
-										<DialogTitle className="text-xl font-semibold mb-4">
-											{dialogContent[dialog].title}
-										</DialogTitle>
-										<DialogDescription className="text-base leading-relaxed space-y-4">
-											<p className="whitespace-pre-line">
-												{dialogContent[dialog].description}
-											</p>
-										</DialogDescription>
-									</DialogHeader>
-									<Button
-										type="button"
-										onClick={handleDialogClose}
-										className="w-full sm:w-auto"
-									>
-										{t("legal.accept")}
-									</Button>
-								</DialogContent>
-							</Dialog>
+								{link.label}
+							</button>
 						))}
 						<NextLink
 							href="https://mehanisik.is-a.dev/"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-muted-foreground hover:text-primary transition-colors duration-200 opacity-60 hover:opacity-100"
+							className="p-2 text-muted-foreground hover:text-primary transition-colors duration-200 opacity-60 hover:opacity-100"
 						>
 							Developed by Mehanisik
 						</NextLink>
 					</nav>
 				</div>
 			</div>
+			{openDialog && (
+				<LegalDialog
+					open={openDialog}
+					onOpenChange={setOpenDialog}
+					type={dialog}
+				/>
+			)}
 		</footer>
 	);
 }

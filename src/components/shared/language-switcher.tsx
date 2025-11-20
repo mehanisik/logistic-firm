@@ -55,13 +55,7 @@ export const LanguageSwitcher = ({ isScrolled }: LanguageSwitcherProps) => {
 
 			setCurrentLocale(newLocale);
 
-			const pathWithoutLocale = pathname.replace(/^\/[^/]+/, "");
-
-			const newPath = `/${newLocale}${pathWithoutLocale}`;
-
-			await router.replace(newPath, { locale: newLocale });
-
-			window.location.href = newPath;
+			await router.replace(pathname as any, { locale: newLocale });
 		} catch (error) {
 			console.error("Failed to switch language:", error);
 		}

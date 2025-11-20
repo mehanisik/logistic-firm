@@ -1,415 +1,676 @@
 {
-  "Common": {
-    "backToHome": "Back to Home"
-  },
-  "Footer": {
-    "copyright": "© {year} Atik Import Export. All Rights Reserved. Your Partner in Global Trade.",
-    "githubLink": "GitHub",
-    "quickLinks": "Quick Links",
-    "contactTitle": "Contact Atik Import Export",
-    "followUs": "Follow Us",
-    "nav": {
-      "home": "Home",
-      "about": "About Atik Import Export",
-      "services": "Our Services",
-      "contact": "Contact Us"
-    },
-    "legal": {
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "sitemap": "Sitemap",
-      "privacyTitle": "Privacy Policy",
-      "privacyDescription": "We protect your privacy. This policy explains how we collect, use, and protect your personal information. We collect only what we need to provide services and improve your experience. We don't share your data with third parties without your consent, except when required by law. We use strong security measures to protect your information. For privacy questions, contact us at info@atikexp.com.",
-      "termsTitle": "Terms of Service",
-      "termsDescription": "Using our services means you agree to these terms. We provide international transportation and trade services. We focus on reliability and quality. Our services follow applicable laws and regulations. We may modify these terms and will notify you of significant changes. For details about service terms, shipping conditions, and liability limits, contact us at info@atikexp.com.",
-      "sitemapTitle": "Site Map",
-      "sitemapDescription": "Find information about our international transportation and trade services. The site includes services, about us, contact information, and more. Use the navigation menu or footer links to explore.",
-      "accept": "I Understand and Accept"
-    },
-    "social": {
-      "linkedin": "Connect with Atik Import Export on LinkedIn",
-      "twitter": "Follow Atik Import Export on Twitter",
-      "facebook": "Like Atik Import Export on Facebook"
-    },
-    "newsletterPlaceholder": "your.email@example.com",
-    "newsletterAriaLabel": "Subscribe to newsletter",
-    "companyName": "Atik Import Export",
-    "address": "ORTA MAH. DEMİRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA/ İSTANBUL",
-    "phoneLabel": "Phone: +90 533 964 20 84",
-    "emailLabel": "Email: atilla@atikexp.com",
-    "newsletterDescription": "Stay updated with Atik Import Export. Subscribe for the latest news on our services and product offerings."
-  },
-  "Metadata": {
-    "title": "Atik Import Export – Global Trade & Transportation for Cleaning and Care Products",
-    "description": "Atik Import Export connects global markets through reliable international transportation and specialized solutions for cleaning and care products. Your partner for global trade.",
-    "keywords": "Atik Import Export, international trade, international transportation, cleaning products, care products, import export, truck transportation, global supply chain, Istanbul trade, Warsaw trade, Tehran trade"
-  },
-  "Contact": {
-    "letsConnect": "Let's Connect",
-    "title": "Get in Touch with Atik Import Export",
-    "description": "Need international transportation, truck-based solutions, or information about our upcoming cleaning and care products? Our team and international contacts are ready to help.",
-    "quickContact": "Quick Contact",
-    "generalInquiries": "General Inquiries:",
-    "salesAndQuotes": "Sales & Quotes:",
-    "globalSupportHotline": "Global Support Hotline:",
-    "sendUsAMessage": "Send Us a Message",
-    "fullName": "Full Name",
-    "emailAddress": "Email Address",
-    "emailLabel": "Email",
-    "phoneLabel": "Phone",
-    "companyNameOptional": "Company Name (Optional)",
-    "yourMessage": "Your Message",
-    "submitYourInquiry": "Submit Your Inquiry",
-    "ourGlobalPresence": "Our Locations",
-    "namePlaceholder": "e.g., John Doe",
-    "emailPlaceholder": "you@company.com",
-    "companyPlaceholder": "e.g., Global Corp",
-    "messagePlaceholder": "Please describe your inquiry. For transportation needs, include type of goods, origin/destination, etc. For products, specify your interest.",
-    "officeLocations": {
-      "global-headquarters": {
-        "name": "Headquarters (Istanbul, Turkey)",
-        "addressLines": "ORTA MAH. DEMİRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA/ İSTANBUL"
-      },
-      "european-hub": {
-        "name": "European Connection (Warsaw, Poland)",
-        "addressLines": "Warsaw, Poland"
-      },
-      "asia-pacific-hub": {
-        "name": "Middle East Connection (Tehran, Iran)",
-        "addressLines": "Tehran, Iran"
-      }
-    },
-    "toastMessages": {
-      "success": "Thank you for contacting us! We will get back to you soon.",
-      "error": "There was an error submitting the form. Please try again.",
-      "sending": "Sending..."
-    },
-    "businessHours": "Business Hours",
-    "mondayFriday": "Monday - Friday",
-    "saturday": "Saturday",
-    "sunday": "Sunday",
-    "closed": "Closed",
-    "emergencySupport": "Emergency support available 24/7",
-    "ctaTitle": "Need Immediate Assistance?",
-    "ctaDescription": "Our team is available 24/7 for urgent inquiries and emergency support.",
-    "ctaHotline": "Call our emergency hotline:",
-    "validation": {
-      "nameRequired": "Name is required",
-      "nameMin": "Name must be at least 2 characters",
-      "emailRequired": "Email is required",
-      "emailInvalid": "Please enter a valid email address",
-      "messageRequired": "Message is required",
-      "messageMin": "Message must be at least 10 characters"
-    },
-    "contact": "Contact Us",
-    "am": "AM",
-    "pm": "PM"
-  },
-  "Testimonial": {
-    "testimonials": "Testimonials",
-    "title": "Trusted by Businesses in Trade and Transportation",
-    "description": "Hear from our clients who trust Atik Import Export for their critical international trade and transportation needs.",
-    "testimonialItems": {
-      "testimonial-1": {
-        "author": {
-          "name": "Ayşe Demir",
-          "handle": "Operations Manager"
-        },
-        "text": "Atik Import Export has been a dependable partner in our daily logistics operations. Their attention to detail and timely deliveries consistently exceed expectations. It's clear they prioritize reliability and service."
-      },
-      "testimonial-2": {
-        "author": {
-          "name": "Mehmet Yalçın",
-          "handle": "Supply Chain Coordinator"
-        },
-        "text": "We've worked with several logistics firms, but none have matched the professionalism of Atik. Their team is responsive, organized, and always ready with a solution when challenges arise."
-      },
-      "testimonial-3": {
-        "author": {
-          "name": "Zeynep Koç",
-          "handle": "Import/Export Specialist"
-        },
-        "text": "International shipping can be complex. Atik makes it straightforward. From customs handling to final delivery, everything runs smoothly and transparently. A team you can count on."
-      }
-    }
-  },
-  "AboutUs": {
-    "aboutUs": "About Us",
-    "aboutUsText": "Atik Import Export connects global markets through reliable trade partnerships, high-quality products, and efficient logistics. We build lasting connections that drive growth and success across Europe and the Middle East.",
-    "ourStory": "About Us",
-    "headline1": "Building Global Trade Bridges,",
-    "headline2": "Founded on",
-    "headlineAccent": "Trust & Excellence",
-    "subDescription": "We focus on excellence, integrity, and customer satisfaction. Atik Import Export turns opportunities into results. We specialize in international transportation of cleaning and care products. We're preparing our full range of these products for global distribution.",
-    "partnerWithUs": "Partner With Us",
-    "yearsOfExpertiseValue": "5+",
-    "yearsOfExpertiseLabel": "Years of Expertise",
-    "customerRetentionValue": "97%",
-    "customerRetentionLabel": "Customer Retention",
-    "globalClientsValue": "100+",
-    "globalClientsLabel": "Global Clients"
-  },
-  "Hero": {
-    "imageAlt": "Global trade concept with containers, trucks, and product images representing cleaning and care items",
-    "companyName": "Atik Import Export",
-    "headline1": "Your Gateway to",
-    "headline2": "Global Trade Excellence",
-    "geometric": {
-      "badge": "Your Trusted Global Partner",
-      "title1": "Connecting Markets",
-      "title2": "Delivering Excellence"
-    }
-  },
-  "Services": {
-    "services": "Our Services",
-    "coreServices": "Our Core Services",
-    "headline": "International Trade & Transportation Solutions",
-    "description": "Atik Import Export provides international transportation for cleaning and care products, reliable truck-based solutions, and will soon distribute a full range of high-quality cleaning and care products.",
-    "stats": {
-      "countries-served": {
-        "name": "Global Reach"
-      },
-      "annual-shipments": {
-        "name": "Successful Trades"
-      },
-      "client-satisfaction": {
-        "name": "Partner Satisfaction"
-      }
-    },
-    "features": {
-      "freight-forwarding": {
-        "name": "International Transportation",
-        "description": "Atik Import Export specializes in the international transportation of cleaning and care products. We deliver your goods safely and on time, all around the world.",
-        "cta": "Explore Transportation",
-        "badge": "Core Service",
-        "altText": "Cargo containers being loaded onto a ship with Atik Import Export branding"
-      },
-      "warehousing": {
-        "name": "Secure Storage Solutions",
-        "description": "Safe and efficient storage options that complement our transportation services. Your cleaning and care products stay in good condition.",
-        "cta": "Learn About Storage",
-        "badge": "Value-Added",
-        "altText": "Neatly organized warehouse storing various packaged products"
-      },
-      "track-shipment": {
-        "name": "Shipment Updates",
-        "description": "Get real-time updates on your shipments. Full transparency throughout the transportation process.",
-        "cta": "Get Shipment Status",
-        "badge": "Feature",
-        "altText": "Digital interface showing a map with shipment tracking points"
-      },
-      "customs-brokerage": {
-        "name": "Customs Facilitation",
-        "description": "Expert help with customs documentation and procedures. We ensure timely international trade operations.",
-        "cta": "Simplify Your Customs",
-        "badge": "Value-Added",
-        "altText": "Official documents and stamps related to international customs"
-      },
-      "project-cargo": {
-        "name": "Truck Transportation",
-        "description": "With our truck-based transportation services, we carry your cargo safely, quickly, and cost-effectively to its destination. Our modern fleet and experienced team are always at your service.",
-        "cta": "Get Road Freight Info",
-        "badge": "Core Service",
-        "altText": "Atik Import Export branded truck driving on a scenic route"
-      }
-    },
-    "ctaTitle": "Need a Custom Solution?",
-    "ctaDescription": "Every business is unique. Let's discuss how we can adapt our services to meet your needs.",
-    "ctaContact": "Get Custom Quote",
-    "ctaDownload": "Download Brochure"
-  },
-  "Team": {
-    "leadership": "Our Dedicated Team",
-    "headline1": "Meet the Professionals Driving",
-    "headline2": "Your",
-    "headlineAccent": "Trade Success",
-    "description": "Our experienced team follows Atik Import Export's core values of trust and hard work. We ensure every partnership is valuable and every trade runs smoothly.",
-    "joinOurTeam": "Join Our Team",
-    "connectOnLinkedIn": "Connect on LinkedIn",
-    "team": {
-      "mehmet-akkaya": {
-        "role": "Founder & CEO"
-      },
-      "khalid-xkhospervaz": {
-        "role": "Sales Director (Middle East)"
-      },
-      "atilla-mert-akkaya": {
-        "role": "Sales Director (Europe)"
-      }
-    },
-    "locations": {
-      "istanbul": "Head Office, Istanbul",
-      "tehran": "Tehran Office, Iran",
-      "warsaw": "Warsaw Office, Poland"
-    }
-  },
-  "Navbar": {
-    "brand": "ATIK",
-    "home": "Home",
-    "about": "About Us",
-    "service": "Services",
-    "blog": "Insights",
-    "contact": "Contact Us",
-    "openMenuAria": "Open menu",
-    "closeMenuAria": "Close menu",
-    "logoAlt": "Atik Import Export Logo"
-  },
-  "Summary": {
-    "summary": "Why Choose Us",
-    "title": "Building Global Bridges, Delivering Excellence",
-    "description": "Atik Import Export specializes in international transportation and will soon distribute high-quality cleaning and care products. We connect businesses worldwide with reliable, secure, and efficient solutions that drive growth.",
-    "features": {
-      "fast-and-reliable": {
-        "title": "Reliable & Efficient",
-        "description": "Safe and timely delivery worldwide. Your goods reach their destination on time and in good condition."
-      },
-      "specialized-expertise": {
-        "title": "Industry Expertise",
-        "description": "We specialize in international trade and transportation of cleaning and care products."
-      },
-      "trust-and-security": {
-        "title": "Trust & Excellence",
-        "description": "We deliver on our promises with dedication and precision for every partnership."
-      },
-      "customer-centric": {
-        "title": "Partnership Success",
-        "description": "We focus on excellence and help our clients and partners grow worldwide."
-      }
-    }
-  },
-  "FeatureAccordion": {
-    "features": "Our Features",
-    "title": "Why Partner with Atik Import Export?",
-    "description": "We offer international transportation, reliable truck-based solutions, and will soon provide direct access to high-quality cleaning and care products. Trust and customer satisfaction guide everything we do.",
-    "items": {
-      "international-logistics": {
-        "title": "International Transportation",
-        "content": "Global transportation services. We specialize in safe and timely delivery of cleaning and care products worldwide."
-      },
-      "truck-transportation": {
-        "title": "Truck Transportation",
-        "content": "Our modern fleet and experienced team ensure your cargo is transported safely, quickly, and cost-effectively to its destination."
-      },
-      "distribution": {
-        "title": "Product Distribution (Coming Soon)",
-        "content": "Explore our full range of high-quality cleaning and care products. We source and deliver with a commitment to excellence."
-      },
-      "partnership-and-growth": {
-        "title": "Partnership & Growth",
-        "content": "We build strong, reliable, and lasting trade connections. We help our clients grow internationally and succeed long-term."
-      }
-    }
-  },
-  "Stats": {
-    "stats": "Our Impact",
-    "title": "Global Trade Excellence",
-    "description": "Delivering value through our logistics solutions",
-    "statItems": {
-      "countries-served": {
-        "name": "Countries Served"
-      },
-      "annual-shipments": {
-        "name": "Annual Shipments"
-      },
-      "client-satisfaction": {
-        "name": "Client Satisfaction"
-      }
-    }
-  },
-  "LogoCloud": {
-    "partners": "Our Partners",
-    "title": "Trusted by Businesses",
-    "description": "Our partners and clients reflect our commitment to quality and reliability in international trade."
-  },
-  "Story": {
-    "title": "Our Foundation: Trust and Hard Work",
-    "description": "Trust and hard work drive everything we do. We deliver on our promises. We ensure timely deliveries with care and dedication. We're preparing our website and full range of cleaning and care products. Explore everything we offer soon.",
-    "cta": "Learn More About Our Values"
-  },
-  "AboutUsPage": {
-    "meta": {
-      "title": "About Us | Atik Import Export",
-      "description": "Learn more about our company, mission, and values."
-    },
-    "title": "About Atik Import Export",
-    "subtitle": "Connecting global trade with trust and reliable logistics solutions.",
-    "ourStoryTitle": "Our Story",
-    "ourStoryText": "Founded in Istanbul, Atik Import Export has become a trusted partner for businesses across Europe and the Middle East. We started with a vision to connect markets and deliver quality products reliably. Today, we continue expanding, connecting clients with opportunities worldwide.",
-    "missionTitle": "Our Mission",
-    "missionText": "We provide efficient, transparent, and customer-focused international trade and transportation services. We specialize in cleaning and care products. We build lasting partnerships and help our clients grow.",
-    "valuesTitle": "Our Core Values",
-    "value1": "Integrity and trust in every transaction.",
-    "value2": "Continuous improvement in everything we do.",
-    "value3": "Customer success as our top priority.",
-    "partnerWithUs": "Partner With Us",
-    "contactEmail": "atilla@atikexp.com",
-    "subDescription": "We focus on excellence, integrity, and customer satisfaction. Atik Import Export turns opportunities into results. We specialize in international transportation of cleaning and care products. We're preparing our full range of these products for distribution."
-  },
-  "About3": {
-    "stat1Value": "5+",
-    "stat1Label": "Years of Expertise",
-    "stat2Value": "100+",
-    "stat2Label": "Global Clients",
-    "stat3Value": "20+",
-    "stat3Label": "Countries Served",
-    "stat4Value": "97%",
-    "stat4Label": "Customer Retention",
-    "breakoutTitle": "Your Trusted Partner in Global Trade",
-    "breakoutDescription": "We provide solutions for international transportation and product distribution. We help your business thrive in a competitive market.",
-    "breakoutButton": "Explore Our Services",
-    "mainImageAlt": "Modern logistics hub with containers and trucks",
-    "secondaryImageAlt": "Efficient cargo handling at a global port",
-    "breakoutAlt": "Teamwork and partnership in logistics",
-    "title": "Who We Are",
-    "description": "Atik Import Export connects global markets with reliable logistics and effective solutions. We focus on customer success. Our expertise in international trade and transportation helps businesses grow beyond borders."
-  },
-  "ServicesPage": {
-    "meta": {
-      "title": "Services | Atik Import Export",
-      "description": "Services | Atik Import Export"
-    }
-  },
-  "ContactPage": {
-    "meta": {
-      "title": "Contact | Atik Import Export",
-      "description": "Contact | Atik Import Export"
-    }
-  },
-  "HomePage": {
-    "meta": {
-      "title": "Home | Atik Import Export",
-      "description": "Home | Atik Import Export"
-    }
-  },
-
-  "error": {
-    "title": "Something went wrong",
-    "sorry": "We apologize for the inconvenience. An error has occurred.",
-    "tryAgain": "Try Again",
-    "returnHome": "Return Home",
-    "notFound": {
-      "title": "Page Not Found",
-      "description": "We couldn't find the page you were looking for. Please check the URL or return to the homepage."
-    },
-    "global": {
-      "title": "Something went wrong",
-      "description": "We apologize for the inconvenience. A critical error has occurred. Our team has been notified and is working to resolve the issue."
-    }
-  },
-  "ThemeSwitcher": {
-    "title": "Theme",
-    "light": "Light",
-    "dark": "Dark",
-    "system": "System",
-    "ariaLabel": "Toggle theme",
-    "ariaDescription": "Choose between light, dark, or system theme"
-  },
-  "LanguageSwitcher": {
-    "title": "Language",
-    "en": "English",
-    "tr": "Turkish",
-    "ariaLabel": "Switch language",
-    "ariaDescription": "Choose your preferred language",
-    "currentLanguage": "Current language"
-  }
+	"Common": {
+		"backToHome": "Back to Home"
+	},
+	"Brands": {
+		"dreft": {
+			"description": "A highly prestigious laundry detergent brand in Belgium and the Netherlands.",
+			"fullDescription": "Dreft was first launched in Belgium in 1948 and in the Netherlands in 1957, quickly becoming an iconic and historic brand in both countries. Renowned for its trustworthiness, Dreft is regarded by consumers as 'the safest detergent for clothes,' with the slogan, 'Nothing is safer than Dreft.' As a total care brand, it provides safe, effective solutions for all types of clothing, including colors, delicates, and more. Recently, Dreft has expanded into the Nordic countries with its Dreft 0% variant, which is free from fragrances and colorants. This version carries the endorsement of Nordic Swan and the Asthma and Allergy Foundation, reflecting its commitment to safety and sustainability.",
+			"slogan": "Nothing is safer than Dreft.",
+			"keyFeatures": [
+				"Safe for all fabric types",
+				"Fragrance-free variant available",
+				"Nordic Swan certified",
+				"Trusted by families for generations"
+			]
+		},
+		"daz": {
+			"description": "One of the UK's most iconic brands in laundry care, known for brilliant whiteness and exceptional freshness.",
+			"fullDescription": "Since 1953, DAZ has been a well-loved UK brand, trusted for its effective laundry care and its iconic red packaging. Known for delivering brilliant whiteness and exceptional freshness, DAZ ensures clothes look their best and smell delightful. With decades of experience, DAZ simplifies laundry routines, making everyday life easier and more enjoyable for its users.",
+			"keyFeatures": [
+				"Brilliant whiteness",
+				"Exceptional freshness",
+				"Iconic red packaging",
+				"Trusted for decades"
+			]
+		},
+		"a-plus": {
+			"description": "A brand synonymous with innovation and exceptional effectiveness across Sweden, Denmark, Norway, Finland, and Portugal.",
+			"fullDescription": "A+ is committed to creating the best detergent for both your clothes and the environment. We have invested significantly in developing a product that delivers superior cleaning power while minimizing environmental impact. In the Nordic countries, A+ proudly carries the Nordic Swan and Asthma and Allergy labels, demonstrating our commitment to sustainability and consumer health. In Portugal, where fragrances play a key role for consumers, we offer an extensive range of extraordinary scents in our detergents. Recently, we also launched a line of fabric softeners and scent boosters, providing a full spectrum of fragrance options that cater to the preferences of the Portuguese market. In line with our sustainability goals, A+ uses 100% recyclable packaging and offers refill bags that contain 76% less plastic than traditional bottles, reinforcing our dedication to reducing plastic waste and promoting eco-friendly solutions.",
+			"keyFeatures": [
+				"Superior cleaning power",
+				"100% recyclable packaging",
+				"76% less plastic in refill bags",
+				"Nordic Swan certified",
+				"Extensive fragrance range in Portugal"
+			]
+		},
+		"lavandera": {
+			"description": "Our Spanish brand is a specialist in cleaning and caring for clothes and homes, blending efficiency and tradition with exceptional fragrances.",
+			"fullDescription": "La Lavandera by BlueSun is our Spanish brand, a specialist in cleaning and caring for clothes and homes. It blends efficiency and tradition with an exceptional range of fragrances. The brand offers a comprehensive range of products for complete home and laundry care and has been successfully launched in several Eastern European countries, including Romania and Ukraine, where it has quickly gained popularity. La Antigua Lavandera ensures your clothes and your home are cleaned and cared for with the same level of efficiency as always.",
+			"keyFeatures": [
+				"Complete home and laundry care",
+				"Exceptional fragrance range",
+				"Efficiency and tradition",
+				"Growing presence in Eastern Europe"
+			]
+		},
+		"gama": {
+			"description": "The smart choice for households worldwide, with a presence in over 20 countries.",
+			"fullDescription": "Gama is our most international brand, with a presence in over 20 countries. Recognized as the smart choice for those seeking quality, reliability, and convenience in laundry care, Gama continues to expand its range of fragrances and formats to meet the needs of even the most discerning consumers. By adapting to the diverse preferences of global markets, Gama delivers value and convenience to families around the world.",
+			"keyFeatures": [
+				"International presence",
+				"Quality and reliability",
+				"Diverse fragrance range",
+				"Value for families"
+			]
+		},
+		"tinokleen": {
+			"description": "An iconic baby care laundry detergent, specially designed to care for the delicate skin of babies while providing gentle yet effective cleaning.",
+			"fullDescription": "Tinokleen is an iconic baby care laundry detergent, specially designed to care for the delicate skin of babies while providing gentle yet effective cleaning for mums. The brand focuses on safety and gentleness, ensuring that baby clothes are cleaned thoroughly without harsh chemicals that could irritate sensitive skin.",
+			"keyFeatures": [
+				"Gentle on baby skin",
+				"Effective cleaning",
+				"Safe for delicate fabrics",
+				"Trusted by parents"
+			]
+		},
+		"ambipur": {
+			"description": "Brings a breath of fresh air to your home, combining powerful cleaning performance with delightful botanical fragrances.",
+			"fullDescription": "Ambipur brings a breath of fresh air to your WC, combining powerful cleaning performance with delightful botanical fragrances. With advanced formulas, Ambipur guarantees hygienic cleanliness and long-lasting freshness. Using innovative anti-odor technology and natural essential oils, it offers a variety of scents that bring the essence of nature indoors, all in increasingly sustainable packaging.",
+			"keyFeatures": [
+				"Botanical fragrances",
+				"Advanced anti-odor technology",
+				"Natural essential oils",
+				"Sustainable packaging",
+				"Long-lasting freshness"
+			]
+		},
+		"noora": {
+			"description": "Northern European countries enjoy the fresh fragrances of Noora fabric softeners.",
+			"fullDescription": "Northern European countries enjoy the fresh fragrances of Noora. These softeners not only safeguard clothes and fabrics but also infuse them with a long-lasting, delightful freshness. Noora offers a broad range of fabric softeners across the Nordic countries, providing consumers with quality care for their textiles.",
+			"keyFeatures": [
+				"Long-lasting freshness",
+				"Fabric protection",
+				"Broad product range",
+				"Nordic market focus"
+			]
+		},
+		"opso": {
+			"description": "The ultimate air freshener brand for those seeking a more eco-friendly approach to home care.",
+			"fullDescription": "Immerse yourself in the captivating fragrances of the world's most majestic forests. Crafted with natural tree resin from Mediterranean pine trees, Öpso replaces artificial ingredients with sustainable alternatives. Öpso is the ultimate air freshener brand for those seeking a more eco-friendly approach to home care, with ingredients and packaging designed to minimize environmental impact, support sustainable forestry, and empower local communities.",
+			"keyFeatures": [
+				"Natural tree resin",
+				"Sustainable alternatives",
+				"Eco-friendly approach",
+				"Supports sustainable forestry",
+				"Empowers local communities"
+			]
+		},
+		"lang": {
+			"description": "A smart choice and good for everyday cleaning, highly recognized for high-quality powder products.",
+			"fullDescription": "A smart choice and good for everyday cleaning. While currently expanding its portfolio, it remains highly recognized for its high-quality powder products. A trusted brand for freshness and cleaning performance, it's the go-to solution for Egyptian families seeking the best value for money. Available in 5Kg and 8Kg formats, Lang provides value for families.",
+			"keyFeatures": [
+				"High-quality powder products",
+				"Value for money",
+				"Available in 5Kg and 8Kg formats",
+				"Trusted for freshness"
+			]
+		},
+		"coca-cola": {
+			"description": "One of the world's most recognized beverage brands, known for quality and global presence.",
+			"fullDescription": "Coca-Cola is one of the world's most recognized and valuable brands, with a presence in over 200 countries. Known for its iconic taste and quality, Coca-Cola has been a trusted partner in the beverage industry for over a century.",
+			"keyFeatures": [
+				"Global recognition",
+				"Iconic taste",
+				"Quality assurance",
+				"Extensive distribution network"
+			]
+		},
+		"colgate": {
+			"description": "A leading global oral care brand trusted by millions of families worldwide.",
+			"fullDescription": "Colgate is a leading global oral care brand with a strong presence in over 200 countries. The brand is committed to improving oral health and hygiene, offering a wide range of toothpaste, toothbrushes, and oral care products trusted by millions of families worldwide.",
+			"keyFeatures": [
+				"Oral health expertise",
+				"Wide product range",
+				"Trusted by families",
+				"Global presence"
+			]
+		},
+		"dr-pepper": {
+			"description": "A unique and distinctive soft drink brand with a one-of-a-kind flavor profile.",
+			"fullDescription": "Dr Pepper is a unique soft drink brand known for its distinctive flavor that combines 23 flavors. With a rich history spanning over a century, Dr Pepper has become a beloved beverage choice in many markets around the world.",
+			"keyFeatures": [
+				"Unique flavor profile",
+				"23 distinct flavors",
+				"Rich heritage",
+				"Distinctive taste"
+			]
+		},
+		"fanta": {
+			"description": "A vibrant and refreshing fruit-flavored soft drink brand enjoyed worldwide.",
+			"fullDescription": "Fanta is a vibrant fruit-flavored soft drink brand that offers a refreshing taste experience. With a wide variety of flavors available in different markets, Fanta has become a popular choice for consumers seeking a fruity and refreshing beverage option.",
+			"keyFeatures": [
+				"Fruit-flavored varieties",
+				"Refreshing taste",
+				"Wide flavor range",
+				"Global popularity"
+			]
+		},
+		"garnier": {
+			"description": "A leading beauty and personal care brand offering natural and innovative beauty solutions.",
+			"fullDescription": "Garnier is a leading beauty and personal care brand that combines natural ingredients with innovative formulas. The brand offers a comprehensive range of hair care, skin care, and beauty products, focusing on natural beauty solutions that are accessible to everyone.",
+			"keyFeatures": [
+				"Natural ingredients",
+				"Innovative formulas",
+				"Comprehensive product range",
+				"Accessible beauty solutions"
+			]
+		},
+		"loreal": {
+			"description": "The world's leading beauty company, offering innovative beauty and personal care products.",
+			"fullDescription": "L'Oréal is the world's leading beauty company, with a portfolio of brands that cater to diverse beauty needs. The company is committed to innovation, research, and development, offering high-quality beauty and personal care products that are available worldwide.",
+			"keyFeatures": [
+				"World's leading beauty company",
+				"Innovation and research",
+				"Diverse product portfolio",
+				"Global availability"
+			]
+		},
+		"nivea": {
+			"description": "A trusted skincare brand known for quality and care, with products for the whole family.",
+			"fullDescription": "Nivea is a trusted skincare brand that has been caring for skin for over a century. Known for its quality and gentle formulations, Nivea offers a wide range of skincare products suitable for the whole family, from daily moisturizers to specialized care solutions.",
+			"keyFeatures": [
+				"Trusted skincare brand",
+				"Gentle formulations",
+				"Family-friendly products",
+				"Over a century of expertise"
+			]
+		},
+		"prime": {
+			"description": "A modern hydration and energy drink brand designed for active lifestyles.",
+			"fullDescription": "Prime is a modern beverage brand that offers hydration and energy drinks designed for active lifestyles. The brand focuses on providing quality hydration solutions with innovative formulations that cater to health-conscious consumers.",
+			"keyFeatures": [
+				"Hydration solutions",
+				"Energy drinks",
+				"Active lifestyle focus",
+				"Innovative formulations"
+			]
+		},
+		"toblerone": {
+			"description": "An iconic Swiss chocolate brand known for its distinctive triangular shape and quality.",
+			"fullDescription": "Toblerone is an iconic Swiss chocolate brand recognized worldwide for its distinctive triangular shape and high-quality Swiss chocolate. With a rich heritage dating back over a century, Toblerone has become a symbol of Swiss chocolate excellence.",
+			"keyFeatures": [
+				"Iconic triangular shape",
+				"Swiss chocolate quality",
+				"Rich heritage",
+				"Global recognition"
+			]
+		},
+		"dove": {
+			"description": "A personal care brand committed to real beauty and gentle, moisturizing products.",
+			"fullDescription": "Dove is a personal care brand committed to real beauty and providing gentle, moisturizing products. The brand is known for its commitment to body positivity and offers a wide range of personal care products including soaps, body washes, and skincare items that are gentle on the skin.",
+			"keyFeatures": [
+				"Real beauty commitment",
+				"Gentle formulations",
+				"Moisturizing products",
+				"Body positivity"
+			]
+		},
+		"evian": {
+			"description": "Premium natural spring water sourced from the French Alps, known for purity and quality.",
+			"fullDescription": "Evian is a premium natural spring water brand sourced from the French Alps. Known for its purity and natural mineral composition, Evian has become a symbol of premium hydration, trusted by consumers worldwide for its quality and taste.",
+			"keyFeatures": [
+				"Natural spring water",
+				"French Alps source",
+				"Premium quality",
+				"Natural mineral composition"
+			]
+		}
+	},
+	"Footer": {
+		"copyright": "© {year} Atik Import Export. All Rights Reserved. Your Partner in Global Trade.",
+		"githubLink": "GitHub",
+		"quickLinks": "Quick Links",
+		"contactTitle": "Contact Atik Import Export",
+		"followUs": "Follow Us",
+		"nav": {
+			"home": "Home",
+			"about": "About Atik Import Export",
+			"services": "Our Services",
+			"contact": "Contact Us"
+		},
+		"legal": {
+			"privacy": "Privacy Policy",
+			"terms": "Terms of Service",
+			"sitemap": "Sitemap",
+			"privacyTitle": "Privacy Policy",
+			"privacyDescription": "We protect your privacy. This policy explains how we collect, use, and protect your personal information. We collect only what we need to provide services and improve your experience. We don't share your data with third parties without your consent, except when required by law. We use strong security measures to protect your information. For privacy questions, contact us at info@atikexp.com.",
+			"termsTitle": "Terms of Service",
+			"termsDescription": "Using our services means you agree to these terms. We provide international transportation and trade services. We focus on reliability and quality. Our services follow applicable laws and regulations. We may modify these terms and will notify you of significant changes. For details about service terms, shipping conditions, and liability limits, contact us at info@atikexp.com.",
+			"sitemapTitle": "Site Map",
+			"sitemapDescription": "Find information about our international transportation and trade services. The site includes services, about us, contact information, and more. Use the navigation menu or footer links to explore.",
+			"accept": "I Understand and Accept"
+		},
+		"social": {
+			"linkedin": "Connect with Atik Import Export on LinkedIn",
+			"twitter": "Follow Atik Import Export on Twitter",
+			"facebook": "Like Atik Import Export on Facebook"
+		},
+		"newsletterPlaceholder": "your.email@example.com",
+		"newsletterAriaLabel": "Subscribe to newsletter",
+		"companyName": "Atik Import Export",
+		"address": "ORTA MAH. DEMİRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA/ İSTANBUL",
+		"phoneLabel": "Phone: +90 533 964 20 84",
+		"emailLabel": "Email: atilla@atikexp.com",
+		"newsletterDescription": "Stay updated with Atik Import Export. Subscribe for the latest news on our services and product offerings."
+	},
+	"Metadata": {
+		"brandName": "Atik Import Export",
+		"title": "Atik Import Export – Global Trade & Transportation for Cleaning and Care Products",
+		"description": "Atik Import Export connects global markets through reliable international transportation and specialized solutions for cleaning and care products. Your partner for global trade.",
+		"keywords": "Atik Import Export, international trade, international transportation, cleaning products, care products, import export, truck transportation, global supply chain, Istanbul trade, Warsaw trade, Tehran trade"
+	},
+	"Contact": {
+		"letsConnect": "Let's Connect",
+		"title": "Get in Touch with Atik Import Export",
+		"description": "Need international transportation, truck-based solutions, or information about our upcoming cleaning and care products? Our team and international contacts are ready to help.",
+		"quickContact": "Quick Contact",
+		"generalInquiries": "General Inquiries:",
+		"salesAndQuotes": "Sales & Quotes:",
+		"globalSupportHotline": "Global Support Hotline:",
+		"sendUsAMessage": "Send Us a Message",
+		"fullName": "Full Name",
+		"emailAddress": "Email Address",
+		"emailLabel": "Email",
+		"phoneLabel": "Phone",
+		"companyNameOptional": "Company Name (Optional)",
+		"yourMessage": "Your Message",
+		"submitYourInquiry": "Submit Your Inquiry",
+		"ourGlobalPresence": "Our Locations",
+		"namePlaceholder": "e.g., John Doe",
+		"emailPlaceholder": "you@company.com",
+		"companyPlaceholder": "e.g., Global Corp",
+		"messagePlaceholder": "Please describe your inquiry. For transportation needs, include type of goods, origin/destination, etc. For products, specify your interest.",
+		"officeLocations": {
+			"global-headquarters": {
+				"name": "Headquarters (Istanbul, Turkey)",
+				"addressLines": "ORTA MAH. DEMİRKAPI CAD. PAŞAM İŞ HANI NO: 15 İÇ KAPI NO: 106 BAYRAMPAŞA/ İSTANBUL"
+			},
+			"european-hub": {
+				"name": "European Connection (Warsaw, Poland)",
+				"addressLines": "Warsaw, Poland"
+			},
+			"asia-pacific-hub": {
+				"name": "Middle East Connection (Tehran, Iran)",
+				"addressLines": "Tehran, Iran"
+			}
+		},
+		"toastMessages": {
+			"success": "Thank you for contacting us! We will get back to you soon.",
+			"error": "There was an error submitting the form. Please try again.",
+			"sending": "Sending..."
+		},
+		"businessHours": "Business Hours",
+		"mondayFriday": "Monday - Friday",
+		"saturday": "Saturday",
+		"sunday": "Sunday",
+		"closed": "Closed",
+		"emergencySupport": "Emergency support available 24/7",
+		"ctaTitle": "Need Immediate Assistance?",
+		"ctaDescription": "Our team is available 24/7 for urgent inquiries and emergency support.",
+		"ctaHotline": "Call our emergency hotline:",
+		"validation": {
+			"nameRequired": "Name is required",
+			"nameMin": "Name must be at least 2 characters",
+			"emailRequired": "Email is required",
+			"emailInvalid": "Please enter a valid email address",
+			"messageRequired": "Message is required",
+			"messageMin": "Message must be at least 10 characters"
+		},
+		"contact": "Contact Us",
+		"am": "AM",
+		"pm": "PM"
+	},
+	"Testimonial": {
+		"testimonials": "Testimonials",
+		"title": "Trusted by Businesses in Trade and Transportation",
+		"description": "Hear from our clients who trust Atik Import Export for their critical international trade and transportation needs.",
+		"testimonialItems": {
+			"testimonial-1": {
+				"author": {
+					"name": "Ayşe Demir",
+					"handle": "Operations Manager"
+				},
+				"text": "Atik Import Export has been a dependable partner in our daily logistics operations. Their attention to detail and timely deliveries consistently exceed expectations. It's clear they prioritize reliability and service."
+			},
+			"testimonial-2": {
+				"author": {
+					"name": "Mehmet Yalçın",
+					"handle": "Supply Chain Coordinator"
+				},
+				"text": "We've worked with several logistics firms, but none have matched the professionalism of Atik. Their team is responsive, organized, and always ready with a solution when challenges arise."
+			},
+			"testimonial-3": {
+				"author": {
+					"name": "Zeynep Koç",
+					"handle": "Import/Export Specialist"
+				},
+				"text": "International shipping can be complex. Atik makes it straightforward. From customs handling to final delivery, everything runs smoothly and transparently. A team you can count on."
+			}
+		}
+	},
+	"AboutUs": {
+		"aboutUs": "About Us",
+		"aboutUsText": "Atik Import Export connects global markets through reliable trade partnerships, high-quality products, and efficient logistics. We build lasting connections that drive growth and success across Europe and the Middle East.",
+		"ourStory": "About Us",
+		"headline1": "Building Global Trade Bridges,",
+		"headline2": "Founded on",
+		"headlineAccent": "Trust & Excellence",
+		"subDescription": "We focus on excellence, integrity, and customer satisfaction. Atik Import Export turns opportunities into results. We specialize in international transportation of cleaning and care products. We're preparing our full range of these products for global distribution.",
+		"partnerWithUs": "Partner With Us",
+		"yearsOfExpertiseValue": "5+",
+		"yearsOfExpertiseLabel": "Years of Expertise",
+		"customerRetentionValue": "97%",
+		"customerRetentionLabel": "Customer Retention",
+		"globalClientsValue": "100+",
+		"globalClientsLabel": "Global Clients"
+	},
+	"Hero": {
+		"imageAlt": "Global trade concept with containers, trucks, and product images representing cleaning and care items",
+		"companyName": "Atik Import Export",
+		"headline1": "Your Gateway to",
+		"headline2": "Global Trade Excellence",
+		"geometric": {
+			"badge": "Your Trusted Global Partner",
+			"title1": "Connecting Markets",
+			"title2": "Delivering Excellence"
+		}
+	},
+	"Services": {
+		"services": "Our Services",
+		"coreServices": "Our Core Services",
+		"headline": "International Trade & Transportation Solutions",
+		"description": "Atik Import Export provides international transportation for cleaning and care products, reliable truck-based solutions, and will soon distribute a full range of high-quality cleaning and care products.",
+		"stats": {
+			"countries-served": {
+				"name": "Global Reach"
+			},
+			"annual-shipments": {
+				"name": "Successful Trades"
+			},
+			"client-satisfaction": {
+				"name": "Partner Satisfaction"
+			}
+		},
+		"features": {
+			"freight-forwarding": {
+				"name": "International Transportation",
+				"description": "Atik Import Export specializes in the international transportation of cleaning and care products. We deliver your goods safely and on time, all around the world.",
+				"cta": "Explore Transportation",
+				"badge": "Core Service",
+				"altText": "Cargo containers being loaded onto a ship with Atik Import Export branding"
+			},
+			"warehousing": {
+				"name": "Secure Storage Solutions",
+				"description": "Safe and efficient storage options that complement our transportation services. Your cleaning and care products stay in good condition.",
+				"cta": "Learn About Storage",
+				"badge": "Value-Added",
+				"altText": "Neatly organized warehouse storing various packaged products"
+			},
+			"track-shipment": {
+				"name": "Shipment Updates",
+				"description": "Get real-time updates on your shipments. Full transparency throughout the transportation process.",
+				"cta": "Get Shipment Status",
+				"badge": "Feature",
+				"altText": "Digital interface showing a map with shipment tracking points"
+			},
+			"customs-brokerage": {
+				"name": "Customs Facilitation",
+				"description": "Expert help with customs documentation and procedures. We ensure timely international trade operations.",
+				"cta": "Simplify Your Customs",
+				"badge": "Value-Added",
+				"altText": "Official documents and stamps related to international customs"
+			},
+			"project-cargo": {
+				"name": "Truck Transportation",
+				"description": "With our truck-based transportation services, we carry your cargo safely, quickly, and cost-effectively to its destination. Our modern fleet and experienced team are always at your service.",
+				"cta": "Get Road Freight Info",
+				"badge": "Core Service",
+				"altText": "Atik Import Export branded truck driving on a scenic route"
+			}
+		},
+		"ctaTitle": "Need a Custom Solution?",
+		"ctaDescription": "Every business is unique. Let's discuss how we can adapt our services to meet your needs.",
+		"ctaContact": "Get Custom Quote",
+		"ctaDownload": "Download Brochure"
+	},
+	"Team": {
+		"leadership": "Our Dedicated Team",
+		"headline1": "Meet the Professionals Driving",
+		"headline2": "Your",
+		"headlineAccent": "Trade Success",
+		"description": "Our experienced team follows Atik Import Export's core values of trust and hard work. We ensure every partnership is valuable and every trade runs smoothly.",
+		"joinOurTeam": "Join Our Team",
+		"connectOnLinkedIn": "Connect on LinkedIn",
+		"team": {
+			"mehmet-akkaya": {
+				"role": "Founder & CEO"
+			},
+			"khalid-xkhospervaz": {
+				"role": "Sales Director (Middle East)"
+			},
+			"atilla-mert-akkaya": {
+				"role": "Sales Director (Europe)"
+			}
+		},
+		"locations": {
+			"istanbul": "Head Office, Istanbul",
+			"tehran": "Tehran Office, Iran",
+			"warsaw": "Warsaw Office, Poland"
+		}
+	},
+	"Navbar": {
+		"brand": "ATIK",
+		"home": "Home",
+		"about": "About Us",
+		"service": "Services",
+		"our-brands": "Logistics Partners",
+		"contact": "Contact Us",
+		"openMenuAria": "Open menu",
+		"closeMenuAria": "Close menu",
+		"logoAlt": "Atik Import Export Logo"
+	},
+	"Summary": {
+		"summary": "Why Choose Us",
+		"title": "Building Global Bridges, Delivering Excellence",
+		"description": "Atik Import Export specializes in international transportation and will soon distribute high-quality cleaning and care products. We connect businesses worldwide with reliable, secure, and efficient solutions that drive growth.",
+		"features": {
+			"fast-and-reliable": {
+				"title": "Reliable & Efficient",
+				"description": "Safe and timely delivery worldwide. Your goods reach their destination on time and in good condition."
+			},
+			"specialized-expertise": {
+				"title": "Industry Expertise",
+				"description": "We specialize in international trade and transportation of cleaning and care products."
+			},
+			"trust-and-security": {
+				"title": "Trust & Excellence",
+				"description": "We deliver on our promises with dedication and precision for every partnership."
+			},
+			"customer-centric": {
+				"title": "Partnership Success",
+				"description": "We focus on excellence and help our clients and partners grow worldwide."
+			}
+		}
+	},
+	"FeatureAccordion": {
+		"features": "Our Features",
+		"title": "Why Partner with Atik Import Export?",
+		"description": "We offer international transportation, reliable truck-based solutions, and will soon provide direct access to high-quality cleaning and care products. Trust and customer satisfaction guide everything we do.",
+		"items": {
+			"international-logistics": {
+				"title": "International Transportation",
+				"content": "Global transportation services. We specialize in safe and timely delivery of cleaning and care products worldwide."
+			},
+			"truck-transportation": {
+				"title": "Truck Transportation",
+				"content": "Our modern fleet and experienced team ensure your cargo is transported safely, quickly, and cost-effectively to its destination."
+			},
+			"distribution": {
+				"title": "Product Distribution (Coming Soon)",
+				"content": "Explore our full range of high-quality cleaning and care products. We source and deliver with a commitment to excellence."
+			},
+			"partnership-and-growth": {
+				"title": "Partnership & Growth",
+				"content": "We build strong, reliable, and lasting trade connections. We help our clients grow internationally and succeed long-term."
+			}
+		}
+	},
+	"Stats": {
+		"stats": "Our Impact",
+		"title": "Global Trade Excellence",
+		"description": "Delivering value through our logistics solutions",
+		"statItems": {
+			"countries-served": {
+				"name": "Countries Served"
+			},
+			"annual-shipments": {
+				"name": "Annual Shipments"
+			},
+			"client-satisfaction": {
+				"name": "Client Satisfaction"
+			}
+		}
+	},
+	"LogoCloud": {
+		"partners": "Logistics Partners",
+		"title": "Trusted by Global Brands",
+		"description": "We proudly transport and manage logistics for leading global brands, ensuring their products reach markets safely and on time.",
+		"viewAll": "View All Partners"
+	},
+	"Story": {
+		"title": "Our Foundation: Trust and Hard Work",
+		"description": "Trusted by global industry leaders",
+		"viewAll": "View All Partners",
+		"cta": "Learn More About Our Values"
+	},
+	"AboutUsPage": {
+		"meta": {
+			"title": "About Us",
+			"description": "Learn more about Atik Import Export, our mission to connect global markets, and our commitment to trust and excellence in international trade."
+		},
+		"title": "About Atik Import Export",
+		"subtitle": "Connecting global trade with trust and reliable logistics solutions.",
+		"ourStoryTitle": "Our Story",
+		"ourStoryText": "Founded in Istanbul, Atik Import Export has become a trusted partner for businesses across Europe and the Middle East. We started with a vision to connect markets and deliver quality products reliably. Today, we continue expanding, connecting clients with opportunities worldwide.",
+		"missionTitle": "Our Mission",
+		"missionText": "We provide efficient, transparent, and customer-focused international trade and transportation services. We specialize in cleaning and care products. We build lasting partnerships and help our clients grow.",
+		"valuesTitle": "Our Core Values",
+		"value1": "Integrity and trust in every transaction.",
+		"value2": "Continuous improvement in everything we do.",
+		"value3": "Customer success as our top priority.",
+		"partnerWithUs": "Partner With Us",
+		"contactEmail": "atilla@atikexp.com",
+		"subDescription": "We focus on excellence, integrity, and customer satisfaction. Atik Import Export turns opportunities into results. We specialize in international transportation of cleaning and care products. We're preparing our full range of these products for distribution."
+	},
+	"About3": {
+		"stat1Value": "5+",
+		"stat1Label": "Years of Expertise",
+		"stat2Value": "100+",
+		"stat2Label": "Global Clients",
+		"stat3Value": "20+",
+		"stat3Label": "Countries Served",
+		"stat4Value": "97%",
+		"stat4Label": "Customer Retention",
+		"breakoutTitle": "Your Trusted Partner in Global Trade",
+		"breakoutDescription": "We provide solutions for international transportation and product distribution. We help your business thrive in a competitive market.",
+		"breakoutButton": "Explore Our Services",
+		"mainImageAlt": "Modern logistics hub with containers and trucks",
+		"secondaryImageAlt": "Efficient cargo handling at a global port",
+		"breakoutAlt": "Teamwork and partnership in logistics",
+		"title": "Who We Are",
+		"description": "Atik Import Export connects global markets with reliable logistics and effective solutions. We focus on customer success. Our expertise in international trade and transportation helps businesses grow beyond borders."
+	},
+	"ServicesPage": {
+		"meta": {
+			"title": "Services",
+			"description": "Explore our services including international transportation, warehousing, customs brokerage, and distribution of cleaning and care products."
+		}
+	},
+	"ContactPage": {
+		"meta": {
+			"title": "Contact Us",
+			"description": "Get in touch with Atik Import Export for inquiries about international transportation, logistics solutions, or our product range."
+		}
+	},
+	"BrandsPage": {
+		"meta": {
+			"title": "Our Brands",
+			"description": "Discover the trusted brands represented by Atik Import Export. We work with leading brands in cleaning, care, and consumer products.",
+			"keywords": "Atik Import Export brands, cleaning products brands, care products brands, consumer products, import export brands, logistics brands"
+		},
+		"badge": "Our Partners",
+		"title": "Trusted Brands We Represent",
+		"description": "We partner with leading global brands in cleaning, care, and consumer products. Each brand represents our commitment to quality and excellence in international trade.",
+		"footerText": "These brands trust Atik Import Export for their international transportation and distribution needs.",
+		"about": "About",
+		"regions": "Regions",
+		"certifications": "Certifications",
+		"keyFeatures": "Key Features",
+		"categories": {
+			"detergent": "Laundry Detergent",
+			"fabric-softener": "Fabric Softener",
+			"air-freshener": "Air Freshener",
+			"household-cleaner": "Household Cleaner",
+			"beverage": "Beverage",
+			"personal-care": "Personal Care",
+			"confectionery": "Confectionery"
+		}
+	},
+	"Distributor": {
+		"badge": "Strategic Alliance",
+		"title": "BlueSun - Manufacturing Partner",
+		"mainHeadlinePrimary": "Our Main",
+		"mainHeadlineSecondary": "Partner.",
+		"description": "As our key partner, BlueSun produces for leading global brands while also creating its own proprietary lines. Together, we combine strong manufacturing expertise with a deep understanding of consumer needs to deliver outstanding results.",
+		"locationLabel": "Headquarters",
+		"locationValue": "Mataró (Barcelona), Spain",
+		"typeLabel": "Partnership Model",
+		"typeValue": "Exclusive Distribution",
+		"figLabel": "FIG 01. — Corporate Identity",
+		"headquartersLabel": "Official Address",
+		"addressValue": "Carrer de Vilassar 5, 08302 Mataró (Barcelona)",
+		"referenceLabel": "Industry Focus",
+		"tagline": "Leaders in Household Care",
+		"scrollLabel": "SCROLL TO EXPLORE",
+		"pagination": "01 / 04",
+		"logoAlt": "BlueSun Corporate Logo"
+	},
+	"HomePage": {
+		"meta": {
+			"title": "Home",
+			"description": "Atik Import Export connects global markets through reliable international transportation and specialized solutions for cleaning and care products."
+		}
+	},
+	"error": {
+		"title": "Something went wrong",
+		"sorry": "We apologize for the inconvenience. An error has occurred.",
+		"tryAgain": "Try Again",
+		"returnHome": "Return Home",
+		"notFound": {
+			"title": "Page Not Found",
+			"description": "We couldn't find the page you were looking for. Please check the URL or return to the homepage."
+		},
+		"global": {
+			"title": "Something went wrong",
+			"description": "We apologize for the inconvenience. A critical error has occurred. Our team has been notified and is working to resolve the issue."
+		}
+	},
+	"ThemeSwitcher": {
+		"title": "Theme",
+		"light": "Light",
+		"dark": "Dark",
+		"system": "System",
+		"ariaLabel": "Toggle theme",
+		"ariaDescription": "Choose between light, dark, or system theme"
+	},
+	"LanguageSwitcher": {
+		"title": "Language",
+		"en": "English",
+		"tr": "Turkish",
+		"ariaLabel": "Switch language",
+		"ariaDescription": "Choose your preferred language",
+		"currentLanguage": "Current language"
+	}
 }

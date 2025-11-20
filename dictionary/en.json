@@ -465,7 +465,7 @@
 		"home": "Home",
 		"about": "About Us",
 		"service": "Services",
-		"our-brands": "Logistics Partners",
+		"our-brands": "Brands",
 		"contact": "Contact Us",
 		"openMenuAria": "Open menu",
 		"closeMenuAria": "Close menu",
@@ -534,7 +534,7 @@
 		}
 	},
 	"LogoCloud": {
-		"partners": "Logistics Partners",
+		"partners": "Brands",
 		"title": "Trusted by Global Brands",
 		"description": "We proudly transport and manage logistics for leading global brands, ensuring their products reach markets safely and on time.",
 		"viewAll": "View All Partners"
@@ -607,6 +607,8 @@
 		"about": "About",
 		"regions": "Regions",
 		"certifications": "Certifications",
+		"aboutBrand": "About the Brand",
+		"availableMarkets": "Available Markets",
 		"keyFeatures": "Key Features",
 		"categories": {
 			"detergent": "Laundry Detergent",

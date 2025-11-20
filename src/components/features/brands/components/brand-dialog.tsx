@@ -20,6 +20,7 @@ interface BrandDialogProps {
 
 export function BrandDialog({ brand, isOpen, onClose }: BrandDialogProps) {
 	const t = useTranslations("Brands");
+	const tPage = useTranslations("BrandsPage");
 	const tCategories = useTranslations("BrandsPage.categories");
 
 	if (!brand) return null;
@@ -29,74 +30,71 @@ export function BrandDialog({ brand, isOpen, onClose }: BrandDialogProps) {
 
 	return (
 		<Dialog open={isOpen} onOpenChange={onClose}>
-			<DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-0 gap-0 border-border bg-background">
-				<DialogHeader className="p-6 pb-2 border-b border-border/50">
-					<div className="flex items-center justify-between">
-						<div className="flex flex-col gap-1">
-							<DialogTitle className="text-xl font-semibold tracking-tight">
+			<DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-0 gap-0 border-none shadow-2xl bg-background/95 backdrop-blur-xl">
+				<DialogHeader className="p-8 pb-6">
+					<div className="flex items-start justify-between gap-4">
+						<div className="space-y-1.5">
+							<DialogTitle className="text-2xl font-light tracking-tight">
 								{brand.name}
 							</DialogTitle>
-							<span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+							<span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
 								{tCategories(brand.category)}
 							</span>
 						</div>
 					</div>
 				</DialogHeader>
 
-				<div className="p-6 space-y-8">
-					<div className="flex justify-center py-4">
-						<div className="relative w-40 h-40 p-6 border border-border/40 rounded-2xl bg-muted/5">
+				<div className="px-8 pb-8 space-y-10">
+					<div className="flex justify-center">
+						<div className="relative w-48 h-48 p-8">
 							<Image
 								src={brand.logo}
 								alt={brand.name}
 								fill
 								className={cn(
-									"object-contain p-2",
+									"object-contain transition-all duration-300",
 									brand.invertDark !== false && "dark:brightness-0 dark:invert"
 								)}
 							/>
 						</div>
 					</div>
 
-					<div className="space-y-3">
-						<h3 className="text-sm font-medium text-foreground flex items-center gap-2">
-							<span className="w-1 h-4 bg-primary rounded-full" />
-							About the Brand
+					<div className="space-y-4">
+						<h3 className="text-sm font-medium text-muted-foreground uppercase tracking-widest">
+							{tPage("aboutBrand")}
 						</h3>
-						<p className="text-sm text-muted-foreground leading-relaxed">
+						<p className="text-base leading-relaxed text-foreground/90 font-light">
 							{t(`${brand.id}.fullDescription`)}
 						</p>
 					</div>
 
-					<div className="grid sm:grid-cols-2 gap-6">
-						<div className="space-y-3">
-							<h3 className="text-sm font-medium text-foreground flex items-center gap-2">
-								<IconLeaf className="w-4 h-4 text-primary" />
-								Key Features
+					<div className="grid sm:grid-cols-2 gap-10">
+						<div className="space-y-4">
+							<h3 className="text-sm font-medium text-muted-foreground uppercase tracking-widest flex items-center gap-2">
+								{tPage("keyFeatures")}
 							</h3>
-							<ul className="grid gap-2">
+							<ul className="space-y-3">
 								{keyFeatures.map((feature) => (
 									<li
 										key={feature}
-										className="text-sm text-muted-foreground flex items-start gap-3 p-2.5 rounded-lg bg-muted/5 border border-border/50"
+										className="text-sm text-foreground/80 flex items-start gap-3"
 									>
-										<IconCheck className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+										<span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
 										<span>{feature}</span>
 									</li>
 								))}
 							</ul>
 						</div>
 
-						<div className="space-y-3">
-							<h3 className="text-sm font-medium text-foreground flex items-center gap-2">
-								<IconWorld className="w-4 h-4 text-blue-500" />
-								Available Markets
+						<div className="space-y-4">
+							<h3 className="text-sm font-medium text-muted-foreground uppercase tracking-widest flex items-center gap-2">
+								{tPage("availableMarkets")}
 							</h3>
 							<div className="flex flex-wrap gap-2">
 								{brand.regions.map((region) => (
 									<span
 										key={region}
-										className="text-xs font-mono border border-border px-2 py-1 rounded-md text-muted-foreground bg-muted/5"
+										className="text-xs font-medium px-3 py-1.5 rounded-md bg-muted/50 text-muted-foreground hover:bg-muted transition-colors"
 									>
 										{region}
 									</span>
@@ -104,13 +102,13 @@ export function BrandDialog({ brand, isOpen, onClose }: BrandDialogProps) {
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div className="p-4 border-t border-border bg-muted/5">
 					{hasSlogan && (
-						<p className="text-xs font-medium italic text-center text-muted-foreground">
-							"{t(`${brand.id}.slogan`)}"
-						</p>
+						<div className="pt-6 border-t border-border/20">
+							<p className="text-lg font-light italic text-center text-muted-foreground">
+								"{t(`${brand.id}.slogan`)}"
+							</p>
+						</div>
 					)}
 				</div>
 			</DialogContent>

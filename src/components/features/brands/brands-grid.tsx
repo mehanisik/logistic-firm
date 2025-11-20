@@ -20,14 +20,7 @@ export default function BrandsGrid() {
 			</div>
 
 			{}
-			<div className="flex justify-between items-center py-4 mt-4 border-t border-border border-dashed px-2 opacity-60">
-				<span className="text-[10px] font-mono text-muted-foreground uppercase">
-					Catalog Index
-				</span>
-				<span className="text-[10px] font-mono text-muted-foreground uppercase">
-					{BRANDS.length} Entries
-				</span>
-			</div>
+			{}
 
 			{}
 			<BrandDialog

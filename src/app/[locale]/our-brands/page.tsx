@@ -54,18 +54,7 @@ export default async function OurBrandsPage({ params }: Props) {
 					</div>
 
 					{}
-					<div className="flex items-center gap-4">
-						<div className="hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-muted/40 border border-border/50">
-							<span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-							<span className="text-[10px] font-mono font-medium text-muted-foreground">
-								{BRANDS.length} BRANDS
-							</span>
-						</div>
-						<IconLayoutGrid
-							className="w-5 h-5 text-muted-foreground"
-							strokeWidth={1.5}
-						/>
-					</div>
+					{}
 				</div>
 			</header>
 

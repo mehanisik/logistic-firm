@@ -246,7 +246,7 @@
 		"home": "Ana Sayfa",
 		"about": "Hakkımızda",
 		"service": "Hizmetler",
-		"our-brands": "Lojistik Ortaklarımız",
+		"our-brands": "Markalar",
 		"contact": "İletişim",
 		"openMenuAria": "Menüyü aç",
 		"closeMenuAria": "Menüyü kapat",
@@ -277,6 +277,8 @@
 		"about": "Hakkında",
 		"regions": "Bölgeler",
 		"certifications": "Sertifikalar",
+		"aboutBrand": "Marka Hakkında",
+		"availableMarkets": "Mevcut Pazarlar",
 		"keyFeatures": "Önemli Özellikler",
 		"categories": {
 			"detergent": "Çamaşır Deterjanı",
@@ -376,7 +378,7 @@
 		}
 	},
 	"LogoCloud": {
-		"partners": "Lojistik Ortaklarımız",
+		"partners": "Markalar",
 		"title": "Küresel Markaların Güvendiği",
 		"description": "Önde gelen küresel markaların lojistik süreçlerini yönetiyor ve ürünlerinin pazarlara güvenli ve zamanında ulaşmasını sağlıyoruz.",
 		"viewAll": "Tüm Ortakları Gör"

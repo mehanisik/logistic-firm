@@ -276,6 +276,14 @@ export default function Footer() {
 								</DialogContent>
 							</Dialog>
 						))}
+						<NextLink
+							href="https://mehanisik.is-a.dev/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-muted-foreground hover:text-primary transition-colors duration-200 opacity-60 hover:opacity-100"
+						>
+							Developed by Mehanisik
+						</NextLink>
 					</nav>
 				</div>
 			</div>

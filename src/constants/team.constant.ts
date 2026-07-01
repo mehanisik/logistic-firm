@@ -7,13 +7,6 @@ const ATIK_TEAM_MEMBERS = [
 		email: "mehmet@atikexp.com",
 	},
 	{
-		id: "khalid-xkhospervaz",
-		name: "Khalid KHOSPERVAZ",
-		linkedinUrl: "#",
-		phone: "+90 534 846 95 50",
-		email: "khospervaz@atikexp.com",
-	},
-	{
 		id: "atilla-mert-akkaya",
 		name: "Atilla Mert AKKAYA",
 		linkedinUrl: "#",
